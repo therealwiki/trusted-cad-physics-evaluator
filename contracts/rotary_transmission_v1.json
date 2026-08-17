@@ -1,0 +1,66 @@
+{
+  "contract_id": "rotary_transmission_v1",
+  "contract_version": "1.0.0",
+  "frozen_before_attempts": true,
+  "units": "SI",
+  "candidate_policy": {
+    "components": "separate_tetrahedral_fem_deformables",
+    "candidate_attachments": false,
+    "candidate_constraints": false,
+    "candidate_prescribed_motion": false,
+    "candidate_direct_forces": false,
+    "port_metadata_only_locates_equipment": true
+  },
+  "connector": {
+    "standard": "d_shaft_6mm_v1",
+    "nominal_diameter_m": 0.006,
+    "flat_depth_m": 0.00075,
+    "diametral_clearance_m": 0.0002,
+    "engagement_length_m": 0.01,
+    "insertion_speed_m_s": 0.002,
+    "max_insertion_force_n": 35.0,
+    "max_torque_nm": 0.45
+  },
+  "mount": {
+    "standard": "mount_30mm_square_v1",
+    "bolt_pattern_m": [[-0.015, -0.015], [-0.015, 0.015], [0.015, -0.015], [0.015, 0.015]],
+    "bolt_diameter_m": 0.0032,
+    "max_load_n": 500.0
+  },
+  "material": {
+    "profile": "PLA isotropic baseline v1",
+    "density_kg_m3": 1240.0,
+    "youngs_modulus_pa": 2300000000.0,
+    "poissons_ratio": 0.36,
+    "damping": 0.02
+  },
+  "mesh_and_contact": {
+    "surface_size_m": 0.0008,
+    "volume_size_m": 0.0012,
+    "ipc_contact_distance_m": 0.00005,
+    "friction_coefficient": 0.35,
+    "fixed_time_step_s": 0.001
+  },
+  "phases": ["insertion", "settle", "actuation_load", "observation"],
+  "actuation": {
+    "input_speed_target_rad_s": 6.0,
+    "input_torque_limit_nm": 0.25,
+    "output_resistance_nm": 0.08,
+    "actuation_duration_s": 1.0
+  },
+  "acceptance": {
+    "target_ratio": 2.0,
+    "ratio_tolerance": 0.15,
+    "ratio_score_min": 0.99,
+    "expected_direction": -1,
+    "load_score_min": 0.99,
+    "connector_slip_rad_max_exclusive": 0.1,
+    "shaft_wobble_m_max_exclusive": 0.0005,
+    "component_escape_m_max_exclusive": 0.001,
+    "max_strain_max_exclusive": 0.08,
+    "input_stalled": false,
+    "insertion_must_pass": true,
+    "solver_must_converge": true,
+    "numerical_failure_classification": "INCONCLUSIVE_NUMERICS"
+  }
+}

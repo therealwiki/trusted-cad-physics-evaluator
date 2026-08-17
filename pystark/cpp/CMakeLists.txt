@@ -138,7 +138,6 @@ install(TARGETS pystark
 
 install(FILES
     "${CMAKE_CURRENT_SOURCE_DIR}/../pystark/__init__.py"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../pystark/serialize.py"
     DESTINATION pystark
 )
 
