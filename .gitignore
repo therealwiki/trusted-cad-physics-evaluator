@@ -4,3 +4,5 @@
 *.so
 build/
 dist/
+.native/
+.venv/

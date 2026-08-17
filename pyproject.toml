@@ -1,0 +1,42 @@
+[build-system]
+requires = ["scikit-build-core>=0.11"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "pystark"
+version = "0.1.0"
+description = "Python bindings for the STARK strongly coupled simulation library"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+license = { file = "LICENSE" }
+dependencies = [
+    "gmsh>=4.14",
+    "gymnasium>=1.2",
+    "networkx>=3.4",
+    "numpy>=2.1",
+    "pyvista>=0.46",
+    "trimesh>=4.8",
+]
+
+[dependency-groups]
+dev = [
+    "ninja>=1.11",
+    "pytest>=8.3",
+]
+
+[tool.scikit-build]
+minimum-version = "build-system.requires"
+build-dir = "build/pyproject/{wheel_tag}"
+wheel.packages = ["pystark/pystark", "mechanical_eval"]
+cmake.build-type = "Release"
+cmake.args = [
+    "-DSTARK_BUILD_EXAMPLES=OFF",
+    "-DSTARK_BUILD_TESTS=OFF",
+    "-DSTARK_BUILD_PYTHON_BINDINGS=ON",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "pystark/pystark"]
+python_files = ["test_*.py"]
+addopts = ["--import-mode=importlib"]
+markers = ["integration: exercises external CAD/physics backends"]
