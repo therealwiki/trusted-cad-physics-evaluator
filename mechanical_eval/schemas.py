@@ -77,18 +77,49 @@ class SimulationSettings:
     friction_coefficient: float = 0.35
     ipc_min_contact_stiffness: float = 1e8
     ipc_max_contact_stiffness: float = 1e12
+    friction_stick_slide_threshold_m_s: float = 1e-4
+    newton_residual_tolerance_abs: float = 1e-6
+    newton_residual_tolerance_rel: float = 0.0
+    newton_step_tolerance: float = 1e-3
+    newton_max_iterations: int = 100
+    armijo_backtracking_enabled: bool = True
+    armijo_max_iterations: int = 20
+    invalid_state_max_iterations: int = 8
+    hessian_projection_mode: Literal["Progressive"] = "Progressive"
+    hessian_projection_epsilon: float = 1e-10
+    linear_solver: Literal["BDPCG", "EigenICPCG", "EigenILUTBiCGSTAB"] = "BDPCG"
+    cg_max_iterations: int = 10000
+    cg_absolute_tolerance: float = 1e-12
+    cg_relative_tolerance: float = 1e-4
+    cg_stop_on_indefiniteness: bool = True
+    cg_bailout_residual: float = 1e-10
+    ilut_fill_factor: int = 4
+    ilut_drop_tolerance: float = 1e-3
+    execution_threads: int = 0
     schema_version: Literal["1.0"] = SCHEMA_VERSION
 
     def __post_init__(self) -> None:
         for name in ("surface_size_m", "volume_size_m", "contact_distance_m", "time_step_s", "duration_s",
                      "ipc_min_contact_stiffness", "ipc_max_contact_stiffness"):
             _positive(name, getattr(self, name))
+        for name in ("friction_stick_slide_threshold_m_s", "newton_residual_tolerance_abs",
+                     "newton_step_tolerance", "hessian_projection_epsilon", "cg_absolute_tolerance",
+                     "cg_relative_tolerance", "cg_bailout_residual", "ilut_drop_tolerance"):
+            _positive(name, getattr(self, name))
+        if self.newton_residual_tolerance_rel < 0:
+            raise ValueError("newton_residual_tolerance_rel must be non-negative")
+        for name in ("newton_max_iterations", "armijo_max_iterations", "invalid_state_max_iterations",
+                     "cg_max_iterations", "ilut_fill_factor"):
+            if getattr(self, name) <= 0:
+                raise ValueError(f"{name} must be positive")
         if self.contact_distance_m >= self.surface_size_m:
             raise ValueError("contact distance must be smaller than surface mesh size")
         if not 0 <= self.friction_coefficient <= 2:
             raise ValueError("friction_coefficient must be in [0, 2]")
         if self.ipc_min_contact_stiffness > self.ipc_max_contact_stiffness:
             raise ValueError("minimum IPC contact stiffness cannot exceed maximum")
+        if self.execution_threads < 0:
+            raise ValueError("execution_threads must be non-negative; zero selects STARK's default")
 
 
 @dataclass(frozen=True)

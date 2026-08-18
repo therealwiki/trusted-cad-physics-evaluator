@@ -14,7 +14,14 @@ class RotaryTransmissionSpec:
     input_speed_rad_s: float = 6.0
     input_torque_limit_nm: float = 0.25
     output_resistance_nm: float = 0.08
-    duration_s: float = 1.0
+    duration_s: float = 3.0
+    connector_slip_rad_max: float = 0.1
+    shaft_wobble_m_max: float = 5e-4
+    component_escape_m_max: float = 1e-3
+    max_strain: float = 0.02
+    min_deformation_jacobian: float = 0.0
+    ratio_score_min: float = 0.99
+    load_score_min: float = 0.99
 
     def __post_init__(self) -> None:
         if self.target_ratio <= 0 or self.ratio_tolerance <= 0 or self.expected_direction not in {-1, 1}:

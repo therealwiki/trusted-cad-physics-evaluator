@@ -18,9 +18,16 @@ def test_candidate_is_real_stark_deformable_with_no_hidden_constraint(tmp_path):
     assert contact.default_contact_thickness == 2.5e-5
     assert contact.min_contact_stiffness == 2e8
     assert contact.max_contact_stiffness == 3e11
-    assert scene.policy_audit() == {
-        "candidate_is_deformable": True,
-        "candidate_attachments": False,
-        "candidate_internal_constraints": False,
-        "candidate_prescribed_motion": False,
-    }
+    assert contact.friction_stick_slide_threshold == 1e-4
+    before = scene.simulation.get_time()
+    assert scene.simulation.run_one_time_step() is True
+    assert scene.simulation.get_time() > before
+    audit = scene.policy_audit()
+    assert audit["audit_method"] == "candidate_construction_ledger_v1"
+    assert audit["candidate_count"] == 1
+    assert audit["candidate_is_deformable"] is True
+    assert audit["candidate_attachments"] is False
+    assert audit["candidate_internal_constraints"] is False
+    assert audit["candidate_prescribed_motion"] is False
+    assert audit["candidate_direct_forces"] is False
+    assert len(audit["ledger_sha256"]) == 64

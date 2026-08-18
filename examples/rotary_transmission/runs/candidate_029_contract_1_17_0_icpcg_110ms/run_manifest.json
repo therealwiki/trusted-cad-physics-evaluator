@@ -1,0 +1,15 @@
+{
+  "cad_path": "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_029.step",
+  "cad_sha256": "fff1c9ecfbc0ba8f8b303ae44952a6085e4d6808cef7b16ce3609bcce2a18901",
+  "contract_sha256": "707188c7fec452aedf1cd0608593be8bbfa6b3aba1d8cd0ad653a7c655079ef3",
+  "contract_snapshot": "contract_snapshot.json",
+  "evaluator_source_sha256": {
+    "examples/rotary_transmission/run_harness.py": "3628d210e150cf25ea3c784eea734ec9ab8b68c771c3b4236bebadebe2144004",
+    "examples/rotary_transmission/actuation_scene.py": "6bba038ee4533ef85ee0597a3b30bbf5e59f368c82d13d2bdf194b17cc09a2e0",
+    "examples/rotary_transmission/insertion_scene.py": "781452ab527df31df4adf643f214efbdeae3280d68e68a37d77609e541d7c3e6",
+    "examples/rotary_transmission/candidate_manifest.py": "5258538c9ca3f40cca21bebcf809f18bc3f62863f36aba59f210c5ea6dd521e7",
+    "mechanical_eval/scene.py": "36975639357f1e1cc74d2953c51f11abf78b66d158084b3f308763979717482e",
+    "mechanical_eval/scoring.py": "e0b0909fe1d3d387906eb5c1cbd5d251031cb6acee391135dc089467b7eb0540",
+    "stark/extern/symx/src/solver/NewtonsMethod.cpp": "0d8bbaec9367e76f28a0b80adf66d2fcb72b79f186d5923f3aeefd4c8072d732"
+  }
+}

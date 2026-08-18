@@ -1,0 +1,80 @@
+{
+  "contract_sha256": "34f347c4c38327276c6ebe3d2cb27f55a637e8b02a4eaa6f87ee14d7aac95726",
+  "cad_sha256": "6854534610a8bb20ca98c59846d6fb6a41c17958f097b7c2a840156f7daf2405",
+  "step_path": "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_024.step",
+  "duration_s": 0.05,
+  "candidate": [
+    {
+      "angle_rad": -2.522796279036334e-16,
+      "omega_rad_s": -8.013631298154527e-13,
+      "wobble_m": 1.301308922618816e-16,
+      "final_wobble_m": 1.2143343438275702e-16,
+      "escape_m": 1.3022156092623685e-16,
+      "final_escape_m": 1.2143356342285227e-16,
+      "max_strain": 1.1848460990115939e-08,
+      "min_deformation_jacobian": 0.9999999882736859,
+      "final_strain": 5.14576825594304e-10
+    },
+    {
+      "angle_rad": -9.006522139578563e-10,
+      "omega_rad_s": 3.097815231599174e-14,
+      "wobble_m": 1.5617073091508665e-11,
+      "final_wobble_m": 1.5614230370210396e-11,
+      "escape_m": 1.5642160668668926e-11,
+      "final_escape_m": 1.5642157355740818e-11,
+      "max_strain": 0.0023067158705107893,
+      "min_deformation_jacobian": 0.9997369710122006,
+      "final_strain": 0.0023066338808186426
+    }
+  ],
+  "input_work_j": 1.9201399233035606e-05,
+  "output_work_j": 0.0,
+  "applied_motor_torque_nm": 0.0023999785459532103,
+  "applied_brake_torque_nm": 0.0,
+  "max_motor_torque_nm": 0.0023999785459532103,
+  "max_brake_torque_nm": 0.0,
+  "completed_steps": 50,
+  "contact_hardening_retries": 0,
+  "solver_converged": true,
+  "input_shaft_omega_rad_s": 0.4320004290809362,
+  "output_connector_omega_rad_s": -4.23752257556722e-50,
+  "input_shaft_angle_rad": 0.008051998648841882,
+  "output_connector_angle_rad": 1.2613756657306814e-48,
+  "connector_slip_rad": 0.008051998648842134,
+  "steady_observations": {
+    "input_gear_omega_rad_s": -4.93218420621309e-15,
+    "output_gear_omega_rad_s": -1.8013043509649822e-08,
+    "input_shaft_omega_rad_s": 0.16103997425513353,
+    "output_connector_omega_rad_s": 2.5227513313557163e-47,
+    "motor_torque_nm": 0.0017400017163242685,
+    "brake_torque_nm": 0.0,
+    "output_connector_alpha_rad_s2": -8.648005256259627e-49,
+    "transmitted_contact_torque_nm": 1.7296010512519256e-53
+  },
+  "termination_tuple": {
+    "simulation_time_s": 0.05000000000000004,
+    "time_since_brake_start_s": 0.0,
+    "instantaneous_brake_torque_nm": 0.0,
+    "instantaneous_motor_torque_nm": 0.0023999785459532103,
+    "candidate_angles_rad": [
+      -2.522796279036334e-16,
+      -9.006522139578563e-10
+    ],
+    "candidate_omegas_rad_s": [
+      -8.013631298154527e-13,
+      3.097815231599174e-14
+    ],
+    "max_strain": 0.0023067158705107893,
+    "min_deformation_jacobian": 0.9997369710122006,
+    "max_escape_m": 1.5642160668668926e-11,
+    "connector_slip_rad": 0.008051998648842134,
+    "solver_status": "CONVERGED"
+  },
+  "policy_audit": {
+    "candidate_is_deformable": true,
+    "candidate_attachments": false,
+    "candidate_internal_constraints": false,
+    "candidate_prescribed_motion": false
+  },
+  "classification": "UNSCORED_PHYSICS_OBSERVATION"
+}

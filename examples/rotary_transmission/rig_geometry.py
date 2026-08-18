@@ -5,6 +5,12 @@ import math
 import numpy as np
 
 
+def _outward(vertices: np.ndarray, triangles: np.ndarray) -> np.ndarray:
+    signed_volume = np.einsum("ij,ij->i", vertices[triangles[:, 0]],
+                              np.cross(vertices[triangles[:, 1]], vertices[triangles[:, 2]])).sum() / 6
+    return triangles if signed_volume > 0 else triangles[:, [0, 2, 1]]
+
+
 def d_shaft_mesh(radius_m: float = 0.003, flat_x_m: float = 0.00225,
                  length_m: float = 0.018, segments: int = 48) -> tuple[np.ndarray, np.ndarray]:
     alpha = math.acos(flat_x_m / radius_m)
@@ -19,7 +25,22 @@ def d_shaft_mesh(radius_m: float = 0.003, flat_x_m: float = 0.00225,
         triangles.extend(((i, j, n + j), (i, n + j, n + i)))
     for i in range(1, n - 1):
         triangles.extend(((0, i + 1, i), (n, n + i, n + i + 1)))
-    return vertices, np.asarray(triangles, dtype=np.int32)
+    return vertices, _outward(vertices, np.asarray(triangles, dtype=np.int32))
+
+
+def cylinder_mesh(radius_m: float, length_m: float, segments: int = 32) -> tuple[np.ndarray, np.ndarray]:
+    angles = np.linspace(0, 2 * math.pi, segments, endpoint=False)
+    profile = np.column_stack((radius_m * np.cos(angles), radius_m * np.sin(angles)))
+    n = len(profile)
+    vertices = np.vstack((np.column_stack((profile, np.full(n, -length_m / 2))),
+                          np.column_stack((profile, np.full(n, length_m / 2)))))
+    triangles: list[tuple[int, int, int]] = []
+    for i in range(n):
+        j = (i + 1) % n
+        triangles.extend(((i, j, n + j), (i, n + j, n + i)))
+    for i in range(1, n - 1):
+        triangles.extend(((0, i + 1, i), (n, n + i, n + i + 1)))
+    return vertices, _outward(vertices, np.asarray(triangles, dtype=np.int32))
 
 
 def sleeve_mesh(inner_radius_m: float = 0.00430, outer_radius_m: float = 0.0058,
@@ -37,7 +58,7 @@ def sleeve_mesh(inner_radius_m: float = 0.00430, outer_radius_m: float = 0.0058,
             a0, a1 = ring_a * segments + i, ring_a * segments + j
             b0, b1 = ring_b * segments + i, ring_b * segments + j
             triangles.extend(((a0, a1, b1), (a0, b1, b0)) if not flip else ((a0, b1, a1), (a0, b0, b1)))
-    return vertices, np.asarray(triangles, dtype=np.int32)
+    return vertices, _outward(vertices, np.asarray(triangles, dtype=np.int32))
 
 
 def solid_inertia(vertices: np.ndarray, triangles: np.ndarray, mass: float) -> np.ndarray:

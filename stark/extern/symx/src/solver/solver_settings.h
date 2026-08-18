@@ -81,6 +81,8 @@ namespace symx
         double cg_rel_tolerance = 1e-4;
         bool cg_stop_on_indefiniteness = true;
         double bailout_residual = 1e-10;             // Skip step if residual below this (CG stability)
+        int ilut_fill_factor = 4;
+        double ilut_drop_tolerance = 1e-3;
 
         std::string as_string(const std::string& prefix = "") const
         {
@@ -101,6 +103,8 @@ namespace symx
             out += "\n" + p + "    cg_rel_tolerance: " + to_string_sci(cg_rel_tolerance);
             out += "\n" + p + "    cg_stop_on_indefiniteness: " + to_string(cg_stop_on_indefiniteness);
             out += "\n" + p + "    bailout_residual: " + to_string_sci(bailout_residual);
+            out += "\n" + p + "    ilut_fill_factor: " + std::to_string(ilut_fill_factor);
+            out += "\n" + p + "    ilut_drop_tolerance: " + to_string_sci(ilut_drop_tolerance);
             return out;
         }
     };

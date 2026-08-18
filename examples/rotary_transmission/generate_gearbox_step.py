@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import math
 from pathlib import Path
 
@@ -111,8 +112,35 @@ def _gear(cx: float, teeth: int, pitch_r: float, thickness: float, bore: bool,
     return gear
 
 
+def _housing_plate(z_center: float, gear_centers_x: tuple[float, float]) -> int:
+    """Printable bearing/mount plate; all support is supplied through its contact geometry."""
+    thickness = 4.0
+    z0 = z_center - thickness / 2
+    parts = [gmsh.model.occ.addCylinder(cx, 0.0, z0, 0, 0, thickness, 7.0)
+             for cx in gear_centers_x]
+    parts.extend(gmsh.model.occ.addCylinder(x, y, z0, 0, 0, thickness, 4.0)
+                 for x in (-15.0, 15.0) for y in (-15.0, 15.0))
+    # One central drive-train rib, two mount rails, and two cross-ribs form a
+    # single printable support body without a broad, numerically expensive slab.
+    parts.append(gmsh.model.occ.addBox(-15.0, -2.0, z0, 36.5, 4.0, thickness))
+    parts.extend(gmsh.model.occ.addBox(-17.0, y - 2.0, z0, 34.0, 4.0, thickness)
+                 for y in (-15.0, 15.0))
+    parts.extend(gmsh.model.occ.addBox(x - 2.0, -15.0, z0, 4.0, 30.0, thickness)
+                 for x in (-15.0, 15.0))
+    fused, _ = gmsh.model.occ.fuse([(3, parts[0])], [(3, part) for part in parts[1:]],
+                                   removeObject=True, removeTool=True)
+    plate = fused[0][1]
+    tools = [gmsh.model.occ.addCylinder(cx, 0.0, z_center - 3.0, 0, 0, 6.0, 4.3)
+             for cx in gear_centers_x]
+    tools.extend(gmsh.model.occ.addCylinder(x, y, z_center - 3.0, 0, 0, 6.0, 1.75)
+                 for x in (-15.0, 15.0) for y in (-15.0, 15.0))
+    cut, _ = gmsh.model.occ.cut([(3, plate)], [(3, tool) for tool in tools],
+                                removeObject=True, removeTool=True)
+    return cut[0][1]
+
+
 def generate(path: Path, tooth_fraction: float, center_distance: float, profile: str, dogbone: bool,
-             addendum_factor: float, pressure_angle_deg: float) -> None:
+             addendum_factor: float, pressure_angle_deg: float, housing: bool = False) -> None:
     gmsh.initialize()
     try:
         gmsh.option.setNumber("General.Terminal", 1)
@@ -125,9 +153,33 @@ def generate(path: Path, tooth_fraction: float, center_distance: float, profile:
                             tooth_fraction, profile, dogbone, addendum_factor, pressure_angle_deg)
         gmsh.model.setEntityName(3, input_gear, "input_gear_12t")
         gmsh.model.setEntityName(3, output_gear, "output_gear_24t")
+        component_roles = [
+            {"role": "input_gear", "expected_centroid_mm": [-10.0, 0.0, 0.0]},
+            {"role": "output_gear", "expected_centroid_mm": [-10.0 + center_distance, 0.0, 0.0]},
+        ]
+        if housing:
+            lower = _housing_plate(-6.1, (-10.0, -10.0 + center_distance))
+            upper = _housing_plate(6.1, (-10.0, -10.0 + center_distance))
+            gmsh.model.setEntityName(3, lower, "candidate_lower_bearing_plate")
+            gmsh.model.setEntityName(3, upper, "candidate_upper_bearing_plate")
+            component_roles.extend([
+                {"role": "lower_bearing_plate", "expected_centroid_mm": [4.0, 0.0, -6.1]},
+                {"role": "upper_bearing_plate", "expected_centroid_mm": [4.0, 0.0, 6.1]},
+            ])
         gmsh.model.occ.synchronize()
         path.parent.mkdir(parents=True, exist_ok=True)
         gmsh.write(str(path))
+        manifest = {
+            "schema_version": "1.0",
+            "step_path": path.name,
+            "components": component_roles,
+            "ports": {
+                "input": {"origin_mm": [-10.0, 0.0, 0.0], "axis": [0.0, 0.0, 1.0]},
+                "output": {"origin_mm": [-10.0 + center_distance, 0.0, 0.0], "axis": [0.0, 0.0, 1.0]},
+                "mount": {"origin_mm": [0.0, 0.0, 0.0], "axis": [0.0, 0.0, 1.0]},
+            },
+        }
+        path.with_suffix(".manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     finally:
         gmsh.finalize()
 
@@ -141,6 +193,7 @@ if __name__ == "__main__":
     parser.add_argument("--dogbone", action="store_true")
     parser.add_argument("--addendum-factor", type=float, default=1.0)
     parser.add_argument("--pressure-angle-deg", type=float, default=20.0)
+    parser.add_argument("--housing", action="store_true")
     args = parser.parse_args()
     generate(args.output.resolve(), args.tooth_fraction, args.center_distance_mm, args.profile, args.dogbone,
-             args.addendum_factor, args.pressure_angle_deg)
+             args.addendum_factor, args.pressure_angle_deg, args.housing)

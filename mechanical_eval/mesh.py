@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from collections import Counter
 from pathlib import Path
 from typing import Protocol
 
@@ -15,6 +16,18 @@ class VolumeMesh:
     vertices_m: np.ndarray
     tets: np.ndarray
     surface_triangles: np.ndarray
+
+    def validate(self) -> None:
+        if not np.all(np.isfinite(self.vertices_m)):
+            raise ValueError(f"{self.name}: non-finite vertex coordinates")
+        x = self.vertices_m[self.tets]
+        signed_six_volume = np.linalg.det(x[:, 1:] - x[:, :1])
+        if np.any(signed_six_volume <= 1e-18):
+            raise ValueError(f"{self.name}: inverted or degenerate tetrahedron")
+        edge_counts = Counter(tuple(sorted((int(a), int(b)))) for tri in self.surface_triangles
+                              for a, b in ((tri[0], tri[1]), (tri[1], tri[2]), (tri[2], tri[0])))
+        if not edge_counts or any(count != 2 for count in edge_counts.values()):
+            raise ValueError(f"{self.name}: contact boundary is not a closed two-manifold")
 
     @property
     def volume_m3(self) -> float:
@@ -78,7 +91,9 @@ class GmshOccBackend:
                     raise ValueError(f"volume entity {tag} produced no linear tetrahedra")
                 tets = np.fromiter((tag_to_local[n] for n in tet_nodes), dtype=np.int32).reshape(-1, 4)
                 vertices = np.asarray(coords, dtype=float).reshape(-1, 3) * scale
-                result.append(VolumeMesh(f"volume_{tag}", vertices, tets, tet_surface(tets)))
+                mesh = VolumeMesh(f"volume_{tag}", vertices, tets, tet_surface(tets))
+                mesh.validate()
+                result.append(mesh)
             return result
         finally:
             gmsh.finalize()

@@ -1,0 +1,121 @@
+{
+  "contract_id": "rotary_transmission_v1",
+  "contract_version": "1.17.0",
+  "frozen_before_attempts": false,
+  "units": "SI",
+  "candidate_policy": {
+    "components": "separate_tetrahedral_fem_deformables",
+    "candidate_attachments": false,
+    "candidate_constraints": false,
+    "candidate_prescribed_motion": false,
+    "candidate_direct_forces": false,
+    "port_metadata_only_locates_equipment": true
+  },
+  "connector": {
+    "standard": "d_shaft_6mm_v1",
+    "nominal_diameter_m": 0.006,
+    "flat_depth_m": 0.00075,
+    "diametral_clearance_m": 0.0002,
+    "engagement_length_m": 0.01,
+    "insertion_speed_m_s": 0.002,
+    "max_insertion_force_n": 35.0,
+    "max_torque_nm": 0.45
+  },
+  "mount": {
+    "standard": "mount_30mm_square_v1",
+    "bolt_pattern_m": [[-0.015, -0.015], [-0.015, 0.015], [0.015, -0.015], [0.015, 0.015]],
+    "bolt_diameter_m": 0.0032,
+    "hole_diameter_m": 0.0035,
+    "max_load_n": 500.0
+  },
+  "rig_geometry": {
+    "shaft_length_m": 0.018,
+    "shaft_mass_kg": 0.020,
+    "initial_insertion_gap_m": 0.001,
+    "bearing_inner_radius_m": 0.0043,
+    "bearing_outer_radius_m": 0.0058,
+    "bearing_length_m": 0.004,
+    "mount_pin_length_m": 0.004,
+    "bearing_axial_centers_m": [-0.0061, 0.0061],
+    "bearing_mass_kg": 0.050
+  },
+  "material": {
+    "profile": "effective isotropic printed-PLA v1",
+    "density_kg_m3": 1200.0,
+    "youngs_modulus_pa": 2500000000.0,
+    "poissons_ratio": 0.35,
+    "damping": 0.02,
+    "constitutive_model": "stable_neo_hookean_recoverable_elasticity",
+    "elastic_strain_ceiling": 0.02,
+    "provisional_invalidity_strain": 0.05,
+    "damage_or_fracture_model": false,
+    "print_recipe": "dense nominal 100 percent infill; exact filament, nozzle, temperature, walls, and infill require calibration"
+  },
+  "mesh_and_contact": {
+    "surface_size_m": 0.0008,
+    "volume_size_m": 0.0012,
+    "ipc_contact_distance_m": 0.00005,
+    "friction_coefficient": 0.35,
+    "friction_stick_slide_threshold_m_s": 0.0001,
+    "fixed_time_step_s": 0.001
+  },
+  "solver": {
+    "newton_residual_tolerance_abs": 1e-6,
+    "newton_residual_tolerance_rel": 0.0,
+    "newton_step_tolerance": 0.0000025,
+    "newton_max_iterations": 100,
+    "armijo_backtracking_enabled": true,
+    "armijo_max_iterations": 20,
+    "invalid_state_max_iterations": 8,
+    "hessian_projection_mode": "Progressive",
+    "hessian_projection_epsilon": 1e-10,
+    "linear_solver": "EigenICPCG",
+    "cg_max_iterations": 10000,
+    "cg_absolute_tolerance": 1e-12,
+    "cg_relative_tolerance": 0.01,
+    "cg_stop_on_indefiniteness": true,
+    "cg_bailout_residual": 1e-10,
+    "execution_threads": 10,
+    "adaptive_time_step": false,
+    "ipc_min_contact_stiffness": 100000000.0,
+    "ipc_max_contact_stiffness": 1000000000000.0,
+    "amendment_note": "Pre-lock linear-solver audit: use incomplete-Cholesky PCG and a 1 percent inexact-Newton linear tolerance; the unchanged 1e-6 outer Newton residual remains authoritative. The 2.5 micrometre step tolerance remains five percent of the 50 micrometre IPC distance. Physical acceptance thresholds are unchanged."
+  },
+  "evaluator_rotor": {
+    "input_reflected_inertia_kg_m2": 0.0002,
+    "output_reflected_inertia_kg_m2": 0.00002,
+    "speed_feedback_gain_nm_per_rad_s": 0.05,
+    "note": "Evaluator-owned reflected motor/brake rotor inertia; no inertia or force is added to candidate bodies."
+  },
+  "phases": ["insertion", "settle", "actuation_load", "observation"],
+  "actuation": {
+    "input_speed_target_rad_s": 6.0,
+    "input_torque_limit_nm": 0.25,
+    "output_resistance_nm": 0.08,
+    "brake_velocity_regularization_rad_s": 0.1,
+    "speed_ramp_start_s": 0.01,
+    "speed_ramp_duration_s": 0.5,
+    "brake_ramp_start_s": 0.5,
+    "brake_ramp_duration_s": 1.0,
+    "actuation_duration_s": 3.0
+  },
+  "acceptance": {
+    "target_ratio": 2.0,
+    "ratio_tolerance": 0.15,
+    "ratio_score_min": 0.99,
+    "expected_direction": -1,
+    "load_score_min": 0.99,
+    "connector_slip_rad_max_exclusive": 0.1,
+    "shaft_wobble_m_max_exclusive": 0.0005,
+    "component_escape_m_max_exclusive": 0.001,
+    "max_strain_max_exclusive": 0.02,
+    "min_deformation_jacobian_exclusive": 0.0,
+    "repeat_ratio_delta_max": 0.01,
+    "repeat_omega_relative_delta_max": 0.05,
+    "repeat_load_delta_nm_max": 0.002,
+    "input_stalled": false,
+    "insertion_must_pass": true,
+    "solver_must_converge": true,
+    "numerical_failure_classification": "INCONCLUSIVE_NUMERICS"
+  }
+}

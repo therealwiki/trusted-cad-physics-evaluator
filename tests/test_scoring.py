@@ -9,7 +9,7 @@ def observations(**updates):
     values = dict(input_rotation_rad=6, output_rotation_rad=-3, input_omega_rad_s=6,
                   output_omega_rad_s=-3, transmitted_torque_nm=.08, input_stalled=False,
                   connector_slip_rad=.01, shaft_wobble_m=1e-4, component_escape_m=0,
-                  max_strain=.01, input_work_j=.1, output_work_j=.08,
+                  max_strain=.01, min_deformation_jacobian=.98, input_work_j=.1, output_work_j=.08,
                   solver_converged=True, insertion_passed=True)
     values.update(updates)
     return RotaryObservations(**values)
@@ -25,6 +25,11 @@ def test_physical_observations_can_pass_with_visible_components():
 def test_numerical_failure_is_never_a_physical_jam():
     result = score_rotary(RotaryTransmissionSpec(), observations(solver_converged=False), ())
     assert result.classification == Classification.INCONCLUSIVE_NUMERICS
+
+
+def test_inverted_candidate_element_cannot_pass():
+    result = score_rotary(RotaryTransmissionSpec(), observations(min_deformation_jacobian=-1.0), ())
+    assert result.classification == Classification.FAIL
 
 
 @pytest.mark.parametrize("source", [EvidenceSource.DECLARED, EvidenceSource.SYNTHETIC])

@@ -29,12 +29,16 @@ namespace symx
     {
         DirectLLT,
         BDPCG,  // Block Diagonal Preconditioned Conjugate Gradient
+        EigenICPCG, // Sparse incomplete-Cholesky preconditioned conjugate gradient
+        EigenILUTBiCGSTAB, // Sparse ILUT-preconditioned BiCGSTAB
     };
     inline std::string to_string(symx::LinearSolver v)
     {
         switch (v)
         {
         case symx::LinearSolver::BDPCG: return "BDPCG"; break;
+        case symx::LinearSolver::EigenICPCG: return "EigenICPCG"; break;
+        case symx::LinearSolver::EigenILUTBiCGSTAB: return "EigenILUTBiCGSTAB"; break;
         case symx::LinearSolver::DirectLLT: return "DirectLLT"; break;
         default:
             std::cout << "symx::LinearSolver " << (int)v << " does not have a name. Exiting." << std::endl;

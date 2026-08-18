@@ -77,10 +77,10 @@ void Simulation::run(double duration, std::function<void()> user_callback)
 	);
 }
 
-void Simulation::run_one_time_step()
+bool Simulation::run_one_time_step()
 {
 	this->stark.script.run_a_cycle(this->get_time());
-	this->stark.run_one_step();
+	return this->stark.run_one_step();
 }
 
 Simulation::Simulation(const Settings& settings)

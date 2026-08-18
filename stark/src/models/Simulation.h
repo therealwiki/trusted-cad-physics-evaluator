@@ -29,7 +29,7 @@ namespace stark
 		void add_time_event(double t0, double t1, std::function<void(double, EventInfo&)> action);
 		void run(std::function<void()> callback = nullptr);
 		void run(double duration, std::function<void()> callback = nullptr);
-		void run_one_time_step();
+		bool run_one_time_step();
 
 		/* Fields */
 		Stark stark;

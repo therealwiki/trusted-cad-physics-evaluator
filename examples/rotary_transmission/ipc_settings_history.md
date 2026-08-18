@@ -50,3 +50,21 @@ This is an execution audit, not a retrospective statement of intended settings. 
 STARK's native `run_one_step()` treats `InvalidConvergedState` and `TooManyInvalidIntermediateIterations` as recoverable: it hardens the IPC barrier, does not advance physical time, and returns a continue signal so the caller retries the same timestep. The old Python harness interpreted one non-advancing call as terminal. Therefore Candidates 006–026 that ended at their first hardening event are evaluator-integration failures and must not be presented as broken parts.
 
 Contract 1.10.0 fixed the settings plumbing and retry protocol, then its expensive 0.25 ms / 2e8 diagnostic was deliberately interrupted before the old failure point when the performance audit showed that those conservative settings predated the root-cause fix. Contract 1.11.0 restores a 1.00 ms step and 1e8 initial barrier while retaining the same physical load history. It is the fast baseline for a controlled 1.00/0.50/0.25 ms convergence study. Final scoring requires a newly frozen contract and clean repeat runs.
+
+## Post-retry architecture and conditioning audit
+
+| Candidate | Contract | dt | Initial IPC k | Linear solve | Outcome |
+|---:|---:|---:|---:|---|---|
+| 024 | 1.12–1.13 | 1.00 ms | 1e8 | BDPCG | Native rollback and 2.5 µm Newton-step tolerance smoke tests completed 50 ms; diagnostic two-solid assembly only. |
+| 027 | pre-1.15 | 1.00 ms | 1e8 | BDPCG | First four-solid CAD with candidate bearing plates; mount-hole radial gap equaled the IPC distance, so it was superseded before actuation. |
+| 028 | 1.14 | 1.00 ms | 1e8 | BDPCG | Rejected because evaluator through-pins intersected the output gear; evaluator defect, not candidate failure. |
+| 028 | 1.15 | 1.00 ms | 1e8 | BDPCG | Unchanged STEP passed 1 ms and 50 ms gates after split fixture studs; no torque-transfer claim. |
+| 029 | 1.15–1.17 | 1.00 ms | 1e8 | BDPCG / ICPCG | Trimmed plates reduced nodes 22%; sustained take-up exposed thousands of Krylov iterations. ICPCG and 1% inexact-Newton trials were retained as interrupted numerical diagnostics. |
+| 030 | 1.18 | 1.00 ms | 1e8 | ICPCG | Printable ribbed bearing frames reduced the assembly to about 32k nodes, but contact conditioning remained dominant. |
+| 030 | 1.19 | 1.00 ms | 1e7 | BDPCG | Lower initial barrier improved early contact cost but sustained take-up again became expensive. |
+| 030 | 1.20 | 0.25 ms | 1e7 | BDPCG | Fewer iterations per step but fourfold step count was slower per simulated millisecond; rejected for production. |
+| 030 | 1.21 | 1.00 ms | 1e7 | ILUT BiCGSTAB | Rejected immediately: non-descent directions triggered repeated Hessian-projection retries. |
+| 030 | 1.22 | 1.00 ms | 1e7 | ICPCG | Better early coupling but sustained take-up again reached roughly 10 s/step; rejected. |
+| 030 | 1.23 | 0.50 ms | 1e7 | BDPCG | Active midpoint performance/convergence diagnostic; pre-lock and not eligible for final reward. |
+
+All interrupted rows are `INCONCLUSIVE_NUMERICS` performance studies. None is evidence of a broken printed part or a physical PASS.

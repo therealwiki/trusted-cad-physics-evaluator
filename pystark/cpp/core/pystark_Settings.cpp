@@ -5,7 +5,9 @@ void pystark_Settings(nb::module_& m)
     // symx enums
     nb::enum_<symx::LinearSolver>(m, "LinearSolver")
         .value("DirectLLT", symx::LinearSolver::DirectLLT)
-        .value("BDPCG", symx::LinearSolver::BDPCG);
+        .value("BDPCG", symx::LinearSolver::BDPCG)
+        .value("EigenICPCG", symx::LinearSolver::EigenICPCG)
+        .value("EigenILUTBiCGSTAB", symx::LinearSolver::EigenILUTBiCGSTAB);
 
     nb::enum_<symx::ProjectionToPD>(m, "ProjectionToPD")
         .value("Newton", symx::ProjectionToPD::Newton)
@@ -64,7 +66,9 @@ void pystark_Settings(nb::module_& m)
         .def_rw("cg_abs_tolerance",                       &symx::NewtonSettings::cg_abs_tolerance)
         .def_rw("cg_rel_tolerance",                       &symx::NewtonSettings::cg_rel_tolerance)
         .def_rw("cg_stop_on_indefiniteness",              &symx::NewtonSettings::cg_stop_on_indefiniteness)
-        .def_rw("bailout_residual",                       &symx::NewtonSettings::bailout_residual);
+        .def_rw("bailout_residual",                       &symx::NewtonSettings::bailout_residual)
+        .def_rw("ilut_fill_factor",                       &symx::NewtonSettings::ilut_fill_factor)
+        .def_rw("ilut_drop_tolerance",                    &symx::NewtonSettings::ilut_drop_tolerance);
 
     auto execution_struct = nb::class_<Settings::Execution>(settings_struct, "Execution")
         .def(nb::init<>())

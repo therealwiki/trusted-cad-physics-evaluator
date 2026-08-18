@@ -1,0 +1,110 @@
+{
+  "contract_sha256": "e31fd270058db843f7cc48a8fcd1e024af9482045524e0ca722125c098f94cea",
+  "cad_sha256": "8c06708c1a27fb0f374596e67712e508fc44b597e0b6c608475cf88604c984d9",
+  "step_path": "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_028.step",
+  "duration_s": 0.001,
+  "candidate": [
+    {
+      "angle_rad": -1.05456288876033e-17,
+      "omega_rad_s": -1.0836082735583407e-14,
+      "wobble_m": 1.1275786646539474e-16,
+      "final_wobble_m": 1.1275786646539474e-16,
+      "escape_m": 1.1275790221205092e-16,
+      "final_escape_m": 1.1275790221205092e-16,
+      "max_strain": 1.6009416015094757e-13,
+      "min_deformation_jacobian": 0.9999999999998409,
+      "final_strain": 1.6009416015094757e-13
+    },
+    {
+      "angle_rad": 4.97890984456959e-10,
+      "omega_rad_s": 4.978909650373413e-07,
+      "wobble_m": 4.04494414988197e-12,
+      "final_wobble_m": 4.04494414988197e-12,
+      "escape_m": 4.047464201953132e-12,
+      "final_escape_m": 4.047464201953132e-12,
+      "max_strain": 0.001950419534637149,
+      "min_deformation_jacobian": 0.9997636137340669,
+      "final_strain": 0.001950419534637149
+    },
+    {
+      "angle_rad": -6.774802341612701e-19,
+      "omega_rad_s": -1.0264948039831995e-15,
+      "wobble_m": 1.5626057933874606e-17,
+      "final_wobble_m": 1.562338363643746e-17,
+      "escape_m": 1.5863133866799705e-16,
+      "final_escape_m": 1.5863107525733812e-16,
+      "max_strain": 5.995204332975845e-15,
+      "min_deformation_jacobian": 0.9999999999999937,
+      "final_strain": 5.995204332975845e-15
+    },
+    {
+      "angle_rad": -9.929938082390807e-19,
+      "omega_rad_s": 2.3732949812622746e-16,
+      "wobble_m": 1.389271039484868e-17,
+      "final_wobble_m": 1.389271039484868e-17,
+      "escape_m": 1.0513342220976465e-15,
+      "final_escape_m": 1.0513342220976465e-15,
+      "max_strain": 7.771561172376096e-15,
+      "min_deformation_jacobian": 0.9999999999999934,
+      "final_strain": 7.771561172376096e-15
+    }
+  ],
+  "input_work_j": 0.0,
+  "output_work_j": 0.0,
+  "applied_motor_torque_nm": 0.0,
+  "applied_brake_torque_nm": -0.0,
+  "max_motor_torque_nm": 0.0,
+  "max_brake_torque_nm": 0.0,
+  "completed_steps": 1,
+  "contact_hardening_retries": 0,
+  "solver_converged": true,
+  "input_shaft_omega_rad_s": 0.0,
+  "output_connector_omega_rad_s": 0.0,
+  "input_shaft_angle_rad": 0.0,
+  "output_connector_angle_rad": 0.0,
+  "connector_slip_rad": 4.97890984456959e-10,
+  "steady_observations": {
+    "input_gear_omega_rad_s": -1.0836082735583407e-14,
+    "output_gear_omega_rad_s": 4.978909650373413e-07,
+    "input_shaft_omega_rad_s": 0.0,
+    "output_connector_omega_rad_s": 0.0,
+    "motor_torque_nm": 0.0,
+    "brake_torque_nm": 0.0,
+    "output_connector_alpha_rad_s2": NaN,
+    "transmitted_contact_torque_nm": 0.0
+  },
+  "termination_tuple": {
+    "simulation_time_s": 0.001,
+    "time_since_brake_start_s": 0.0,
+    "instantaneous_brake_torque_nm": 0.0,
+    "instantaneous_motor_torque_nm": 0.0,
+    "candidate_angles_rad": [
+      -1.05456288876033e-17,
+      4.97890984456959e-10,
+      -6.774802341612701e-19,
+      -9.929938082390807e-19
+    ],
+    "candidate_omegas_rad_s": [
+      -1.0836082735583407e-14,
+      4.978909650373413e-07,
+      -1.0264948039831995e-15,
+      2.3732949812622746e-16
+    ],
+    "max_strain": 0.001950419534637149,
+    "min_deformation_jacobian": 0.9997636137340669,
+    "max_escape_m": 4.047464201953132e-12,
+    "connector_slip_rad": 4.97890984456959e-10,
+    "solver_status": "CONVERGED"
+  },
+  "policy_audit": {
+    "audit_method": "candidate_construction_ledger_v1",
+    "candidate_count": 4,
+    "candidate_is_deformable": true,
+    "candidate_attachments": false,
+    "candidate_internal_constraints": false,
+    "candidate_prescribed_motion": false,
+    "candidate_direct_forces": false,
+    "ledger_sha256": "c8a528e14574332d92bf98ea029c5b71d50061e590ea2f3c199354ad5795a13e"
+  },
+  "classification": "UNSCORED_PHYSICS_OBSERVATION"
+}

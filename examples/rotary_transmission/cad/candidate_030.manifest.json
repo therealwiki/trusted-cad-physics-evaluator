@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "step_path": "candidate_030.step",
+  "components": [
+    {
+      "role": "input_gear",
+      "expected_centroid_mm": [
+        -10.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "output_gear",
+      "expected_centroid_mm": [
+        21.5,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "role": "lower_bearing_plate",
+      "expected_centroid_mm": [
+        4.0,
+        0.0,
+        -6.1
+      ]
+    },
+    {
+      "role": "upper_bearing_plate",
+      "expected_centroid_mm": [
+        4.0,
+        0.0,
+        6.1
+      ]
+    }
+  ],
+  "ports": {
+    "input": {
+      "origin_mm": [
+        -10.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "output": {
+      "origin_mm": [
+        21.5,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "mount": {
+      "origin_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    }
+  }
+}

@@ -2,6 +2,7 @@
 #include "gnuplot.h"
 #include <fmt/format.h>
 #include <BlockedSparseMatrix/solve_pcg.h>
+#include <Eigen/IterativeLinearSolvers>
 #include <Eigen/SparseCholesky>
 #include <limits>
 #include <omp.h>
@@ -53,6 +54,12 @@ SolverReturn NewtonsMethod::solve()
     this->dofs_ls.resize(ndofs);
     this->rhs.resize(ndofs);
     this->grad.resize(ndofs);
+    // A failed nonlinear solve must be transaction-like: callers may retry the
+    // same physical timestep with hardened contact or a smaller dt. Preserve
+    // the exact pre-solve state unconditionally so no failed Newton iterate can
+    // leak into that retry.
+    this->initial_dofs.resize(ndofs);
+    this->global_potential->get_dofs(this->initial_dofs.data());
     double E0 = 0.0;
     double du_dot_grad = 0.0;
     double res_0 = std::numeric_limits<double>::max();
@@ -66,11 +73,6 @@ SolverReturn NewtonsMethod::solve()
     this->ppn_active_dof_blocks_for_projection.assign(n_dof_blocks, static_cast<uint8_t>(false));
 
     // Prepare for line search plot if needed
-    if (this->settings.print_line_search_upon_failure && !this->_ls_logging_mode) {
-        this->initial_dofs.resize(ndofs);
-        this->global_potential->get_dofs(this->initial_dofs.data());
-    }
-
     // Check initial state validity
     bool initial_valid = this->callbacks->run_is_initial_state_valid();
     if (!initial_valid) {
@@ -244,8 +246,15 @@ SolverReturn NewtonsMethod::solve()
         converged_valid = this->callbacks->run_is_converged_state_valid();
         if (!converged_valid) {
             this->output->print_with_new_line("Newton failure: Invalid converged state.", Verbosity::Medium);
+            this->callbacks->run_on_intermediate_state_invalid();
             result = SolverReturn::InvalidConvergedState;
         }
+    }
+
+    // Roll back every unsuccessful solve. State advancement is committed only
+    // by Stark::run_one_step() after a successful, validity-checked solve.
+    if (result != SolverReturn::Successful) {
+        this->global_potential->set_dofs(this->initial_dofs.data());
     }
 
     // Log
@@ -458,7 +467,46 @@ bool NewtonsMethod::_solve_linear_system(Eigen::VectorXd& du, const ElementHessi
         this->stats.cg_iterations += pcg_info.n_iterations;
         this->last_cg_iterations = pcg_info.n_iterations;
         return pcg_info.converged;
-    } 
+    }
+    else if (this->settings.linear_solver == LinearSolver::EigenICPCG) {
+        std::vector<Eigen::Triplet<double>> triplets;
+        hess->to_triplets(triplets);
+        Eigen::SparseMatrix<double> sparse_hess(ndofs, ndofs);
+        sparse_hess.setFromTriplets(triplets.begin(), triplets.end());
+        Eigen::ConjugateGradient<Eigen::SparseMatrix<double>, Eigen::Lower | Eigen::Upper,
+                                 Eigen::IncompleteCholesky<double>> solver;
+        solver.setMaxIterations(this->settings.cg_max_iterations);
+        solver.setTolerance(this->settings.cg_rel_tolerance);
+        solver.compute(sparse_hess);
+        if (solver.info() != Eigen::Success) {
+            return false;
+        }
+        du = solver.solve(this->rhs);
+        this->output->print(fmt::format("#CG {:5d} | ", (int)solver.iterations()), Verbosity::Full);
+        this->stats.cg_iterations += solver.iterations();
+        this->last_cg_iterations = solver.iterations();
+        return solver.info() == Eigen::Success;
+    }
+    else if (this->settings.linear_solver == LinearSolver::EigenILUTBiCGSTAB) {
+        std::vector<Eigen::Triplet<double>> triplets;
+        hess->to_triplets(triplets);
+        Eigen::SparseMatrix<double> sparse_hess(ndofs, ndofs);
+        sparse_hess.setFromTriplets(triplets.begin(), triplets.end());
+        Eigen::BiCGSTAB<Eigen::SparseMatrix<double>, Eigen::IncompleteLUT<double>> solver;
+        solver.preconditioner().setFillfactor(this->settings.ilut_fill_factor);
+        solver.preconditioner().setDroptol(this->settings.ilut_drop_tolerance);
+        solver.setMaxIterations(this->settings.cg_max_iterations);
+        solver.setTolerance(this->settings.cg_rel_tolerance);
+        solver.compute(sparse_hess);
+        if (solver.info() != Eigen::Success) {
+            return false;
+        }
+        du = solver.solve(this->rhs);
+        this->output->print(fmt::format("#CG {:5d} | ", (int)solver.iterations()), Verbosity::Full);
+        this->stats.cg_iterations += solver.iterations();
+        this->last_cg_iterations = solver.iterations();
+        return solver.info() == Eigen::Success;
+    }
     else {
         std::cout << "symx error: Unknown linear solver." << std::endl;
         exit(-1);
