@@ -1,4 +1,4 @@
-# IPC and timestep history — Candidates 001–030
+# IPC and timestep history — Candidates 001–031
 
 This is an execution audit, not a retrospective statement of intended settings. Values are taken from native STARK logs, observation contract hashes, preserved source history, and the immutable attempt ledger. `effective` means the value that reached STARK. Where the surviving artifacts cannot prove a value, it is explicitly marked.
 
@@ -66,5 +66,7 @@ Contract 1.10.0 fixed the settings plumbing and retry protocol, then its expensi
 | 030 | 1.21 | 1.00 ms | 1e7 | ILUT BiCGSTAB | Rejected immediately: non-descent directions triggered repeated Hessian-projection retries. |
 | 030 | 1.22 | 1.00 ms | 1e7 | ICPCG | Better early coupling but sustained take-up again reached roughly 10 s/step; rejected. |
 | 030 | 1.23 | 0.50 ms | 1e7 | BDPCG | Completed all 220 steps through 0.110 s with zero hardening retries, but required about 15 minutes and ended before brake onset. Stable early gate; rejected for production speed and not eligible for final reward. |
+| 031 | 1.23 | 0.50 ms | 1e7 | BDPCG | Corrected module-scaled 8:16 involute pair; 24,806 nodes. Completed 0.110 s with zero hardening and zero output work; faster than Candidate 030 but still expensive after D-flat take-up. |
+| 031 | 1.24 | 0.50 ms | 1e7 | BDPCG | Friction regularization changed from 1e-4 to 1e-3 m/s. The matched trajectory remained stable; outer Newton work fell, while sustained contact still required roughly 1,800–2,600 CG iterations. Pre-lock diagnostic only. |
 
 All interrupted rows are `INCONCLUSIVE_NUMERICS` performance studies. None is evidence of a broken printed part or a physical PASS.

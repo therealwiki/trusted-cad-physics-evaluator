@@ -62,8 +62,9 @@ def _gear(cx: float, teeth: int, pitch_r: float, thickness: float, bore: bool,
           dogbone: bool = False, addendum_factor: float = 1.0,
           pressure_angle_deg: float = 20.0) -> int:
     """Create one conservative spur gear/journal solid in millimetres."""
-    root_r = pitch_r - 1.25
-    outer_r = pitch_r + 1.05
+    module = 2.0 * pitch_r / teeth
+    root_r = pitch_r - 1.25 * module
+    outer_r = pitch_r + addendum_factor * module
     z0 = -thickness / 2
     parts = [gmsh.model.occ.addCylinder(cx, 0, z0, 0, 0, thickness, root_r)]
     for i in range(teeth):
@@ -140,19 +141,24 @@ def _housing_plate(z_center: float, gear_centers_x: tuple[float, float]) -> int:
 
 
 def generate(path: Path, tooth_fraction: float, center_distance: float, profile: str, dogbone: bool,
-             addendum_factor: float, pressure_angle_deg: float, housing: bool = False) -> None:
+             addendum_factor: float, pressure_angle_deg: float, housing: bool = False,
+             input_teeth: int = 12, output_teeth: int = 24) -> None:
     gmsh.initialize()
     try:
         gmsh.option.setNumber("General.Terminal", 1)
         gmsh.model.add("gearbox_candidate_001")
-        # 12:24 tooth pair, 30 mm pitch-centre spacing, opposite rotation.
-        input_gear = _gear(-10.0, 12, 10.0, 8.0, True, tooth_fraction=tooth_fraction, profile=profile,
+        if output_teeth != 2 * input_teeth:
+            raise ValueError("rotary_transmission_v1 requires an exact 2:1 tooth-count ratio")
+        # The pitch radii and center distance remain contract-facing geometry;
+        # tooth counts may change during pre-lock design optimization.
+        input_gear = _gear(-10.0, input_teeth, 10.0, 8.0, True, tooth_fraction=tooth_fraction, profile=profile,
                            dogbone=dogbone, addendum_factor=addendum_factor,
                            pressure_angle_deg=pressure_angle_deg)
-        output_gear = _gear(-10.0 + center_distance, 24, 20.0, 8.0, True, math.pi / 24,
+        output_gear = _gear(-10.0 + center_distance, output_teeth, 20.0, 8.0, True,
+                            math.pi / output_teeth,
                             tooth_fraction, profile, dogbone, addendum_factor, pressure_angle_deg)
-        gmsh.model.setEntityName(3, input_gear, "input_gear_12t")
-        gmsh.model.setEntityName(3, output_gear, "output_gear_24t")
+        gmsh.model.setEntityName(3, input_gear, f"input_gear_{input_teeth}t")
+        gmsh.model.setEntityName(3, output_gear, f"output_gear_{output_teeth}t")
         component_roles = [
             {"role": "input_gear", "expected_centroid_mm": [-10.0, 0.0, 0.0]},
             {"role": "output_gear", "expected_centroid_mm": [-10.0 + center_distance, 0.0, 0.0]},
@@ -193,7 +199,10 @@ if __name__ == "__main__":
     parser.add_argument("--dogbone", action="store_true")
     parser.add_argument("--addendum-factor", type=float, default=1.0)
     parser.add_argument("--pressure-angle-deg", type=float, default=20.0)
+    parser.add_argument("--input-teeth", type=int, default=12)
+    parser.add_argument("--output-teeth", type=int, default=24)
     parser.add_argument("--housing", action="store_true")
     args = parser.parse_args()
     generate(args.output.resolve(), args.tooth_fraction, args.center_distance_mm, args.profile, args.dogbone,
-             args.addendum_factor, args.pressure_angle_deg, args.housing)
+             args.addendum_factor, args.pressure_angle_deg, args.housing,
+             args.input_teeth, args.output_teeth)

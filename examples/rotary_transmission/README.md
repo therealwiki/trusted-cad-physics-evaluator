@@ -21,7 +21,7 @@ No analytic capacity estimate, declared trace, or scripted rotation is accepted 
 - `render/`: Blender/PyVista/FFmpeg project sources and frames
 - `outputs/`: final client-facing deliverables
 
-Candidate 030 is the first compact four-body architecture: separate input/output FEM gears and separate upper/lower FEM bearing frames. Evaluator-owned split mount studs contact the candidate frames; no evaluator bearing directly supports a gear.
+Candidate 031 is the current compact four-body architecture: separate input/output FEM gears and separate upper/lower FEM bearing frames. Evaluator-owned split mount studs contact the candidate frames; no evaluator bearing directly supports a gear. Its 8:16 involute pair preserves the 2:1 ratio while using module-scaled root and addendum geometry.
 
 ## Current reproducible commands
 
@@ -30,12 +30,13 @@ uv sync --reinstall-package pystark
 uv run pytest -q
 
 uv run python examples/rotary_transmission/generate_gearbox_step.py \
-  examples/rotary_transmission/cad/candidate_030.step \
-  --profile involute --center-distance-mm 31.5 --pressure-angle-deg 20 --housing
+  examples/rotary_transmission/cad/candidate_031.step \
+  --profile involute --center-distance-mm 31.5 --pressure-angle-deg 20 --housing \
+  --input-teeth 8 --output-teeth 16
 
 uv run python examples/rotary_transmission/run_harness.py \
-  examples/rotary_transmission/cad/candidate_030.step \
-  examples/rotary_transmission/runs/candidate_030_contract_1_23_0_full_a \
+  examples/rotary_transmission/cad/candidate_031.step \
+  examples/rotary_transmission/runs/candidate_031_contract_1_24_0_full_a \
   --duration 3 --actuation
 ```
 

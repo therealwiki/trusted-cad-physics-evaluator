@@ -301,6 +301,16 @@
       "evidence": ["runs/candidate_030_contract_1_18_0_icpcg_110ms", "runs/candidate_030_contract_1_19_0_k1e7_110ms", "runs/candidate_030_contract_1_20_0_dt025_110ms", "runs/candidate_030_contract_1_21_0_ilut_110ms", "runs/candidate_030_contract_1_22_0_icpcg_k1e7_110ms", "runs/candidate_030_contract_1_23_0_dt05_110ms/actuation_observation.json"],
       "measured_reason": "The 0.5 ms BDPCG run completed 220 steps through 0.110 s with zero hardening retries, but took about 15 minutes, ended before brake onset, and measured effectively zero output work.",
       "revision": "Treat linear conditioning and coupling take-up as the current engineering bottleneck; do not freeze or score this contract."
+    },
+    {
+      "attempt": 31,
+      "cad": "cad/candidate_031.step",
+      "cad_sha256": "5d3df36b2d9f181e299222ae33561f753219019939b4dc75e7931607f0c73a4c",
+      "settings_sha256": "d5ea6c3f2d51765f2866ba5ccb994a0fe78a48871842a83536f77e0582a51a37",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_031_contract_1_23_0_initial_contact/actuation_observation.json", "runs/candidate_031_contract_1_23_0_dt05_110ms/actuation_observation.json", "runs/candidate_031_contract_1_24_0_friction1e3_110ms/actuation_observation.json"],
+      "measured_reason": "A corrected module-scaled 8:16 involute pair reduced nodes by 23 percent and completed both 110 ms comparisons with zero hardening. A 1e-3 m/s friction regularization reduced nonlinear work, but the gate ended before gear/output engagement and measured zero output work.",
+      "revision": "Extend the unchanged pre-lock run far enough to observe gear engagement, then optimize the remaining linear conditioning before any full-load scoring."
     }
   ]
 }
