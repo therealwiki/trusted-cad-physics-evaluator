@@ -5,9 +5,9 @@ def test_prelock_validation_contract_has_stable_audit_hash():
     contract = load_contract("examples/rotary_transmission/contracts/rotary_transmission_v1.json",
                              allow_prelock=True)
     assert contract["contract_id"] == "rotary_transmission_v1"
-    assert contract["contract_version"] == "1.24.0"
+    assert contract["contract_version"] == "1.25.0"
     assert contract["frozen_before_attempts"] is False
-    assert contract_sha256(contract) == "d5ea6c3f2d51765f2866ba5ccb994a0fe78a48871842a83536f77e0582a51a37"
+    assert contract_sha256(contract) == "a4d8150356ddaeed36ceb53e84f941db7a3b03c877ced9f6acf0355511b01d6d"
 
 
 def test_contract_records_anti_cheating_boundary():
