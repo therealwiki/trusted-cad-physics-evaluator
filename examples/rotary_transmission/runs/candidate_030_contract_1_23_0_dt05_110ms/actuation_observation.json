@@ -1,0 +1,110 @@
+{
+  "contract_sha256": "df42314dead27193196ad238b71657fbeb271d58192d90623cf7f82bbba44637",
+  "cad_sha256": "e8760b052479a0c53e2cefc79472786a78a9b7525aa46b67a2b2c007cba12632",
+  "step_path": "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_030.step",
+  "duration_s": 0.11,
+  "candidate": [
+    {
+      "angle_rad": 0.011558432901046453,
+      "omega_rad_s": 1.155004716836437,
+      "wobble_m": 3.1250773164716685e-05,
+      "final_wobble_m": 3.124604058684182e-05,
+      "escape_m": 3.125080236983812e-05,
+      "final_escape_m": 3.1246061861258194e-05,
+      "max_strain": 1.0671775143578088e-06,
+      "min_deformation_jacobian": 0.9999993940566577,
+      "final_strain": 1.0671775143578088e-06
+    },
+    {
+      "angle_rad": 1.891018172692466e-10,
+      "omega_rad_s": 1.448500971217963e-09,
+      "wobble_m": 6.392357329230066e-12,
+      "final_wobble_m": 6.2328351344259056e-12,
+      "escape_m": 1.761669623226557e-11,
+      "final_escape_m": 1.6855473704511942e-11,
+      "max_strain": 0.0002336046465838404,
+      "min_deformation_jacobian": 0.9999732573848163,
+      "final_strain": 0.00023359930702149256
+    },
+    {
+      "angle_rad": -8.349983970532094e-10,
+      "omega_rad_s": 5.499843983422915e-08,
+      "wobble_m": 1.2787311475654465e-11,
+      "final_wobble_m": 1.2787311475654465e-11,
+      "escape_m": 3.6837949567382276e-11,
+      "final_escape_m": 2.4587039798357978e-11,
+      "max_strain": 8.009630847460869e-09,
+      "min_deformation_jacobian": 0.9999999951238487,
+      "final_strain": 4.750886128945808e-09
+    },
+    {
+      "angle_rad": 8.341164389040822e-10,
+      "omega_rad_s": 2.235583895499874e-07,
+      "wobble_m": 2.699578478950852e-11,
+      "final_wobble_m": 2.699578478950852e-11,
+      "escape_m": 8.128867933096637e-11,
+      "final_escape_m": 8.128867933096637e-11,
+      "max_strain": 9.182130167317837e-09,
+      "min_deformation_jacobian": 0.9999999955064044,
+      "final_strain": 1.941638738678364e-09
+    }
+  ],
+  "input_work_j": 0.0001335629725416704,
+  "output_work_j": 0.0,
+  "applied_motor_torque_nm": 0.0024120517558619105,
+  "applied_brake_torque_nm": -0.0,
+  "max_motor_torque_nm": 0.002417120761425962,
+  "max_brake_torque_nm": 0.0,
+  "completed_steps": 220,
+  "contact_hardening_retries": 0,
+  "solver_converged": true,
+  "input_shaft_omega_rad_s": 1.1517589648827629,
+  "output_connector_omega_rad_s": 4.226644507428189e-16,
+  "input_shaft_angle_rad": 0.05560185220473409,
+  "output_connector_angle_rad": 1.005462841201539e-18,
+  "connector_slip_rad": 0.0440469597501805,
+  "steady_observations": {
+    "input_gear_omega_rad_s": 0.10507666887557862,
+    "output_gear_omega_rad_s": 1.7191075109521311e-09,
+    "input_shaft_omega_rad_s": 0.5054713906992251,
+    "output_connector_omega_rad_s": 9.16582447191953e-18,
+    "motor_torque_nm": 0.0021245575025121283,
+    "brake_torque_nm": 0.0,
+    "output_connector_alpha_rad_s2": 3.859949321852224e-15,
+    "transmitted_contact_torque_nm": 7.719898643704449e-20
+  },
+  "termination_tuple": {
+    "simulation_time_s": 0.11000000000000008,
+    "time_since_brake_start_s": 0.0,
+    "instantaneous_brake_torque_nm": 0.0,
+    "instantaneous_motor_torque_nm": 0.0024120517558619105,
+    "candidate_angles_rad": [
+      0.011558432901046453,
+      1.891018172692466e-10,
+      -8.349983970532094e-10,
+      8.341164389040822e-10
+    ],
+    "candidate_omegas_rad_s": [
+      1.155004716836437,
+      1.448500971217963e-09,
+      5.499843983422915e-08,
+      2.235583895499874e-07
+    ],
+    "max_strain": 0.0002336046465838404,
+    "min_deformation_jacobian": 0.9999732573848163,
+    "max_escape_m": 3.125080236983812e-05,
+    "connector_slip_rad": 0.0440469597501805,
+    "solver_status": "CONVERGED"
+  },
+  "policy_audit": {
+    "audit_method": "candidate_construction_ledger_v1",
+    "candidate_count": 4,
+    "candidate_is_deformable": true,
+    "candidate_attachments": false,
+    "candidate_internal_constraints": false,
+    "candidate_prescribed_motion": false,
+    "candidate_direct_forces": false,
+    "ledger_sha256": "c8a528e14574332d92bf98ea029c5b71d50061e590ea2f3c199354ad5795a13e"
+  },
+  "classification": "UNSCORED_PHYSICS_OBSERVATION"
+}
