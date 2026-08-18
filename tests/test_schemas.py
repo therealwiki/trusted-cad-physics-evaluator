@@ -20,6 +20,8 @@ def test_manifest_rejects_duplicate_ports_and_non_step():
 def test_settings_make_contact_scale_explicit_and_small():
     with pytest.raises(ValueError):
         SimulationSettings(surface_size_m=1e-4, contact_distance_m=2e-4)
+    with pytest.raises(ValueError):
+        SimulationSettings(ipc_min_contact_stiffness=2e8, ipc_max_contact_stiffness=1e8)
 
 
 def test_task_requires_prescribed_standard_for_each_port():

@@ -1,0 +1,65 @@
+{
+  "contract_sha256": "e6ed82e0ab76ab3729958bced5d17d063bca22f14e9c241c51c51663f8b9d989",
+  "step_path": "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_025.step",
+  "duration_s": 0.8,
+  "candidate": [
+    {
+      "angle_rad": 2.817773938269082,
+      "omega_rad_s": 3.1551607866327744,
+      "wobble_m": 0.0001242496430487475,
+      "escape_m": 0.00013090688205447104,
+      "max_strain": 0.00040071744165004475
+    },
+    {
+      "angle_rad": -1.3876684081547785,
+      "omega_rad_s": -1.8241252175812535,
+      "wobble_m": 5.501985910384816e-05,
+      "escape_m": 7.409923594509565e-05,
+      "max_strain": 0.00224470245359365
+    }
+  ],
+  "input_work_j": 0.01094466966839236,
+  "output_work_j": 0.006887609064282772,
+  "applied_motor_torque_nm": 0.11779158686513763,
+  "applied_brake_torque_nm": 0.019979999987253923,
+  "completed_steps": 2999,
+  "solver_converged": false,
+  "input_shaft_omega_rad_s": 3.6441682626972476,
+  "output_connector_omega_rad_s": -1.0933132616625663,
+  "input_shaft_angle_rad": 2.889601605543668,
+  "output_connector_angle_rad": -1.3082704716050995,
+  "connector_slip_rad": 0.07939793654967908,
+  "steady_observations": {
+    "input_gear_omega_rad_s": 6.511003991655191,
+    "output_gear_omega_rad_s": -3.113154991262894,
+    "input_shaft_omega_rad_s": 5.834593747885567,
+    "output_connector_omega_rad_s": -3.3909485035100513,
+    "motor_torque_nm": 0.008270312605721664,
+    "brake_torque_nm": 0.014674999999996198
+  },
+  "termination_tuple": {
+    "simulation_time_s": 0.7497499999999452,
+    "time_since_brake_start_s": 0.24974999999994518,
+    "instantaneous_brake_torque_nm": 0.019979999987253923,
+    "instantaneous_motor_torque_nm": 0.11779158686513763,
+    "candidate_angles_rad": [
+      2.817773938269082,
+      -1.3876684081547785
+    ],
+    "candidate_omegas_rad_s": [
+      3.1551607866327744,
+      -1.8241252175812535
+    ],
+    "max_strain": 0.00224470245359365,
+    "max_escape_m": 0.00013090688205447104,
+    "connector_slip_rad": 0.07939793654967908,
+    "solver_status": "INCONCLUSIVE_NUMERICS"
+  },
+  "policy_audit": {
+    "candidate_is_deformable": true,
+    "candidate_attachments": false,
+    "candidate_internal_constraints": false,
+    "candidate_prescribed_motion": false
+  },
+  "classification": "UNSCORED_PHYSICS_OBSERVATION"
+}

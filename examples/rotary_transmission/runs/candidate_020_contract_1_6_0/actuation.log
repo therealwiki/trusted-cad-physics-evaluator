@@ -1,0 +1,1261 @@
+
+================================== Settings ==============================
+Stark Settings
+     Output
+         simulation_name: "mechanical_eval"
+         output_directory: "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/runs/candidate_020_contract_1_6_0/vtk"
+         codegen_directory: "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/runs/candidate_020_contract_1_6_0/codegen"
+         time_stamp: "2026-08-17__19-52-42"
+         fps: 30
+         console_verbosity: Summary
+         file_verbosity: Full
+         enable_frame_writes: true
+         enable_output: true
+     Simulation
+         gravity: (0.000000, 0.000000, -9.810000)
+         init_frictional_contact: true
+         max_time_step_size: 5.0000e-04
+         use_adaptive_time_step: false
+         time_step_size_success_multiplier: 1.05
+         time_step_size_lower_bound: 1.0e-06
+     Newton's Method
+         Iteration limits
+             max_iterations: 2147483647
+             min_iterations: 0
+         Convergence
+             residual_tolerance_abs: 1.0e-06
+             residual_tolerance_rel: 0.0e+00
+             step_tolerance: 1.0e-03
+             max_iterations_as_success: false
+         Line search
+             step_cap: inf
+             enable_armijo_backtracking: true
+             armijo_beta: 1.0e-04
+             max_armijo_iterations: 20
+             max_invalid_state_iterations: 8
+             print_line_search_upon_failure: false
+         Hessian projection
+             projection_mode: Progressive
+             projection_eps: 1.0e-10
+             use_mirroring: false
+             on_demand_countdown: 4
+             ppn_tightening_factor: 0.50
+             ppn_release_factor: 2.00
+         Linear solver
+             solver: BDPCG
+             cg_max_iterations: 10000
+             cg_abs_tolerance: 1.0e-12
+             cg_rel_tolerance: 1.0e-04
+             cg_stop_on_indefiniteness: true
+             bailout_residual: 1.0e-10
+     Execution
+         allowed_execution_time: 1.8e+308
+         end_simulation_time: 1.8e+308
+         end_frame: 2147483647
+         n_threads: 5
+
+==================================== SymX ================================
+Second Order Potentials:
+    EnergyLumpedInertia.............................queued for compilation
+    EnergyPrescribedPositions.......................queued for compilation
+    EnergyAttachments_d_d_e_e.......................queued for compilation
+    EnergySegmentStrain.............................queued for compilation
+    friction_d_d_pt_C0..............................queued for compilation
+    EnergySegmentStrain_Elasticity_Only.............queued for compilation
+    rb_constraint_global_directions.................queued for compilation
+    EnergyAttachments_rb_d..........................queued for compilation
+    friction_d_d_ee_C0..............................queued for compilation
+    contact_d_d_pt_pp_cubic.........................queued for compilation
+    contact_d_d_pt_pe_cubic.........................queued for compilation
+    EnergyTriangleStrain............................queued for compilation
+    contact_d_d_pt_pt_cubic.........................queued for compilation
+    contact_rb_rb_ee_ee_cubic.......................queued for compilation
+    friction_rb_rb_pp_C0............................queued for compilation
+    EnergyTriangleStrain_Elasticity_Only............queued for compilation
+    contact_rb_d_pt_pp_cubic........................queued for compilation
+    rb_constraint_points............................queued for compilation
+    contact_d_d_ee_pp_cubic.........................queued for compilation
+    contact_rb_d_pt_pe_cubic........................queued for compilation
+    contact_d_d_ee_pe_cubic.........................queued for compilation
+    friction_rb_rb_pe_C0............................queued for compilation
+    EnergyDiscreteShells............................queued for compilation
+    EnergyBendingFlat...............................queued for compilation
+    contact_d_d_ee_ee_cubic.........................queued for compilation
+    contact_rb_d_pt_pt_cubic........................queued for compilation
+    rb_constraint_point_on_axis.....................queued for compilation
+    contact_rb_d_pt_ep_cubic........................queued for compilation
+    friction_rb_rb_pt_C0............................queued for compilation
+    contact_rb_rb_pt_pp_cubic.......................queued for compilation
+    contact_rb_d_pt_tp_cubic........................queued for compilation
+    friction_rb_rb_ee_C0............................queued for compilation
+    contact_rb_rb_pt_pe_cubic.......................queued for compilation
+    rb_constraint_distances.........................queued for compilation
+    EnergyTetStrain.................................queued for compilation
+    friction_rb_d_pp_C0.............................queued for compilation
+    EnergyTetStrain_Elasticity_Only.................queued for compilation
+    EnergyRigidBodyInertia_Linear...................queued for compilation
+    contact_rb_d_ee_pp_cubic........................queued for compilation
+    EnergyRigidBodyInertia_Angular..................queued for compilation
+    friction_rb_d_pe_C0.............................queued for compilation
+    contact_rb_rb_pt_pt_cubic.......................queued for compilation
+    rb_constraint_global_points.....................queued for compilation
+    EnergyAttachments_d_d_p_e.......................queued for compilation
+    EnergyAttachments_d_d_p_t.......................queued for compilation
+    EnergyAttachments_d_d_p_p.......................queued for compilation
+    rb_constraint_distance_limits...................queued for compilation
+    friction_rb_d_pt_C0.............................queued for compilation
+    rb_constraint_angular_velocity..................queued for compilation
+    rb_constraint_linear_velocity...................queued for compilation
+    rb_constraint_directions........................queued for compilation
+    friction_rb_d_ee_C0.............................queued for compilation
+    contact_rb_d_ee_pe_cubic........................queued for compilation
+    friction_rb_d_ep_C0.............................queued for compilation
+    rb_constraint_damped_spring.....................queued for compilation
+    rb_constraint_angle_limits......................queued for compilation
+    friction_d_d_pe_C0..............................queued for compilation
+    friction_d_d_pp_C0..............................queued for compilation
+    friction_rb_d_tp_C0.............................queued for compilation
+    contact_rb_d_ee_ee_cubic........................queued for compilation
+    contact_rb_rb_ee_pp_cubic.......................queued for compilation
+    contact_rb_d_ee_ep_cubic........................queued for compilation
+    contact_rb_rb_ee_pe_cubic.......................queued for compilation
+Compiling... done.
+Total time: 22.440717 s
+
+Degrees of freedom:
+soft.v1: 72369
+rigid.v1: 21
+rigid.w1: 21
+Total: 72411
+
+==================================== STARK ===============================
+[Frame: 0] Time: 0.000 s
+    0. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  130.3 ms | cr:  260.5
+    1. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  113.0 ms | cr:  226.1
+    2. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  114.3 ms | cr:  228.7
+    3. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  113.5 ms | cr:  227.0
+    4. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  116.7 ms | cr:  233.5
+    5. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  112.5 ms | cr:  224.9
+    6. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  111.3 ms | cr:  222.5
+    7. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  111.2 ms | cr:  222.3
+    8. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  112.2 ms | cr:  224.4
+    9. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  113.4 ms | cr:  226.8
+    10. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  110.9 ms | cr:  221.8
+    11. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  109.5 ms | cr:  219.0
+    12. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  113.1 ms | cr:  226.1
+    13. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  110.2 ms | cr:  220.5
+    14. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  112.8 ms | cr:  225.7
+    15. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  111.3 ms | cr:  222.6
+    16. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  112.6 ms | cr:  225.2
+    17. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  115.6 ms | cr:  231.3
+    18. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  113.7 ms | cr:  227.4
+    19. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  113.8 ms | cr:  227.7
+    20. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  113.6 ms | cr:  227.2
+    21. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  114.3 ms | cr:  228.5
+    22. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  101 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  174.6 ms | cr:  349.1
+    23. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:   60.5 ms | cr:  121.0
+    24. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:   60.5 ms | cr:  121.1
+    25. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:   57.7 ms | cr:  115.3
+    26. dt:  0.50 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:   58.4 ms | cr:  116.7
+    27. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  461 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  320.4 ms | cr:  640.8
+    28. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.8 ms | cr:  273.6
+    29. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  143.8 ms | cr:  287.7
+    30. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.4 ms | cr:  268.8
+    31. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.2 ms | cr:  270.5
+    32. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.5 ms | cr:  271.0
+    33. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.6 ms | cr:  275.3
+    34. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.6 ms | cr:  275.2
+    35. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.8 ms | cr:  269.5
+    36. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  161.6 ms | cr:  323.2
+    37. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  159.6 ms | cr:  319.2
+    38. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.2 ms | cr:  274.5
+    39. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.3 ms | cr:  268.6
+    40. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.8 ms | cr:  269.5
+    41. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.5 ms | cr:  268.9
+    42. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.9 ms | cr:  275.8
+    43. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.2 ms | cr:  274.4
+    44. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.5 ms | cr:  273.1
+    45. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.3 ms | cr:  278.6
+    46. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  140.8 ms | cr:  281.6
+    47. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.3 ms | cr:  268.5
+    48. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.2 ms | cr:  274.5
+    49. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.3 ms | cr:  278.6
+    50. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.0 ms | cr:  278.1
+    51. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.3 ms | cr:  274.7
+    52. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  141.3 ms | cr:  282.6
+    53. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  138.6 ms | cr:  277.2
+    54. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.0 ms | cr:  268.0
+    55. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.0 ms | cr:  272.0
+    56. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.2 ms | cr:  270.3
+    57. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.9 ms | cr:  273.8
+    58. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  140.4 ms | cr:  280.8
+    59. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.5 ms | cr:  269.0
+    60. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.5 ms | cr:  270.9
+    61. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  132.3 ms | cr:  264.5
+    62. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.8 ms | cr:  275.5
+    63. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.8 ms | cr:  271.6
+    64. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.7 ms | cr:  275.4
+    65. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.8 ms | cr:  273.5
+    66. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  138.2 ms | cr:  276.3
+[Frame: 1] Time: 0.034 s
+    67. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  140.3 ms | cr:  280.6
+    68. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.5 ms | cr:  273.1
+    69. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.2 ms | cr:  270.4
+    70. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  138.5 ms | cr:  277.0
+    71. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.3 ms | cr:  278.6
+    72. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  140.1 ms | cr:  280.2
+    73. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  138.5 ms | cr:  277.0
+    74. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  142.0 ms | cr:  284.0
+    75. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.6 ms | cr:  273.2
+    76. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.8 ms | cr:  279.5
+    77. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.3 ms | cr:  270.7
+    78. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.9 ms | cr:  269.7
+    79. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  140.6 ms | cr:  281.2
+    80. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.7 ms | cr:  279.5
+    81. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.9 ms | cr:  269.8
+    82. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.6 ms | cr:  269.2
+    83. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.8 ms | cr:  267.5
+    84. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  140.7 ms | cr:  281.3
+    85. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.4 ms | cr:  268.9
+    86. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  132.2 ms | cr:  264.4
+    87. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.9 ms | cr:  269.8
+    88. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.0 ms | cr:  277.9
+    89. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  132.7 ms | cr:  265.5
+    90. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.3 ms | cr:  272.5
+    91. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.5 ms | cr:  272.9
+    92. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.0 ms | cr:  274.0
+    93. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.8 ms | cr:  271.6
+    94. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.1 ms | cr:  266.1
+    95. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.8 ms | cr:  273.6
+    96. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  141.5 ms | cr:  283.0
+    97. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.3 ms | cr:  266.6
+    98. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  141.3 ms | cr:  282.5
+    99. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.8 ms | cr:  273.6
+    100. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.6 ms | cr:  267.1
+    101. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.7 ms | cr:  273.3
+    102. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.3 ms | cr:  268.7
+    103. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.6 ms | cr:  271.3
+    104. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.2 ms | cr:  266.3
+    105. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.0 ms | cr:  274.0
+    106. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.8 ms | cr:  271.7
+    107. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  132.5 ms | cr:  265.0
+    108. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.8 ms | cr:  273.6
+    109. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.6 ms | cr:  271.3
+    110. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  138.5 ms | cr:  277.1
+    111. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.1 ms | cr:  270.2
+    112. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.3 ms | cr:  268.6
+    113. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.4 ms | cr:  268.7
+    114. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  138.7 ms | cr:  277.3
+    115. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.7 ms | cr:  273.5
+    116. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.8 ms | cr:  267.5
+    117. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.8 ms | cr:  269.6
+    118. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  141.3 ms | cr:  282.7
+    119. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.9 ms | cr:  271.9
+    120. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.0 ms | cr:  267.9
+    121. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.8 ms | cr:  273.5
+    122. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.1 ms | cr:  268.2
+    123. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.4 ms | cr:  266.9
+    124. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.5 ms | cr:  273.0
+    125. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  138.6 ms | cr:  277.2
+    126. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  130.8 ms | cr:  261.7
+    127. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.1 ms | cr:  274.3
+    128. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  132.3 ms | cr:  264.5
+    129. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  141.1 ms | cr:  282.2
+    130. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.2 ms | cr:  274.4
+    131. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.5 ms | cr:  274.9
+    132. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.7 ms | cr:  273.4
+    133. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.8 ms | cr:  267.7
+[Frame: 2] Time: 0.067 s
+    134. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.5 ms | cr:  269.1
+    135. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.3 ms | cr:  274.7
+    136. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.8 ms | cr:  275.5
+    137. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.1 ms | cr:  268.2
+    138. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.3 ms | cr:  270.5
+    139. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.1 ms | cr:  266.2
+    140. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.6 ms | cr:  279.3
+    141. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  144.5 ms | cr:  289.1
+    142. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.2 ms | cr:  272.4
+    143. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.1 ms | cr:  278.2
+    144. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  133.9 ms | cr:  267.8
+    145. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  136.6 ms | cr:  273.2
+    146. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.0 ms | cr:  269.9
+    147. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.1 ms | cr:  278.2
+    148. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  140.8 ms | cr:  281.7
+    149. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.2 ms | cr:  270.3
+    150. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.6 ms | cr:  269.2
+    151. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.9 ms | cr:  271.7
+    152. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  134.7 ms | cr:  269.4
+    153. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.9 ms | cr:  279.7
+    154. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  139.8 ms | cr:  279.5
+    155. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  137.4 ms | cr:  274.8
+    156. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    1 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  135.8 ms | cr:  271.5
+    157. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:    2 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  140.1 ms | cr:  280.2
+    158. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1395 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  683.7 ms | cr: 1367.5
+    159. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  360 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  273.9 ms | cr:  547.7
+    160. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  958 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  498.8 ms | cr:  997.6
+    161. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  871 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  465.8 ms | cr:  931.6
+    162. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  907 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  478.8 ms | cr:  957.6
+    163. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  958 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  495.1 ms | cr:  990.1
+    164. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  934 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  511.4 ms | cr: 1022.8
+    165. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  971 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  499.0 ms | cr:  998.0
+    166. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  882 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  473.1 ms | cr:  946.3
+    167. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  990 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  512.3 ms | cr: 1024.6
+    168. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  955 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  506.5 ms | cr: 1013.0
+    169. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  981 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  510.7 ms | cr: 1021.4
+    170. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  895 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  473.5 ms | cr:  946.9
+    171. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  994 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  525.7 ms | cr: 1051.4
+    172. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1030 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  531.1 ms | cr: 1062.2
+    173. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  938 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  500.2 ms | cr: 1000.5
+    174. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  994 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  512.0 ms | cr: 1024.0
+    175. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  948 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  489.7 ms | cr:  979.5
+    176. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  988 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  510.4 ms | cr: 1020.8
+    177. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  930 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  489.9 ms | cr:  979.8
+    178. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  976 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  508.5 ms | cr: 1016.9
+    179. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  898 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  476.2 ms | cr:  952.3
+    180. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1011 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  520.0 ms | cr: 1040.0
+    181. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1000 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  512.3 ms | cr: 1024.5
+    182. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1014 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  522.3 ms | cr: 1044.5
+    183. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1004 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  510.7 ms | cr: 1021.4
+    184. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1022 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  521.3 ms | cr: 1042.5
+    185. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  909 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  477.6 ms | cr:  955.2
+    186. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  995 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  506.8 ms | cr: 1013.6
+    187. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  909 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  478.8 ms | cr:  957.7
+    188. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1000 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  509.0 ms | cr: 1018.0
+    189. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1292 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  620.8 ms | cr: 1241.7
+    190. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1259 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  613.5 ms | cr: 1226.9
+    191. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2384 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1053.1 ms | cr: 2106.3
+    192. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1032 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  527.0 ms | cr: 1054.1
+    193. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1312 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  628.7 ms | cr: 1257.4
+    194. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1213 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  600.7 ms | cr: 1201.4
+    195. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1305 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  624.3 ms | cr: 1248.7
+    196. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1288 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  619.7 ms | cr: 1239.4
+    197. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1309 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  627.6 ms | cr: 1255.2
+    198. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1594 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  737.3 ms | cr: 1474.6
+    199. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1123 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  566.6 ms | cr: 1133.1
+    200. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1302 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  637.5 ms | cr: 1274.9
+[Frame: 3] Time: 0.101 s
+    201. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1174 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  575.7 ms | cr: 1151.5
+    202. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1304 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  630.9 ms | cr: 1261.8
+    203. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1544 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  729.5 ms | cr: 1459.0
+    204. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1567 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  723.1 ms | cr: 1446.2
+    205. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2485 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1109.6 ms | cr: 2219.1
+    206. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2568 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1132.4 ms | cr: 2264.7
+    207. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2334 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1042.9 ms | cr: 2085.8
+    208. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2303 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1029.2 ms | cr: 2058.4
+    209. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2426 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1082.1 ms | cr: 2164.3
+    210. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2308 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1036.9 ms | cr: 2073.8
+    211. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2446 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1084.5 ms | cr: 2169.1
+    212. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2371 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1064.2 ms | cr: 2128.4
+    213. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2466 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1092.6 ms | cr: 2185.3
+    214. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2415 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1075.2 ms | cr: 2150.5
+    215. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2523 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1126.0 ms | cr: 2252.0
+    216. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2433 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1089.9 ms | cr: 2179.7
+    217. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2060 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  938.8 ms | cr: 1877.6
+    218. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2158 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  987.5 ms | cr: 1975.1
+    219. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2106 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  952.5 ms | cr: 1905.0
+    220. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2050 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  938.8 ms | cr: 1877.5
+    221. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2049 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  936.9 ms | cr: 1873.8
+    222. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1023 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  540.5 ms | cr: 1081.1
+    223. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1046 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  545.1 ms | cr: 1090.2
+    224. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1059 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  550.6 ms | cr: 1101.1
+    225. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  950 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  504.3 ms | cr: 1008.6
+    226. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1042 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  549.0 ms | cr: 1097.9
+    227. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  947 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  522.4 ms | cr: 1044.8
+    228. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  883 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  479.4 ms | cr:  958.8
+    229. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1019 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  542.4 ms | cr: 1084.7
+    230. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  945 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  507.8 ms | cr: 1015.6
+    231. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1047 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  539.7 ms | cr: 1079.3
+    232. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  941 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  510.6 ms | cr: 1021.2
+    233. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1055 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  548.1 ms | cr: 1096.3
+    234. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  957 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  510.8 ms | cr: 1021.6
+    235. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1047 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  537.2 ms | cr: 1074.4
+    236. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  935 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  501.9 ms | cr: 1003.8
+    237. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  946 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  508.5 ms | cr: 1017.1
+    238. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1034 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  537.7 ms | cr: 1075.3
+    239. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  947 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  513.1 ms | cr: 1026.2
+    240. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  937 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  553.9 ms | cr: 1107.9
+    241. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  945 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  540.6 ms | cr: 1081.2
+    242. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  946 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  511.3 ms | cr: 1022.7
+    243. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1346 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  670.6 ms | cr: 1341.1
+    244. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton:  958 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  512.2 ms | cr: 1024.4
+    245. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1357 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  668.2 ms | cr: 1336.4
+    246. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1372 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  664.6 ms | cr: 1329.2
+    247. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2868 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1254.5 ms | cr: 2509.0
+    248. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3461 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1609.3 ms | cr: 3218.6
+    249. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1654 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  791.3 ms | cr: 1582.7
+    250. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1650 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  948.9 ms | cr: 1897.9
+    251. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1673 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  803.9 ms | cr: 1607.8
+    252. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1659 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  811.6 ms | cr: 1623.1
+    253. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1670 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  802.3 ms | cr: 1604.5
+    254. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1653 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  780.9 ms | cr: 1561.9
+    255. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1663 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  782.0 ms | cr: 1564.1
+    256. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1644 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  809.4 ms | cr: 1618.8
+    257. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1630 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  772.4 ms | cr: 1544.8
+    258. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1642 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  772.4 ms | cr: 1544.8
+    259. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1858 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  848.8 ms | cr: 1697.6
+    260. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1861 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  849.3 ms | cr: 1698.6
+    261. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1858 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  860.8 ms | cr: 1721.5
+    262. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1856 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  855.2 ms | cr: 1710.5
+    263. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1852 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  844.3 ms | cr: 1688.7
+    264. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2090 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  936.7 ms | cr: 1873.4
+    265. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2094 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  940.1 ms | cr: 1880.2
+    266. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2097 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  938.8 ms | cr: 1877.6
+[Frame: 4] Time: 0.134 s
+    267. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1884 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  853.7 ms | cr: 1707.5
+    268. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3537 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1493.8 ms | cr: 2987.6
+    269. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3778 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1692.6 ms | cr: 3385.1
+    270. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3773 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1628.7 ms | cr: 3257.5
+    271. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3782 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1599.0 ms | cr: 3197.9
+    272. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3764 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1591.0 ms | cr: 3182.1
+    273. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3763 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1578.9 ms | cr: 3157.8
+    274. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4016 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1685.5 ms | cr: 3371.1
+    275. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4022 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1680.4 ms | cr: 3360.8
+    276. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3778 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1595.5 ms | cr: 3191.1
+    277. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3777 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1582.5 ms | cr: 3165.1
+    278. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3573 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1503.6 ms | cr: 3007.2
+    279. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3297 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1403.5 ms | cr: 2807.0
+    280. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3317 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1426.7 ms | cr: 2853.5
+    281. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3323 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1427.5 ms | cr: 2855.0
+    282. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3334 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1415.1 ms | cr: 2830.1
+    283. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3341 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1415.5 ms | cr: 2831.0
+    284. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3348 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1416.3 ms | cr: 2832.7
+    285. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3356 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1424.1 ms | cr: 2848.2
+    286. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3363 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1436.7 ms | cr: 2873.4
+    287. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3344 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1443.6 ms | cr: 2887.2
+    288. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3386 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1434.0 ms | cr: 2867.9
+    289. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3400 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1440.6 ms | cr: 2881.3
+    290. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2877 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1244.2 ms | cr: 2488.4
+    291. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2859 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1248.9 ms | cr: 2497.8
+    292. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2861 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1245.9 ms | cr: 2491.8
+    293. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2873 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1294.9 ms | cr: 2589.8
+    294. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2882 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1239.8 ms | cr: 2479.5
+    295. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2888 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1251.6 ms | cr: 2503.2
+    296. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2897 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1250.1 ms | cr: 2500.2
+    297. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2900 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1248.3 ms | cr: 2496.5
+    298. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2905 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1272.9 ms | cr: 2545.8
+    299. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2653 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1160.8 ms | cr: 2321.7
+    300. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2647 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1159.7 ms | cr: 2319.4
+    301. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2630 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1158.4 ms | cr: 2316.8
+    302. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2645 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1147.6 ms | cr: 2295.2
+    303. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2641 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1157.0 ms | cr: 2314.1
+    304. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2645 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1262.7 ms | cr: 2525.3
+    305. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2647 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1162.7 ms | cr: 2325.3
+    306. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2646 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1170.6 ms | cr: 2341.2
+    307. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2646 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1178.8 ms | cr: 2357.5
+    308. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2651 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1154.6 ms | cr: 2309.3
+    309. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2632 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1154.1 ms | cr: 2308.2
+    310. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2648 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1165.4 ms | cr: 2330.8
+    311. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2633 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1156.2 ms | cr: 2312.4
+    312. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2624 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1156.5 ms | cr: 2312.9
+    313. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2647 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1159.3 ms | cr: 2318.6
+    314. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2907 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1257.5 ms | cr: 2515.0
+    315. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2899 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1250.2 ms | cr: 2500.4
+    316. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2894 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1251.7 ms | cr: 2503.4
+    317. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2892 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1248.9 ms | cr: 2497.8
+    318. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2888 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1251.3 ms | cr: 2502.6
+    319. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2882 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1244.0 ms | cr: 2488.1
+    320. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2878 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1240.3 ms | cr: 2480.6
+    321. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2874 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1239.5 ms | cr: 2479.0
+    322. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2871 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1258.1 ms | cr: 2516.2
+    323. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2864 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1236.8 ms | cr: 2473.6
+    324. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2862 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1234.9 ms | cr: 2469.7
+    325. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2857 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1238.2 ms | cr: 2476.4
+    326. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2851 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1229.4 ms | cr: 2458.8
+    327. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2849 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1258.3 ms | cr: 2516.6
+    328. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2848 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1237.0 ms | cr: 2474.0
+    329. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2841 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1234.7 ms | cr: 2469.4
+    330. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2839 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1235.3 ms | cr: 2470.6
+    331. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2837 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1221.2 ms | cr: 2442.4
+    332. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2834 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1232.5 ms | cr: 2465.0
+    333. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2835 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1225.7 ms | cr: 2451.4
+[Frame: 5] Time: 0.167 s
+    334. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2837 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1226.1 ms | cr: 2452.1
+    335. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2834 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1213.8 ms | cr: 2427.6
+    336. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2828 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1222.7 ms | cr: 2445.5
+    337. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2832 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1221.4 ms | cr: 2442.8
+    338. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2832 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1215.4 ms | cr: 2430.7
+    339. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3147 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1332.7 ms | cr: 2665.4
+    340. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3172 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1358.5 ms | cr: 2717.0
+    341. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3178 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1373.3 ms | cr: 2746.5
+    342. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3198 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1374.9 ms | cr: 2749.7
+    343. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3200 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1360.2 ms | cr: 2720.4
+    344. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3176 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1343.7 ms | cr: 2687.5
+    345. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3113 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1333.8 ms | cr: 2667.5
+    346. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3181 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1356.3 ms | cr: 2712.7
+    347. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2875 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1233.2 ms | cr: 2466.3
+    348. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2867 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1240.2 ms | cr: 2480.5
+    349. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2865 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1231.9 ms | cr: 2463.9
+    350. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3193 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1366.9 ms | cr: 2733.8
+    351. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3157 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1348.3 ms | cr: 2696.5
+    352. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2820 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1224.8 ms | cr: 2449.7
+    353. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2828 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1217.9 ms | cr: 2435.8
+    354. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2831 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1209.1 ms | cr: 2418.3
+    355. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2837 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1223.8 ms | cr: 2447.7
+    356. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3156 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1349.8 ms | cr: 2699.5
+    357. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3165 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1360.1 ms | cr: 2720.2
+    358. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2802 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1213.2 ms | cr: 2426.4
+    359. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3180 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1348.5 ms | cr: 2697.0
+    360. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1700 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1494.0 ms | cr: 2988.0
+    361. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3284 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1391.8 ms | cr: 2783.5
+    362. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3345 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1419.0 ms | cr: 2838.0
+    363. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3601 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1506.7 ms | cr: 3013.4
+    364. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3594 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1505.6 ms | cr: 3011.2
+    365. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3595 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1497.4 ms | cr: 2994.7
+    366. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1887 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  848.0 ms | cr: 1695.9
+    367. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2097 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  921.7 ms | cr: 1843.5
+    368. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2082 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  920.5 ms | cr: 1841.1
+    369. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2073 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  922.6 ms | cr: 1845.1
+    370. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2065 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  919.7 ms | cr: 1839.3
+    371. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2058 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  904.1 ms | cr: 1808.1
+    372. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4157 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1718.1 ms | cr: 3436.3
+    373. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1819 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  825.7 ms | cr: 1651.5
+    374. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1802 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  821.9 ms | cr: 1643.7
+    375. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2003 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  903.1 ms | cr: 1806.2
+    376. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2014 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  923.6 ms | cr: 1847.3
+    377. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2006 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  921.9 ms | cr: 1843.8
+    378. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4023 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1675.5 ms | cr: 3351.1
+    379. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4241 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1768.4 ms | cr: 3536.7
+    380. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4247 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1763.0 ms | cr: 3526.1
+    381. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4034 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1688.1 ms | cr: 3376.2
+    382. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4253 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1781.1 ms | cr: 3562.2
+    383. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4232 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1755.6 ms | cr: 3511.1
+    384. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4230 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1760.9 ms | cr: 3521.8
+    385. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4226 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1757.6 ms | cr: 3515.3
+    386. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4025 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1703.4 ms | cr: 3406.7
+    387. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4218 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1855.8 ms | cr: 3711.7
+    388. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4227 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1781.6 ms | cr: 3563.2
+    389. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4253 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1779.9 ms | cr: 3559.7
+    390. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4244 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1786.7 ms | cr: 3573.3
+    391. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4237 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1801.3 ms | cr: 3602.5
+    392. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4227 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1781.2 ms | cr: 3562.4
+    393. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4405 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1828.2 ms | cr: 3656.4
+    394. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4398 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1835.0 ms | cr: 3670.0
+    395. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4391 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1815.0 ms | cr: 3630.0
+    396. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4390 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1849.2 ms | cr: 3698.4
+    397. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4378 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1875.5 ms | cr: 3751.1
+    398. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4374 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1876.1 ms | cr: 3752.3
+    399. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4367 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1868.7 ms | cr: 3737.4
+    400. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4364 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1815.2 ms | cr: 3630.4
+[Frame: 6] Time: 0.201 s
+    401. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4357 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1805.7 ms | cr: 3611.5
+    402. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4357 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1791.2 ms | cr: 3582.5
+    403. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4354 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1805.0 ms | cr: 3610.0
+    404. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4355 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1809.1 ms | cr: 3618.2
+    405. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4354 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1817.5 ms | cr: 3635.0
+    406. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4530 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1874.2 ms | cr: 3748.4
+    407. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4529 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1867.7 ms | cr: 3735.3
+    408. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4525 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1857.5 ms | cr: 3715.0
+    409. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4519 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1862.7 ms | cr: 3725.4
+    410. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4517 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1869.6 ms | cr: 3739.2
+    411. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4507 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1856.5 ms | cr: 3712.9
+    412. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4494 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1865.5 ms | cr: 3731.1
+    413. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4506 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1850.0 ms | cr: 3700.0
+    414. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4504 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1873.6 ms | cr: 3747.2
+    415. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4498 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1846.6 ms | cr: 3693.2
+    416. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4496 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1851.6 ms | cr: 3703.2
+    417. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4494 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1847.5 ms | cr: 3694.9
+    418. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4490 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1866.5 ms | cr: 3733.0
+    419. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4487 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1866.8 ms | cr: 3733.5
+    420. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4485 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1962.9 ms | cr: 3925.7
+    421. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4483 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1843.9 ms | cr: 3687.8
+    422. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4482 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1866.3 ms | cr: 3732.6
+    423. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4478 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1863.5 ms | cr: 3726.9
+    424. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4478 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1860.9 ms | cr: 3721.9
+    425. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4481 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1878.1 ms | cr: 3756.1
+    426. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4650 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1911.1 ms | cr: 3822.2
+    427. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4256 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1752.5 ms | cr: 3504.9
+    428. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4456 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1822.0 ms | cr: 3644.1
+    429. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4629 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1894.0 ms | cr: 3788.1
+    430. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4616 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1905.2 ms | cr: 3810.3
+    431. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4632 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1900.7 ms | cr: 3801.3
+    432. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4632 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1904.4 ms | cr: 3808.7
+    433. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4606 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1885.1 ms | cr: 3770.1
+    434. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4606 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1883.1 ms | cr: 3766.1
+    435. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4606 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1874.5 ms | cr: 3748.9
+    436. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4606 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1896.1 ms | cr: 3792.1
+    437. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4428 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1834.8 ms | cr: 3669.5
+    438. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4597 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1883.2 ms | cr: 3766.4
+    439. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4591 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1883.1 ms | cr: 3766.2
+    440. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4590 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1888.6 ms | cr: 3777.1
+    441. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4579 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1957.9 ms | cr: 3915.8
+    442. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4570 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1899.6 ms | cr: 3799.2
+    443. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4565 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1890.0 ms | cr: 3780.0
+    444. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4735 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1969.8 ms | cr: 3939.7
+    445. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4550 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1877.9 ms | cr: 3755.8
+    446. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4561 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1874.5 ms | cr: 3749.1
+    447. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4557 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1869.0 ms | cr: 3737.9
+    448. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4569 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1878.6 ms | cr: 3757.2
+    449. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4767 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1950.2 ms | cr: 3900.3
+    450. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4775 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1964.5 ms | cr: 3928.9
+    451. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4768 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1958.9 ms | cr: 3917.8
+    452. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4582 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1884.8 ms | cr: 3769.5
+    453. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4572 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1930.4 ms | cr: 3860.8
+    454. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4408 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1860.0 ms | cr: 3720.0
+    455. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4603 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1932.7 ms | cr: 3865.5
+    456. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4585 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1903.3 ms | cr: 3806.6
+    457. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4415 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1819.1 ms | cr: 3638.2
+    458. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4574 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1874.7 ms | cr: 3749.5
+    459. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4592 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1943.2 ms | cr: 3886.5
+    460. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4767 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1955.8 ms | cr: 3911.5
+    461. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4766 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1948.2 ms | cr: 3896.4
+    462. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4767 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1947.8 ms | cr: 3895.7
+    463. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4766 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1942.5 ms | cr: 3885.0
+    464. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4768 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1950.8 ms | cr: 3901.7
+    465. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4770 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1960.1 ms | cr: 3920.3
+    466. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4598 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1892.5 ms | cr: 3785.1
+[Frame: 7] Time: 0.234 s
+    467. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4596 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1892.1 ms | cr: 3784.2
+    468. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4599 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1914.5 ms | cr: 3828.9
+    469. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4404 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1812.6 ms | cr: 3625.2
+    470. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4438 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1820.0 ms | cr: 3640.1
+    471. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4438 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1856.6 ms | cr: 3713.1
+    472. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4444 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1833.5 ms | cr: 3666.9
+    473. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4439 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1827.4 ms | cr: 3654.9
+    474. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4441 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1825.7 ms | cr: 3651.4
+    475. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4446 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1828.3 ms | cr: 3656.6
+    476. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4450 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1833.8 ms | cr: 3667.7
+    477. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4447 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1851.2 ms | cr: 3702.4
+    478. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4451 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1860.7 ms | cr: 3721.4
+    479. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4455 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1822.4 ms | cr: 3644.9
+    480. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4455 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1825.5 ms | cr: 3650.9
+    481. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4459 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1826.6 ms | cr: 3653.2
+    482. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4461 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1835.0 ms | cr: 3670.1
+    483. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4462 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1841.1 ms | cr: 3682.2
+    484. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4461 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1908.0 ms | cr: 3816.1
+    485. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4467 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1845.9 ms | cr: 3691.8
+    486. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4468 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1828.7 ms | cr: 3657.4
+    487. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4467 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1845.2 ms | cr: 3690.4
+    488. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4473 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1838.3 ms | cr: 3676.6
+    489. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4461 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1841.8 ms | cr: 3683.6
+    490. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4474 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1863.0 ms | cr: 3726.0
+    491. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4478 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1843.7 ms | cr: 3687.3
+    492. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4457 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1823.4 ms | cr: 3646.9
+    493. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4455 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1828.6 ms | cr: 3657.2
+    494. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4456 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1855.9 ms | cr: 3711.8
+    495. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4461 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1833.0 ms | cr: 3665.9
+    496. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4500 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1852.9 ms | cr: 3705.9
+    497. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4499 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1857.0 ms | cr: 3714.1
+    498. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4507 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1856.2 ms | cr: 3712.4
+    499. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4512 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1874.4 ms | cr: 3748.8
+    500. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4342 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1815.0 ms | cr: 3630.1
+    501. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4341 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1788.4 ms | cr: 3576.8
+    502. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4347 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1798.0 ms | cr: 3596.0
+    503. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4524 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1860.0 ms | cr: 3720.1
+    504. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4525 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1856.8 ms | cr: 3713.6
+    505. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4524 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1863.0 ms | cr: 3726.0
+    506. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2258 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1916.0 ms | cr: 3832.0
+    507. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4026 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1672.7 ms | cr: 3345.5
+    508. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2266 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1922.7 ms | cr: 3845.5
+    509. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4043 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1683.6 ms | cr: 3367.1
+    510. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2275 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1933.5 ms | cr: 3866.9
+    511. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3247 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1390.8 ms | cr: 2781.5
+    512. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4369 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1780.8 ms | cr: 3561.6
+    513. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4579 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1876.5 ms | cr: 3753.1
+    514. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4393 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1818.9 ms | cr: 3637.9
+    515. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4395 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1830.0 ms | cr: 3660.0
+    516. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4402 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1808.7 ms | cr: 3617.4
+    517. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4404 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1878.4 ms | cr: 3756.7
+    518. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4409 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1826.2 ms | cr: 3652.4
+    519. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4415 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1812.2 ms | cr: 3624.3
+    520. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2208 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1900.8 ms | cr: 3801.7
+    521. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3443 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1451.2 ms | cr: 2902.4
+    522. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2214 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1890.6 ms | cr: 3781.2
+    523. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3125 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1332.5 ms | cr: 2665.0
+    524. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2221 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1900.6 ms | cr: 3801.2
+    525. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3116 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1335.8 ms | cr: 2671.6
+    526. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2229 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1905.4 ms | cr: 3810.8
+    527. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3123 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1346.4 ms | cr: 2692.8
+    528. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2033 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1770.0 ms | cr: 3540.0
+    529. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3297 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1387.3 ms | cr: 2774.6
+    530. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2040 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1758.0 ms | cr: 3516.0
+    531. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3290 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1392.2 ms | cr: 2784.3
+    532. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2046 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1759.0 ms | cr: 3518.1
+    533. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3298 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1387.9 ms | cr: 2775.9
+[Frame: 8] Time: 0.267 s
+    534. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2052 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1767.7 ms | cr: 3535.5
+    535. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3316 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1417.8 ms | cr: 2835.5
+    536. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2059 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1759.8 ms | cr: 3519.6
+    537. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3334 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1410.2 ms | cr: 2820.3
+    538. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2065 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1765.3 ms | cr: 3530.7
+    539. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3343 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1417.8 ms | cr: 2835.7
+    540. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2075 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1771.1 ms | cr: 3542.2
+    541. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3355 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1422.2 ms | cr: 2844.3
+    542. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2081 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1769.9 ms | cr: 3539.8
+    543. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3377 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1430.0 ms | cr: 2859.9
+    544. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2088 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1779.0 ms | cr: 3558.0
+    545. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3398 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1425.1 ms | cr: 2850.1
+    546. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2098 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1786.3 ms | cr: 3572.6
+    547. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3173 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1345.6 ms | cr: 2691.3
+    548. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1990 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1729.7 ms | cr: 3459.4
+    549. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3423 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1431.9 ms | cr: 2863.8
+    550. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1998 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1762.1 ms | cr: 3524.3
+    551. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3170 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1417.5 ms | cr: 2835.1
+    552. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2009 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1822.3 ms | cr: 3644.5
+    553. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2790 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1202.7 ms | cr: 2405.4
+    554. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2018 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1758.0 ms | cr: 3516.0
+    555. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2817 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1222.7 ms | cr: 2445.4
+    556. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1921 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1677.3 ms | cr: 3354.6
+    557. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2833 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1208.5 ms | cr: 2417.1
+    558. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1820 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1584.4 ms | cr: 3168.8
+    559. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2953 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1258.8 ms | cr: 2517.5
+    560. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1703 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1509.9 ms | cr: 3019.8
+    561. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2961 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1277.6 ms | cr: 2555.1
+    562. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1831 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1575.5 ms | cr: 3151.1
+    563. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2599 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1150.5 ms | cr: 2300.9
+    564. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1713 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1505.8 ms | cr: 3011.5
+    565. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2607 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1136.0 ms | cr: 2271.9
+    566. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1601 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1414.8 ms | cr: 2829.7
+    567. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2422 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1063.8 ms | cr: 2127.6
+    568. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1595 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1412.4 ms | cr: 2824.9
+    569. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2810 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1205.6 ms | cr: 2411.3
+    570. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1584 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1412.9 ms | cr: 2825.8
+    571. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2825 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1214.8 ms | cr: 2429.7
+    572. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1435 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1297.0 ms | cr: 2594.1
+    573. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2409 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1053.9 ms | cr: 2107.8
+    574. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1431 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1297.9 ms | cr: 2595.8
+    575. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2414 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1070.2 ms | cr: 2140.5
+    576. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1448 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1304.9 ms | cr: 2609.8
+    577. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2414 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1083.1 ms | cr: 2166.3
+    578. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1330 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1209.5 ms | cr: 2419.0
+    579. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2170 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  972.4 ms | cr: 1944.9
+    580. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1315 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1205.8 ms | cr: 2411.7
+    581. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2150 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  968.6 ms | cr: 1937.2
+    582. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1322 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1210.9 ms | cr: 2421.8
+    583. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2140 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  949.0 ms | cr: 1898.1
+    584. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1324 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1210.8 ms | cr: 2421.6
+    585. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2123 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  950.6 ms | cr: 1901.3
+    586. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1326 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1208.7 ms | cr: 2417.4
+    587. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1627 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  760.8 ms | cr: 1521.6
+    588. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1327 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1213.4 ms | cr: 2426.8
+    589. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1623 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  761.4 ms | cr: 1522.8
+    590. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1327 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1223.3 ms | cr: 2446.6
+    591. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1628 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  790.7 ms | cr: 1581.4
+    592. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1324 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1208.6 ms | cr: 2417.3
+    593. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1623 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  769.8 ms | cr: 1539.6
+    594. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1321 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1211.4 ms | cr: 2422.8
+    595. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2137 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  965.6 ms | cr: 1931.1
+    596. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1325 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1230.4 ms | cr: 2460.8
+    597. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2145 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  962.6 ms | cr: 1925.2
+    598. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1325 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1216.5 ms | cr: 2432.9
+    599. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2144 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  959.6 ms | cr: 1919.3
+    600. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1325 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1225.6 ms | cr: 2451.2
+[Frame: 9] Time: 0.301 s
+    601. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2143 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  967.7 ms | cr: 1935.5
+    602. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1325 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1231.1 ms | cr: 2462.2
+    603. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2144 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  965.2 ms | cr: 1930.4
+    604. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1325 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1210.3 ms | cr: 2420.7
+    605. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2143 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  978.1 ms | cr: 1956.2
+    606. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1325 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1222.1 ms | cr: 2444.3
+    607. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2143 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  956.3 ms | cr: 1912.5
+    608. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1324 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1223.1 ms | cr: 2446.1
+    609. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2143 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  963.0 ms | cr: 1926.0
+    610. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1324 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1236.6 ms | cr: 2473.3
+    611. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2139 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  961.4 ms | cr: 1922.8
+    612. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1321 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1217.3 ms | cr: 2434.7
+    613. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2118 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  955.0 ms | cr: 1910.1
+    614. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1316 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1203.8 ms | cr: 2407.6
+    615. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1635 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  763.0 ms | cr: 1525.9
+    616. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1314 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1194.3 ms | cr: 2388.6
+    617. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1629 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  759.8 ms | cr: 1519.7
+    618. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1317 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1210.5 ms | cr: 2421.0
+    619. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2127 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  957.9 ms | cr: 1915.8
+    620. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1323 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1224.2 ms | cr: 2448.5
+    621. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2137 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  943.0 ms | cr: 1886.0
+    622. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1319 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1203.6 ms | cr: 2407.2
+    623. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2139 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  953.3 ms | cr: 1906.7
+    624. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1317 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1210.2 ms | cr: 2420.5
+    625. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2154 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  965.8 ms | cr: 1931.6
+    626. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1450 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1311.6 ms | cr: 2623.1
+    627. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1889 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  871.9 ms | cr: 1743.7
+    628. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1447 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1308.4 ms | cr: 2616.8
+    629. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1888 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  866.9 ms | cr: 1733.7
+    630. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1445 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1297.4 ms | cr: 2594.9
+    631. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1884 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  865.0 ms | cr: 1730.0
+    632. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1441 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1289.3 ms | cr: 2578.6
+    633. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1881 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  851.0 ms | cr: 1702.0
+    634. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1423 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1289.1 ms | cr: 2578.2
+    635. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1880 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  865.8 ms | cr: 1731.5
+    636. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1437 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1299.6 ms | cr: 2599.2
+    637. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1880 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  864.5 ms | cr: 1729.0
+    638. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1436 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1291.1 ms | cr: 2582.1
+    639. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1879 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  861.5 ms | cr: 1723.0
+    640. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1422 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1284.3 ms | cr: 2568.6
+    641. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1879 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  859.8 ms | cr: 1719.5
+    642. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1438 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1301.7 ms | cr: 2603.4
+    643. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1880 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  870.1 ms | cr: 1740.2
+    644. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1440 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1292.7 ms | cr: 2585.5
+    645. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1882 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  853.2 ms | cr: 1706.4
+    646. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1443 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1313.7 ms | cr: 2627.5
+    647. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1884 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  877.7 ms | cr: 1755.5
+    648. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1443 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1310.8 ms | cr: 2621.7
+    649. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1886 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  864.4 ms | cr: 1728.9
+    650. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1444 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1324.6 ms | cr: 2649.2
+    651. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1888 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  869.0 ms | cr: 1737.9
+    652. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1443 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1306.9 ms | cr: 2613.8
+    653. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1890 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  866.0 ms | cr: 1732.0
+    654. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1445 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1327.0 ms | cr: 2654.0
+    655. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1893 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  870.5 ms | cr: 1741.0
+    656. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1448 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1302.0 ms | cr: 2604.0
+    657. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2138 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  953.9 ms | cr: 1907.8
+    658. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1320 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1220.3 ms | cr: 2440.6
+    659. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2141 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  974.5 ms | cr: 1949.1
+    660. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1312 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1237.7 ms | cr: 2475.5
+    661. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2133 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  961.6 ms | cr: 1923.2
+    662. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1310 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1209.5 ms | cr: 2419.1
+    663. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2119 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  961.8 ms | cr: 1923.6
+    664. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1309 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1212.8 ms | cr: 2425.7
+    665. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2129 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  961.0 ms | cr: 1922.0
+    666. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1320 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1213.0 ms | cr: 2426.0
+[Frame: 10] Time: 0.334 s
+    667. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2133 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  962.8 ms | cr: 1925.5
+    668. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1319 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1217.1 ms | cr: 2434.1
+    669. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2133 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  962.0 ms | cr: 1923.9
+    670. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1320 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1235.1 ms | cr: 2470.2
+    671. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2135 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  976.7 ms | cr: 1953.4
+    672. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1319 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1229.2 ms | cr: 2458.3
+    673. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2143 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  977.0 ms | cr: 1953.9
+    674. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1318 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1232.7 ms | cr: 2465.4
+    675. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1893 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  873.9 ms | cr: 1747.8
+    676. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1313 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1212.4 ms | cr: 2424.9
+    677. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1893 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  872.1 ms | cr: 1744.3
+    678. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1449 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1307.1 ms | cr: 2614.2
+    679. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1892 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  867.1 ms | cr: 1734.2
+    680. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1448 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1330.1 ms | cr: 2660.1
+    681. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1891 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  880.8 ms | cr: 1761.6
+    682. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1447 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1318.1 ms | cr: 2636.2
+    683. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1888 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  864.0 ms | cr: 1727.9
+    684. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1445 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1318.8 ms | cr: 2637.5
+    685. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1887 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  966.4 ms | cr: 1932.8
+    686. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1442 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1301.4 ms | cr: 2602.9
+    687. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1885 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  863.4 ms | cr: 1726.8
+    688. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1441 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1293.9 ms | cr: 2587.7
+    689. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1884 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  865.9 ms | cr: 1731.9
+    690. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1440 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1315.1 ms | cr: 2630.2
+    691. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1882 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  864.1 ms | cr: 1728.2
+    692. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1438 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1295.0 ms | cr: 2590.0
+    693. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1882 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  852.8 ms | cr: 1705.6
+    694. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1437 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1288.3 ms | cr: 2576.6
+    695. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1883 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  856.1 ms | cr: 1712.2
+    696. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1439 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1284.2 ms | cr: 2568.4
+    697. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1882 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  847.3 ms | cr: 1694.5
+    698. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1440 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1279.7 ms | cr: 2559.4
+    699. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1883 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  853.5 ms | cr: 1707.1
+    700. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1440 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1298.7 ms | cr: 2597.5
+    701. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1883 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  860.6 ms | cr: 1721.3
+    702. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1441 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1299.0 ms | cr: 2597.9
+    703. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1883 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  866.1 ms | cr: 1732.3
+    704. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1439 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1292.4 ms | cr: 2584.7
+    705. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1881 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  862.4 ms | cr: 1724.7
+    706. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1441 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1309.8 ms | cr: 2619.5
+    707. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1882 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  869.0 ms | cr: 1738.1
+    708. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1439 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1303.1 ms | cr: 2606.1
+    709. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1884 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  863.9 ms | cr: 1727.9
+    710. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1438 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1303.8 ms | cr: 2607.7
+    711. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1891 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  864.9 ms | cr: 1729.8
+    712. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1437 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1298.9 ms | cr: 2597.8
+    713. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1892 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  867.9 ms | cr: 1735.9
+    714. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1297 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1196.1 ms | cr: 2392.3
+    715. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2808 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1208.8 ms | cr: 2417.7
+    716. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1591 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1466.0 ms | cr: 2932.1
+    717. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2363 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1029.9 ms | cr: 2059.9
+    718. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1593 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1411.2 ms | cr: 2822.5
+    719. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2598 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1114.8 ms | cr: 2229.7
+    720. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1589 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1401.3 ms | cr: 2802.6
+    721. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2603 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1125.0 ms | cr: 2250.1
+    722. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1587 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1403.6 ms | cr: 2807.2
+    723. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2125 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  953.6 ms | cr: 1907.3
+    724. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1582 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1399.1 ms | cr: 2798.2
+    725. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2114 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  942.3 ms | cr: 1884.6
+    726. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1696 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1472.2 ms | cr: 2944.3
+    727. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2970 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1258.2 ms | cr: 2516.5
+    728. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1692 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1479.6 ms | cr: 2959.3
+    729. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2967 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1255.3 ms | cr: 2510.7
+    730. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1670 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1461.9 ms | cr: 2923.7
+    731. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2361 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1038.5 ms | cr: 2077.0
+    732. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1548 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1368.0 ms | cr: 2735.9
+    733. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2861 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1221.1 ms | cr: 2442.2
+[Frame: 11] Time: 0.367 s
+    734. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1565 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1392.5 ms | cr: 2785.1
+    735. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2960 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1295.2 ms | cr: 2590.5
+    736. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1567 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1433.0 ms | cr: 2866.1
+    737. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2110 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  948.1 ms | cr: 1896.1
+    738. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1579 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1388.8 ms | cr: 2777.5
+    739. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2114 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  937.8 ms | cr: 1875.6
+    740. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1582 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1415.0 ms | cr: 2830.1
+    741. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2120 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  938.7 ms | cr: 1877.3
+    742. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1590 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1416.4 ms | cr: 2832.7
+    743. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2125 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  961.0 ms | cr: 1922.0
+    744. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1425 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1295.5 ms | cr: 2590.9
+    745. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2133 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  957.9 ms | cr: 1915.7
+    746. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1422 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1278.3 ms | cr: 2556.5
+    747. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2138 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  961.1 ms | cr: 1922.2
+    748. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1430 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1281.3 ms | cr: 2562.5
+    749. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2821 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1200.2 ms | cr: 2400.5
+    750. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1301 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1209.2 ms | cr: 2418.4
+    751. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2403 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1060.4 ms | cr: 2120.8
+    752. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1306 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1186.9 ms | cr: 2373.9
+    753. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2410 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1053.4 ms | cr: 2106.8
+    754. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1308 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1204.7 ms | cr: 2409.4
+    755. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1917 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  876.5 ms | cr: 1753.0
+    756. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1442 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1285.6 ms | cr: 2571.3
+    757. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1915 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  871.7 ms | cr: 1743.5
+    758. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1315 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1197.6 ms | cr: 2395.2
+    759. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1917 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  877.9 ms | cr: 1755.9
+    760. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1316 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1218.2 ms | cr: 2436.3
+    761. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1917 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  867.2 ms | cr: 1734.4
+    762. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1314 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1204.8 ms | cr: 2409.6
+    763. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1916 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  865.4 ms | cr: 1730.8
+    764. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1314 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1256.9 ms | cr: 2513.7
+    765. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1917 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  883.5 ms | cr: 1766.9
+    766. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1312 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1211.2 ms | cr: 2422.3
+    767. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1915 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  874.9 ms | cr: 1749.8
+    768. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1312 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1211.8 ms | cr: 2423.5
+    769. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1916 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  876.9 ms | cr: 1753.9
+    770. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1312 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1203.5 ms | cr: 2407.0
+    771. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1914 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  876.3 ms | cr: 1752.5
+    772. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1445 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1310.2 ms | cr: 2620.4
+    773. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1909 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  880.9 ms | cr: 1761.8
+    774. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1442 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1309.2 ms | cr: 2618.4
+    775. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1905 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  865.1 ms | cr: 1730.1
+    776. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1441 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1302.9 ms | cr: 2605.8
+    777. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1903 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  863.1 ms | cr: 1726.3
+    778. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1439 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1296.1 ms | cr: 2592.3
+    779. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2772 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1189.2 ms | cr: 2378.4
+    780. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1458 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1317.1 ms | cr: 2634.2
+    781. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2126 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  948.2 ms | cr: 1896.4
+    782. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1455 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1300.1 ms | cr: 2600.2
+    783. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2121 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  950.9 ms | cr: 1901.7
+    784. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1401 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1257.2 ms | cr: 2514.3
+    785. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2119 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  942.6 ms | cr: 1885.2
+    786. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1410 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1271.1 ms | cr: 2542.1
+    787. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2118 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  950.7 ms | cr: 1901.4
+    788. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1418 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1273.3 ms | cr: 2546.6
+    789. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2115 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  943.6 ms | cr: 1887.3
+    790. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1576 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1417.9 ms | cr: 2835.8
+    791. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2111 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  950.0 ms | cr: 1900.1
+    792. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1572 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1397.8 ms | cr: 2795.6
+    793. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2110 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  946.1 ms | cr: 1892.2
+    794. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1573 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1398.7 ms | cr: 2797.4
+    795. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2110 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  936.2 ms | cr: 1872.4
+    796. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1401 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1264.0 ms | cr: 2528.0
+    797. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2111 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  948.9 ms | cr: 1897.8
+    798. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1397 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1269.6 ms | cr: 2539.3
+    799. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2110 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  934.0 ms | cr: 1868.1
+    800. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1397 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1263.9 ms | cr: 2527.8
+[Frame: 12] Time: 0.401 s
+    801. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2117 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  940.5 ms | cr: 1881.0
+    802. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1401 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1264.5 ms | cr: 2529.1
+    803. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2596 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1143.4 ms | cr: 2286.8
+    804. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1577 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1411.4 ms | cr: 2822.8
+    805. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2112 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  937.2 ms | cr: 1874.4
+    806. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1583 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1401.3 ms | cr: 2802.7
+    807. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2110 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  945.5 ms | cr: 1891.0
+    808. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1562 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1384.5 ms | cr: 2769.0
+    809. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2111 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  941.7 ms | cr: 1883.3
+    810. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1576 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1398.5 ms | cr: 2796.9
+    811. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2110 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  950.6 ms | cr: 1901.2
+    812. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1397 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1289.6 ms | cr: 2579.2
+    813. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2112 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  953.3 ms | cr: 1906.6
+    814. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1398 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1273.0 ms | cr: 2546.1
+    815. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2113 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  967.3 ms | cr: 1934.7
+    816. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1399 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1410.9 ms | cr: 2821.7
+    817. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2114 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  963.8 ms | cr: 1927.5
+    818. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1399 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1274.4 ms | cr: 2548.8
+    819. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2116 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  998.2 ms | cr: 1996.5
+    820. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1403 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1407.6 ms | cr: 2815.1
+    821. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2120 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  981.3 ms | cr: 1962.5
+    822. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1409 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1288.2 ms | cr: 2576.3
+    823. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2950 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1264.1 ms | cr: 2528.3
+    824. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1550 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1382.1 ms | cr: 2764.3
+    825. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2569 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1119.6 ms | cr: 2239.1
+    826. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1572 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1394.9 ms | cr: 2789.8
+    827. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2114 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  937.5 ms | cr: 1875.0
+    828. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1405 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1267.0 ms | cr: 2534.1
+    829. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2763 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1181.4 ms | cr: 2362.7
+    830. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1407 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1266.2 ms | cr: 2532.5
+    831. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2117 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  939.3 ms | cr: 1878.7
+    832. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1399 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1269.6 ms | cr: 2539.2
+    833. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2114 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  956.9 ms | cr: 1913.8
+    834. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1575 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1398.3 ms | cr: 2796.6
+    835. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2111 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  938.6 ms | cr: 1877.2
+    836. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1349 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1257.9 ms | cr: 2515.8
+    837. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2113 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1001.2 ms | cr: 2002.4
+    838. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1400 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1286.1 ms | cr: 2572.3
+    839. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2117 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  957.5 ms | cr: 1915.1
+    840. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1404 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1274.8 ms | cr: 2549.7
+    841. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2122 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  958.6 ms | cr: 1917.3
+    842. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1422 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1270.7 ms | cr: 2541.5
+    843. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2124 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  941.9 ms | cr: 1883.8
+    844. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1431 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1294.7 ms | cr: 2589.3
+    845. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2124 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  950.8 ms | cr: 1901.6
+    846. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1433 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1297.6 ms | cr: 2595.1
+    847. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2829 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1208.4 ms | cr: 2416.9
+    848. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1304 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1198.8 ms | cr: 2397.6
+    849. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1910 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  865.4 ms | cr: 1730.8
+    850. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1295 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1221.7 ms | cr: 2443.3
+    851. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2411 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1081.2 ms | cr: 2162.4
+    852. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1287 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1193.2 ms | cr: 2386.4
+    853. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2398 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1076.0 ms | cr: 2152.0
+    854. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1427 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1356.1 ms | cr: 2712.2
+    855. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1893 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  890.7 ms | cr: 1781.3
+    856. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1287 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1170.3 ms | cr: 2340.6
+    857. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1895 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  874.0 ms | cr: 1748.0
+    858. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1286 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1180.5 ms | cr: 2361.0
+    859. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1897 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  877.9 ms | cr: 1755.7
+    860. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1286 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1189.8 ms | cr: 2379.7
+    861. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1899 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  861.3 ms | cr: 1722.6
+    862. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1285 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1173.3 ms | cr: 2346.7
+    863. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1893 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  858.4 ms | cr: 1716.8
+    864. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1290 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1192.7 ms | cr: 2385.3
+    865. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2410 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1055.8 ms | cr: 2111.5
+    866. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1430 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1285.3 ms | cr: 2570.7
+[Frame: 13] Time: 0.434 s
+    867. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2815 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1201.2 ms | cr: 2402.4
+    868. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1428 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1296.9 ms | cr: 2593.9
+    869. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2807 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1253.7 ms | cr: 2507.4
+    870. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1292 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1195.8 ms | cr: 2391.7
+    871. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2547 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1115.9 ms | cr: 2231.9
+    872. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1286 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1182.6 ms | cr: 2365.3
+    873. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2142 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  953.4 ms | cr: 1906.9
+    874. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1430 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1302.3 ms | cr: 2604.6
+    875. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1887 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  862.5 ms | cr: 1725.0
+    876. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1285 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1178.1 ms | cr: 2356.3
+    877. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1887 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  854.4 ms | cr: 1708.9
+    878. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1282 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1180.7 ms | cr: 2361.5
+    879. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1886 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  859.5 ms | cr: 1718.9
+    880. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1283 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1184.4 ms | cr: 2368.7
+    881. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1886 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  855.9 ms | cr: 1711.9
+    882. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1283 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1189.9 ms | cr: 2379.8
+    883. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2146 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  967.7 ms | cr: 1935.4
+    884. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1285 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1182.4 ms | cr: 2364.8
+    885. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1886 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  869.4 ms | cr: 1738.9
+    886. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1281 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1205.3 ms | cr: 2410.5
+    887. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1887 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  874.8 ms | cr: 1749.7
+    888. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1278 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1200.9 ms | cr: 2401.8
+    889. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1888 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  893.4 ms | cr: 1786.8
+    890. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1277 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1239.2 ms | cr: 2478.4
+    891. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1889 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  890.2 ms | cr: 1780.4
+    892. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1278 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1219.9 ms | cr: 2439.7
+    893. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1890 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  892.1 ms | cr: 1784.2
+    894. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1281 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1212.8 ms | cr: 2425.7
+    895. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1892 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  894.3 ms | cr: 1788.5
+    896. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1281 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1196.6 ms | cr: 2393.2
+    897. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1890 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  875.9 ms | cr: 1751.7
+    898. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1280 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1203.4 ms | cr: 2406.7
+    899. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1889 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  878.4 ms | cr: 1756.8
+    900. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1281 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1196.3 ms | cr: 2392.7
+    901. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1891 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  877.9 ms | cr: 1755.9
+    902. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1279 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1192.6 ms | cr: 2385.3
+    903. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1889 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  881.2 ms | cr: 1762.3
+    904. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1280 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1223.5 ms | cr: 2447.0
+    905. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1890 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  869.1 ms | cr: 1738.1
+    906. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1280 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1191.3 ms | cr: 2382.6
+    907. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1889 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  879.5 ms | cr: 1759.0
+    908. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1279 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1190.5 ms | cr: 2381.0
+    909. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1888 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  882.6 ms | cr: 1765.2
+    910. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1277 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1185.6 ms | cr: 2371.2
+    911. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1887 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  873.6 ms | cr: 1747.2
+    912. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1279 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1178.6 ms | cr: 2357.1
+    913. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2421 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1057.5 ms | cr: 2114.9
+    914. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1709 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1497.1 ms | cr: 2994.2
+    915. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2116 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  941.5 ms | cr: 1882.9
+    916. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1700 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1480.3 ms | cr: 2960.6
+    917. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2544 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1095.7 ms | cr: 2191.3
+    918. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1580 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1398.5 ms | cr: 2796.9
+    919. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2372 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1057.7 ms | cr: 2115.5
+    920. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1541 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1370.5 ms | cr: 2741.0
+    921. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2732 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1210.0 ms | cr: 2420.1
+    922. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2695 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2315.7 ms | cr: 4631.4
+    923. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2109 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  970.8 ms | cr: 1941.6
+    924. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1681 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1505.6 ms | cr: 3011.2
+    925. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2954 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1278.0 ms | cr: 2556.0
+    926. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1563 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1457.7 ms | cr: 2915.4
+    927. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2870 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1233.8 ms | cr: 2467.6
+    928. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1390 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1268.6 ms | cr: 2537.1
+    929. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2632 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1136.9 ms | cr: 2273.9
+    930. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2692 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2242.9 ms | cr: 4485.7
+    931. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2892 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1233.1 ms | cr: 2466.2
+    932. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1561 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1393.2 ms | cr: 2786.4
+    933. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2742 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1182.1 ms | cr: 2364.2
+[Frame: 14] Time: 0.467 s
+    934. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1349 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1243.8 ms | cr: 2487.5
+    935. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2375 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1043.1 ms | cr: 2086.2
+    936. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1354 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1233.3 ms | cr: 2466.6
+    937. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2375 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1072.5 ms | cr: 2145.0
+    938. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1414 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1296.7 ms | cr: 2593.3
+    939. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2550 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1187.0 ms | cr: 2374.0
+    940. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1431 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1344.5 ms | cr: 2689.0
+    941. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2385 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1076.3 ms | cr: 2152.7
+    942. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1298 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1227.4 ms | cr: 2454.9
+    943. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2146 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  973.6 ms | cr: 1947.3
+    944. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1300 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1230.2 ms | cr: 2460.5
+    945. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2396 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1057.2 ms | cr: 2114.4
+    946. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1299 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1215.5 ms | cr: 2431.0
+    947. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2400 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1057.5 ms | cr: 2114.9
+    948. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1308 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1194.2 ms | cr: 2388.4
+    949. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2407 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1051.0 ms | cr: 2102.0
+    950. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1304 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1192.6 ms | cr: 2385.2
+    951. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2408 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1050.3 ms | cr: 2100.6
+    952. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1301 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1198.8 ms | cr: 2397.5
+    953. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2402 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1051.7 ms | cr: 2103.4
+    954. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1298 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1210.2 ms | cr: 2420.4
+    955. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2399 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1055.0 ms | cr: 2110.1
+    956. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1301 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1193.5 ms | cr: 2387.0
+    957. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2393 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1059.8 ms | cr: 2119.6
+    958. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1432 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1289.2 ms | cr: 2578.3
+    959. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2388 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1041.9 ms | cr: 2083.9
+    960. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1429 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1285.3 ms | cr: 2570.6
+    961. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2387 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1042.1 ms | cr: 2084.3
+    962. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1302 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1192.8 ms | cr: 2385.7
+    963. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2386 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1042.8 ms | cr: 2085.6
+    964. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1430 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1296.5 ms | cr: 2593.1
+    965. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2384 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1053.6 ms | cr: 2107.3
+    966. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1431 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1298.7 ms | cr: 2597.3
+    967. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2381 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1049.9 ms | cr: 2099.9
+    968. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1432 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1292.8 ms | cr: 2585.7
+    969. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2381 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1053.4 ms | cr: 2106.8
+    970. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1431 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1316.5 ms | cr: 2632.9
+    971. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2382 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1085.6 ms | cr: 2171.2
+    972. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1430 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1314.0 ms | cr: 2627.9
+    973. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2381 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1041.8 ms | cr: 2083.6
+    974. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1429 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1292.9 ms | cr: 2585.9
+    975. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2383 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1042.9 ms | cr: 2085.9
+    976. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1301 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1195.8 ms | cr: 2391.5
+    977. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2135 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  941.3 ms | cr: 1882.6
+    978. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1429 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1295.3 ms | cr: 2590.6
+    979. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2385 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1044.4 ms | cr: 2088.8
+    980. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1426 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1284.5 ms | cr: 2569.0
+    981. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2387 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1049.0 ms | cr: 2097.9
+    982. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1427 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1298.8 ms | cr: 2597.6
+    983. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2389 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1072.7 ms | cr: 2145.3
+    984. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1424 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1361.2 ms | cr: 2722.3
+    985. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2389 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1089.8 ms | cr: 2179.5
+    986. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1425 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1299.0 ms | cr: 2597.9
+    987. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2389 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1056.5 ms | cr: 2113.1
+    988. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1427 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1289.9 ms | cr: 2579.8
+    989. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2390 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1048.8 ms | cr: 2097.5
+    990. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1425 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1313.2 ms | cr: 2626.4
+    991. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2389 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1075.3 ms | cr: 2150.6
+    992. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1426 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1344.4 ms | cr: 2688.8
+    993. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2389 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1105.7 ms | cr: 2211.3
+    994. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1425 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1462.5 ms | cr: 2925.1
+    995. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2142 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1013.8 ms | cr: 2027.5
+    996. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1303 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1261.4 ms | cr: 2522.9
+    997. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2522 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1161.4 ms | cr: 2322.8
+    998. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1303 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1268.6 ms | cr: 2537.2
+    999. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2385 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1119.7 ms | cr: 2239.5
+    1000. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1312 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1266.9 ms | cr: 2533.8
+[Frame: 15] Time: 0.501 s
+    1001. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2382 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1066.5 ms | cr: 2133.0
+    1002. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1431 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1310.9 ms | cr: 2621.7
+    1003. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2387 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1069.7 ms | cr: 2139.4
+    1004. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1436 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1326.8 ms | cr: 2653.5
+    1005. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2383 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1070.1 ms | cr: 2140.2
+    1006. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1442 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1327.2 ms | cr: 2654.4
+    1007. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2384 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1071.9 ms | cr: 2143.8
+    1008. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1440 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1327.2 ms | cr: 2654.4
+    1009. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2383 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1068.8 ms | cr: 2137.6
+    1010. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1437 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1322.7 ms | cr: 2645.5
+    1011. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2383 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1064.7 ms | cr: 2129.3
+    1012. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1437 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1318.5 ms | cr: 2637.0
+    1013. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2383 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1065.8 ms | cr: 2131.7
+    1014. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1433 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1316.3 ms | cr: 2632.6
+    1015. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2383 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1058.0 ms | cr: 2116.1
+    1016. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1305 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1215.3 ms | cr: 2430.6
+    1017. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2753 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1196.1 ms | cr: 2392.3
+    1018. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2582 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2176.3 ms | cr: 4352.5
+    1019. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2981 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1295.0 ms | cr: 2590.0
+    1020. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1567 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1405.2 ms | cr: 2810.4
+    1021. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2578 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1129.6 ms | cr: 2259.1
+    1022. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1694 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1514.2 ms | cr: 3028.5
+    1023. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2608 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1147.2 ms | cr: 2294.5
+    1024. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1692 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1563.7 ms | cr: 3127.3
+    1025. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2608 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1153.5 ms | cr: 2307.0
+    1026. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1679 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1493.1 ms | cr: 2986.2
+    1027. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2602 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1147.3 ms | cr: 2294.5
+    1028. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1669 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1518.3 ms | cr: 3036.6
+    1029. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2599 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1133.3 ms | cr: 2266.6
+    1030. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1549 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1408.3 ms | cr: 2816.6
+    1031. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2600 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1144.9 ms | cr: 2289.7
+    1032. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1684 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1530.5 ms | cr: 3061.0
+    1033. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2602 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1166.8 ms | cr: 2333.7
+    1034. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1571 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1436.6 ms | cr: 2873.3
+    1035. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2604 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1148.8 ms | cr: 2297.6
+    1036. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1692 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1498.0 ms | cr: 2996.0
+    1037. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2606 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1124.1 ms | cr: 2248.2
+    1038. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1695 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1484.5 ms | cr: 2969.0
+    1039. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2612 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1128.3 ms | cr: 2256.6
+    1040. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1592 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1410.7 ms | cr: 2821.3
+    1041. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2773 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1213.6 ms | cr: 2427.3
+    1042. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1583 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1389.5 ms | cr: 2779.1
+    1043. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2775 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1184.7 ms | cr: 2369.5
+    1044. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1428 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1288.6 ms | cr: 2577.2
+    1045. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2388 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1048.8 ms | cr: 2097.6
+    1046. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1429 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1285.4 ms | cr: 2570.8
+    1047. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2390 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1053.0 ms | cr: 2105.9
+    1048. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1431 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1314.1 ms | cr: 2628.2
+    1049. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2401 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1110.9 ms | cr: 2221.8
+    1050. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1433 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1330.9 ms | cr: 2661.8
+    1051. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2410 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1103.1 ms | cr: 2206.3
+    1052. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1433 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1326.5 ms | cr: 2652.9
+    1053. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2410 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1096.2 ms | cr: 2192.3
+    1054. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1379 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1316.4 ms | cr: 2632.8
+    1055. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2401 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1104.3 ms | cr: 2208.6
+    1056. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1298 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1254.9 ms | cr: 2509.8
+    1057. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2399 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1095.2 ms | cr: 2190.5
+    1058. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1426 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1331.7 ms | cr: 2663.5
+    1059. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2630 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1206.8 ms | cr: 2413.5
+    1060. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1430 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1345.6 ms | cr: 2691.2
+    1061. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2625 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1180.8 ms | cr: 2361.6
+    1062. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1580 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1516.4 ms | cr: 3032.8
+    1063. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2623 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1193.1 ms | cr: 2386.1
+    1064. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2579 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2263.7 ms | cr: 4527.4
+    1065. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2617 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1196.8 ms | cr: 2393.5
+    1066. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2577 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2261.7 ms | cr: 4523.3
+[Frame: 16] Time: 0.533 s
+    1067. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2993 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1348.8 ms | cr: 2697.6
+    1068. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2794 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2450.0 ms | cr: 4900.0
+    1069. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2993 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1311.8 ms | cr: 2623.6
+    1070. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2796 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2370.3 ms | cr: 4740.5
+    1071. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3223 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1391.3 ms | cr: 2782.7
+    1072. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 3008 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2549.0 ms | cr: 5098.0
+    1073. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3224 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1403.9 ms | cr: 2807.8
+    1074. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 3003 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2555.3 ms | cr: 5110.6
+    1075. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3043 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1347.9 ms | cr: 2695.8
+    1076. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 3006 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2550.8 ms | cr: 5101.6
+    1077. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3453 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1500.3 ms | cr: 3000.7
+    1078. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2119 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1852.6 ms | cr: 3705.1
+    1079. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3693 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1575.9 ms | cr: 3151.8
+    1080. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2076 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1824.6 ms | cr: 3649.1
+    1081. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3610 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1539.4 ms | cr: 3078.8
+    1082. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2244 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1958.6 ms | cr: 3917.2
+    1083. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4238 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1810.1 ms | cr: 3620.2
+    1084. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2222 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1983.6 ms | cr: 3967.2
+    1085. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4155 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1797.7 ms | cr: 3595.4
+    1086. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2200 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1962.0 ms | cr: 3924.0
+    1087. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4115 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1776.8 ms | cr: 3553.6
+    1088. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2371 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2101.1 ms | cr: 4202.2
+    1089. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3809 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1665.3 ms | cr: 3330.5
+    1090. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2279 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2025.4 ms | cr: 4050.7
+    1091. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4029 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1741.2 ms | cr: 3482.4
+    1092. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2353 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2050.6 ms | cr: 4101.3
+    1093. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4247 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1826.0 ms | cr: 3652.1
+    1094. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2233 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1997.6 ms | cr: 3995.1
+    1095. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4187 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1804.2 ms | cr: 3608.5
+    1096. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2242 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1970.1 ms | cr: 3940.2
+    1097. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4192 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1817.9 ms | cr: 3635.8
+    1098. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2222 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1956.1 ms | cr: 3912.1
+    1099. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4224 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1808.6 ms | cr: 3617.2
+    1100. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2209 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1930.5 ms | cr: 3860.9
+    1101. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3940 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1667.9 ms | cr: 3335.7
+    1102. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2274 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1958.4 ms | cr: 3916.8
+    1103. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3916 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1635.9 ms | cr: 3271.9
+    1104. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2284 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1943.1 ms | cr: 3886.2
+    1105. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4283 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1809.8 ms | cr: 3619.5
+    1106. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2351 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2069.6 ms | cr: 4139.1
+    1107. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4864 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1997.0 ms | cr: 3994.1
+    1108. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2341 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1999.7 ms | cr: 3999.3
+    1109. dt:  0.50 ms | #newton:  1 | ph:  0.0% | #CG/newton: 4264 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1763.0 ms | cr: 3526.0
+    1110. dt:  0.50 ms | #newton:  2 | ph:  0.0% | #CG/newton: 2334 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 2002.1 ms | cr: 4004.1
+    1111. dt:  0.50 ms | 
+    Penetration couldn't be avoided. Contact stiffness hardened from 1.0e+08 to 2.0e+08.

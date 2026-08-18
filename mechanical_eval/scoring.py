@@ -42,7 +42,7 @@ def score_rotary(spec: RotaryTransmissionSpec, obs: RotaryObservations,
     load_score = float(np.clip(obs.transmitted_torque_nm / spec.output_resistance_nm, 0, 1))
     integrity_score = float(obs.insertion_passed and not obs.input_stalled and obs.connector_slip_rad < 0.1
                             and obs.shaft_wobble_m < 5e-4 and obs.component_escape_m < 1e-3
-                            and obs.max_strain < 0.08)
+                            and obs.max_strain < 0.02)
     efficiency = float(np.clip(abs(obs.output_work_j) / max(abs(obs.input_work_j), 1e-9), 0, 1))
     components = {"ratio": ratio_score, "direction": direction_score, "load": load_score,
                   "physical_integrity": integrity_score, "efficiency": efficiency}

@@ -1,0 +1,30 @@
+{
+  "contract_sha256": "b0a972448234c8484d5d3db3499b01916d130404604cd84ca247e18212c724df",
+  "step_path": "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_004.step",
+  "duration_s": 0.02,
+  "candidate": [
+    {
+      "angle_rad": -4.907356522698855e-19,
+      "omega_rad_s": -2.031952985914129e-05,
+      "wobble_m": 5.377643159766824e-17,
+      "max_strain": 7.771561172376096e-16
+    },
+    {
+      "angle_rad": 6.796712582914428e-19,
+      "omega_rad_s": -4.872100954813768e-07,
+      "wobble_m": 2.289835148101301e-16,
+      "max_strain": 6.661338147750939e-15
+    }
+  ],
+  "input_work_j": 0.0,
+  "output_work_j": 0.0,
+  "input_shaft_omega_rad_s": -5.6594022563186305e-05,
+  "output_connector_omega_rad_s": -1.5231617311622103e-05,
+  "policy_audit": {
+    "candidate_is_deformable": true,
+    "candidate_attachments": false,
+    "candidate_internal_constraints": false,
+    "candidate_prescribed_motion": false
+  },
+  "classification": "UNSCORED_PHYSICS_OBSERVATION"
+}

@@ -1,0 +1,47 @@
+{
+  "contract_sha256": "e6ed82e0ab76ab3729958bced5d17d063bca22f14e9c241c51c51663f8b9d989",
+  "step_path": "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_024.step",
+  "duration_s": 0.8,
+  "candidate": [
+    {
+      "angle_rad": 2.9008561843789686,
+      "omega_rad_s": 3.2402599094792723,
+      "wobble_m": 4.4494614141559206e-05,
+      "escape_m": 4.451164130863503e-05,
+      "max_strain": 0.00034444318369253324
+    },
+    {
+      "angle_rad": -1.4316580429088555,
+      "omega_rad_s": -1.6317637994109497,
+      "wobble_m": 2.2420880337598004e-05,
+      "escape_m": 5.447630166736702e-05,
+      "max_strain": 0.0023071191146053494
+    }
+  ],
+  "input_work_j": 0.011800551909733226,
+  "output_work_j": 0.007757929349300942,
+  "applied_motor_torque_nm": 0.13066135091233916,
+  "applied_brake_torque_nm": 0.02109999999999016,
+  "completed_steps": 3055,
+  "solver_converged": false,
+  "input_shaft_omega_rad_s": 3.386772981753217,
+  "output_connector_omega_rad_s": -1.4850119629653482,
+  "input_shaft_angle_rad": 2.9706388724803428,
+  "output_connector_angle_rad": -1.35199133289131,
+  "connector_slip_rad": 0.07966671001754543,
+  "steady_observations": {
+    "input_gear_omega_rad_s": 6.022947319678446,
+    "output_gear_omega_rad_s": -2.889003136622462,
+    "input_shaft_omega_rad_s": 5.85522531693154,
+    "output_connector_omega_rad_s": -2.9823136103721284,
+    "motor_torque_nm": 0.007238734153422966,
+    "brake_torque_nm": 0.014674999999996198
+  },
+  "policy_audit": {
+    "candidate_is_deformable": true,
+    "candidate_attachments": false,
+    "candidate_internal_constraints": false,
+    "candidate_prescribed_motion": false
+  },
+  "classification": "UNSCORED_PHYSICS_OBSERVATION"
+}

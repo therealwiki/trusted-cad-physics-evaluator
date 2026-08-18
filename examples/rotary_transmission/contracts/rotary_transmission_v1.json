@@ -1,7 +1,7 @@
 {
   "contract_id": "rotary_transmission_v1",
-  "contract_version": "1.0.0",
-  "frozen_before_attempts": true,
+  "contract_version": "1.11.0",
+  "frozen_before_attempts": false,
   "units": "SI",
   "candidate_policy": {
     "components": "separate_tetrahedral_fem_deformables",
@@ -28,11 +28,16 @@
     "max_load_n": 500.0
   },
   "material": {
-    "profile": "PLA isotropic baseline v1",
-    "density_kg_m3": 1240.0,
-    "youngs_modulus_pa": 2300000000.0,
-    "poissons_ratio": 0.36,
-    "damping": 0.02
+    "profile": "effective isotropic printed-PLA v1",
+    "density_kg_m3": 1200.0,
+    "youngs_modulus_pa": 2500000000.0,
+    "poissons_ratio": 0.35,
+    "damping": 0.02,
+    "constitutive_model": "stable_neo_hookean_recoverable_elasticity",
+    "elastic_strain_ceiling": 0.02,
+    "provisional_invalidity_strain": 0.05,
+    "damage_or_fracture_model": false,
+    "print_recipe": "dense nominal 100 percent infill; exact filament, nozzle, temperature, walls, and infill require calibration"
   },
   "mesh_and_contact": {
     "surface_size_m": 0.0008,
@@ -41,12 +46,32 @@
     "friction_coefficient": 0.35,
     "fixed_time_step_s": 0.001
   },
+  "solver": {
+    "newton_residual_tolerance_abs": 1e-6,
+    "newton_step_tolerance": 0.001,
+    "cg_absolute_tolerance": 1e-12,
+    "cg_relative_tolerance": 0.0001,
+    "adaptive_time_step": false,
+    "ipc_min_contact_stiffness": 100000000.0,
+    "ipc_max_contact_stiffness": 1000000000000.0,
+    "amendment_note": "Pre-lock performance/convergence test after correcting the STARK contact-hardening retry protocol: restore the 1 ms step and 1e8 initial barrier, retaining the same physical load history and acceptance thresholds."
+  },
+  "evaluator_rotor": {
+    "input_reflected_inertia_kg_m2": 0.0002,
+    "output_reflected_inertia_kg_m2": 0.00002,
+    "speed_feedback_gain_nm_per_rad_s": 0.05,
+    "note": "Evaluator-owned reflected motor/brake rotor inertia; no inertia or force is added to candidate bodies."
+  },
   "phases": ["insertion", "settle", "actuation_load", "observation"],
   "actuation": {
     "input_speed_target_rad_s": 6.0,
     "input_torque_limit_nm": 0.25,
     "output_resistance_nm": 0.08,
-    "actuation_duration_s": 1.0
+    "speed_ramp_start_s": 0.01,
+    "speed_ramp_duration_s": 0.5,
+    "brake_ramp_start_s": 0.5,
+    "brake_ramp_duration_s": 1.0,
+    "actuation_duration_s": 3.0
   },
   "acceptance": {
     "target_ratio": 2.0,
@@ -57,7 +82,7 @@
     "connector_slip_rad_max_exclusive": 0.1,
     "shaft_wobble_m_max_exclusive": 0.0005,
     "component_escape_m_max_exclusive": 0.001,
-    "max_strain_max_exclusive": 0.08,
+    "max_strain_max_exclusive": 0.02,
     "input_stalled": false,
     "insertion_must_pass": true,
     "solver_must_converge": true,

@@ -9,7 +9,7 @@ def observations(**updates):
     values = dict(input_rotation_rad=6, output_rotation_rad=-3, input_omega_rad_s=6,
                   output_omega_rad_s=-3, transmitted_torque_nm=.08, input_stalled=False,
                   connector_slip_rad=.01, shaft_wobble_m=1e-4, component_escape_m=0,
-                  max_strain=.02, input_work_j=.1, output_work_j=.08,
+                  max_strain=.01, input_work_j=.1, output_work_j=.08,
                   solver_converged=True, insertion_passed=True)
     values.update(updates)
     return RotaryObservations(**values)

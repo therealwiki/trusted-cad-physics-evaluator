@@ -28,7 +28,8 @@ class VolumeMesh:
 
 
 class MeshingBackend(Protocol):
-    def mesh_step(self, path: str | Path, *, size_m: float, source_units: str = "mm") -> list[VolumeMesh]: ...
+    def mesh_step(self, path: str | Path, *, size_m: float, surface_size_m: float | None = None,
+                  source_units: str = "mm") -> list[VolumeMesh]: ...
 
 
 def tet_surface(tets: np.ndarray) -> np.ndarray:
@@ -41,7 +42,8 @@ def tet_surface(tets: np.ndarray) -> np.ndarray:
 class GmshOccBackend:
     """OpenCASCADE STEP import with one independently indexed tet mesh per volume."""
 
-    def mesh_step(self, path: str | Path, *, size_m: float, source_units: str = "mm") -> list[VolumeMesh]:
+    def mesh_step(self, path: str | Path, *, size_m: float, surface_size_m: float | None = None,
+                  source_units: str = "mm") -> list[VolumeMesh]:
         path = Path(path).resolve()
         if not path.exists():
             raise FileNotFoundError(path)
@@ -57,8 +59,10 @@ class GmshOccBackend:
             volumes = sorted(tag for dim, tag in gmsh.model.getEntities(3))
             if not volumes:
                 raise ValueError("STEP contains no solid volume entities")
-            gmsh.option.setNumber("Mesh.MeshSizeMin", size_m / scale)
+            surface_size_m = size_m if surface_size_m is None else surface_size_m
+            gmsh.option.setNumber("Mesh.MeshSizeMin", surface_size_m / scale)
             gmsh.option.setNumber("Mesh.MeshSizeMax", size_m / scale)
+            gmsh.option.setNumber("Mesh.MeshSizeFromCurvature", 24)
             gmsh.option.setNumber("Mesh.ElementOrder", 1)
             gmsh.model.mesh.generate(3)
             result = []

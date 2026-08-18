@@ -1,0 +1,181 @@
+
+================================== Settings ==============================
+Stark Settings
+     Output
+         simulation_name: "mechanical_eval"
+         output_directory: "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/runs/candidate_004_actuation_slow_ramp/vtk"
+         codegen_directory: "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/runs/candidate_004_actuation_slow_ramp/codegen"
+         time_stamp: "2026-08-17__17-09-12"
+         fps: 30
+         console_verbosity: Summary
+         file_verbosity: Full
+         enable_frame_writes: true
+         enable_output: true
+     Simulation
+         gravity: (0.000000, 0.000000, -9.810000)
+         init_frictional_contact: true
+         max_time_step_size: 1.0000e-03
+         use_adaptive_time_step: false
+         time_step_size_success_multiplier: 1.05
+         time_step_size_lower_bound: 1.0e-06
+     Newton's Method
+         Iteration limits
+             max_iterations: 2147483647
+             min_iterations: 0
+         Convergence
+             residual_tolerance_abs: 1.0e-06
+             residual_tolerance_rel: 0.0e+00
+             step_tolerance: 1.0e-03
+             max_iterations_as_success: false
+         Line search
+             step_cap: inf
+             enable_armijo_backtracking: true
+             armijo_beta: 1.0e-04
+             max_armijo_iterations: 20
+             max_invalid_state_iterations: 8
+             print_line_search_upon_failure: false
+         Hessian projection
+             projection_mode: Progressive
+             projection_eps: 1.0e-10
+             use_mirroring: false
+             on_demand_countdown: 4
+             ppn_tightening_factor: 0.50
+             ppn_release_factor: 2.00
+         Linear solver
+             solver: BDPCG
+             cg_max_iterations: 10000
+             cg_abs_tolerance: 1.0e-12
+             cg_rel_tolerance: 1.0e-04
+             cg_stop_on_indefiniteness: true
+             bailout_residual: 1.0e-10
+     Execution
+         allowed_execution_time: 1.8e+308
+         end_simulation_time: 1.8e+308
+         end_frame: 2147483647
+         n_threads: 5
+
+==================================== SymX ================================
+Second Order Potentials:
+    EnergyAttachments_d_d_e_e.......................queued for compilation
+    EnergyLumpedInertia.............................queued for compilation
+    rb_constraint_global_directions.................queued for compilation
+    EnergyPrescribedPositions.......................queued for compilation
+    friction_d_d_pt_C0..............................queued for compilation
+    EnergySegmentStrain.............................queued for compilation
+    EnergySegmentStrain_Elasticity_Only.............queued for compilation
+    friction_d_d_ee_C0..............................queued for compilation
+    EnergyAttachments_rb_d..........................queued for compilation
+    rb_constraint_points............................queued for compilation
+    contact_d_d_pt_pp_cubic.........................queued for compilation
+    contact_d_d_pt_pe_cubic.........................queued for compilation
+    rb_constraint_point_on_axis.....................queued for compilation
+    contact_rb_rb_ee_ee_cubic.......................queued for compilation
+    contact_d_d_pt_pt_cubic.........................queued for compilation
+    friction_rb_rb_pp_C0............................queued for compilation
+    EnergyTriangleStrain............................queued for compilation
+    contact_d_d_ee_pp_cubic.........................queued for compilation
+    contact_rb_d_pt_pp_cubic........................queued for compilation
+    rb_constraint_distances.........................queued for compilation
+    contact_rb_d_pt_pe_cubic........................queued for compilation
+    EnergyTriangleStrain_Elasticity_Only............queued for compilation
+    friction_rb_rb_pe_C0............................queued for compilation
+    contact_d_d_ee_pe_cubic.........................queued for compilation
+    rb_constraint_distance_limits...................queued for compilation
+    contact_d_d_ee_ee_cubic.........................queued for compilation
+    rb_constraint_directions........................queued for compilation
+    friction_rb_rb_pt_C0............................queued for compilation
+    rb_constraint_angle_limits......................queued for compilation
+    EnergyDiscreteShells............................queued for compilation
+    contact_rb_d_pt_pt_cubic........................queued for compilation
+    contact_rb_rb_pt_pp_cubic.......................queued for compilation
+    EnergyBendingFlat...............................queued for compilation
+    friction_rb_rb_ee_C0............................queued for compilation
+    rb_constraint_damped_spring.....................queued for compilation
+    contact_rb_d_pt_ep_cubic........................queued for compilation
+    contact_rb_rb_pt_pe_cubic.......................queued for compilation
+    rb_constraint_linear_velocity...................queued for compilation
+    friction_rb_d_pp_C0.............................queued for compilation
+    rb_constraint_angular_velocity..................queued for compilation
+    EnergyAttachments_d_d_p_p.......................queued for compilation
+    EnergyAttachments_d_d_p_e.......................queued for compilation
+    friction_rb_d_pe_C0.............................queued for compilation
+    EnergyAttachments_d_d_p_t.......................queued for compilation
+    contact_rb_d_pt_tp_cubic........................queued for compilation
+    contact_rb_rb_pt_pt_cubic.......................queued for compilation
+    friction_rb_d_pt_C0.............................queued for compilation
+    contact_rb_d_ee_pp_cubic........................queued for compilation
+    friction_rb_d_ee_C0.............................queued for compilation
+    EnergyTetStrain.................................queued for compilation
+    contact_rb_rb_ee_pe_cubic.......................queued for compilation
+    friction_d_d_pe_C0..............................queued for compilation
+    friction_rb_d_ep_C0.............................queued for compilation
+    friction_d_d_pp_C0..............................queued for compilation
+    EnergyTetStrain_Elasticity_Only.................queued for compilation
+    contact_rb_d_ee_pe_cubic........................queued for compilation
+    EnergyRigidBodyInertia_Linear...................queued for compilation
+    EnergyRigidBodyInertia_Angular..................queued for compilation
+    contact_rb_rb_ee_pp_cubic.......................queued for compilation
+    contact_rb_d_ee_ep_cubic........................queued for compilation
+    rb_constraint_global_points.....................queued for compilation
+    friction_rb_d_tp_C0.............................queued for compilation
+    contact_rb_d_ee_ee_cubic........................queued for compilation
+Compiling... done.
+Total time: 30.116336 s
+
+Degrees of freedom:
+soft.v1: 33492
+rigid.v1: 21
+rigid.w1: 21
+Total: 33534
+
+==================================== STARK ===============================
+[Frame: 0] Time: 0.000 s
+    0. dt:  1.00 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1474 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  980.9 ms | cr:  980.9
+    1. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 3334 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1004.3 ms | cr: 1004.3
+    2. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1440 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  485.4 ms | cr:  485.4
+    3. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1427 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  505.0 ms | cr:  505.0
+    4. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1749 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  531.5 ms | cr:  531.5
+    5. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1256 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  427.3 ms | cr:  427.3
+    6. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1251 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  436.1 ms | cr:  436.1
+    7. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1586 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  505.6 ms | cr:  505.6
+    8. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1624 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  521.0 ms | cr:  521.0
+    9. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1761 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  711.4 ms | cr:  711.4
+    10. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1777 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  536.9 ms | cr:  536.9
+    11. dt:  1.00 ms | 
+    settings.simulation.use_adaptive_time_step is false. Exiting simulation.
+
+
+================================== Summary ===============================
+Info
+  Name:               mechanical_eval
+  Simulation time:    0.011 s
+  ndofs:              33534
+  Frames:             1
+  Time steps:         11
+  dt [ms]:            avg: 1.0 | min: 1.0 | max: 1.0
+
+  Solve                         Total      Avg      Min      Max
+  --------------------------------------------------------------
+  Newton iterations                24      2.0        1       12
+  CG iterations                 51539   1982.3     1251     2424
+  Line search cap                   0      0.0        0        0
+  Line search max                   0      0.0        0        0
+  Line search inv                   0      0.0        0        0
+  Line search bt                  167      6.7        0       20
+  Projected hessians                       0.0%     0.0%     0.0%
+  --------------------------------------------------------------
+
+  Runtime                                    Time (s)       %
+  ------------------------------------------------------------
+  initialization                            30.135427   62.4%
+  linear_system_solve                       13.689853   28.3%
+  before_energy_evaluation                   2.883011    6.0%
+  is_intermediate_state_valid                0.325099    0.7%
+  assembly                                   0.301897    0.6%
+  evaluate_P_grad_hess                       0.280375    0.6%
+  evaluate_P                                 0.230783    0.5%
+  is_initial_state_valid                     0.165759    0.3%
+  before_time_step                           0.153773    0.3%
+  is_converged_state_valid                   0.141006    0.3%
+  ------------------------------------------------------------
+  Total                                     48.312387  100.0%

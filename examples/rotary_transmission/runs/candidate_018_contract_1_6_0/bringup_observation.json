@@ -1,0 +1,18 @@
+{
+  "contract_sha256": "c7b520fc43e9f5e67fbe7374f5a7ca9d632de6208107970e88fe3e49b6c8837d",
+  "step_path": "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_018.step",
+  "duration_s": 0.001,
+  "component_count": 2,
+  "component_max_displacement_m": [
+    0.0,
+    0.0
+  ],
+  "policy_audit": {
+    "candidate_is_deformable": true,
+    "candidate_attachments": false,
+    "candidate_internal_constraints": false,
+    "candidate_prescribed_motion": false
+  },
+  "classification": "INCONCLUSIVE_NUMERICS",
+  "reason": "bring-up run only; no rig actuation or physical reward"
+}

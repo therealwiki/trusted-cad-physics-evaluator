@@ -75,15 +75,20 @@ class SimulationSettings:
     time_step_s: float = 1 / 1000
     duration_s: float = 1.0
     friction_coefficient: float = 0.35
+    ipc_min_contact_stiffness: float = 1e8
+    ipc_max_contact_stiffness: float = 1e12
     schema_version: Literal["1.0"] = SCHEMA_VERSION
 
     def __post_init__(self) -> None:
-        for name in ("surface_size_m", "volume_size_m", "contact_distance_m", "time_step_s", "duration_s"):
+        for name in ("surface_size_m", "volume_size_m", "contact_distance_m", "time_step_s", "duration_s",
+                     "ipc_min_contact_stiffness", "ipc_max_contact_stiffness"):
             _positive(name, getattr(self, name))
         if self.contact_distance_m >= self.surface_size_m:
             raise ValueError("contact distance must be smaller than surface mesh size")
         if not 0 <= self.friction_coefficient <= 2:
             raise ValueError("friction_coefficient must be in [0, 2]")
+        if self.ipc_min_contact_stiffness > self.ipc_max_contact_stiffness:
+            raise ValueError("minimum IPC contact stiffness cannot exceed maximum")
 
 
 @dataclass(frozen=True)

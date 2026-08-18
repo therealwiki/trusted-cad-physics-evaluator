@@ -32,9 +32,17 @@ class StarkSceneBuilder:
         native.output.codegen_directory = str(work_dir / "codegen")
         native.simulation.max_time_step_size = settings.time_step_s
         native.simulation.use_adaptive_time_step = False
+        native.newton.residual_tolerance_abs = 1e-6
+        native.newton.step_tolerance = 1e-3
+        native.newton.cg_abs_tolerance = 1e-12
+        native.newton.cg_rel_tolerance = 1e-4
         self.simulation = pystark.Simulation(native)
         contact = pystark.EnergyFrictionalContact.GlobalParams()
-        contact.default_contact_thickness = settings.contact_distance_m
+        # STARK adds the two objects' thicknesses to obtain the pair barrier
+        # distance. The evaluator setting is deliberately the pair distance.
+        contact.default_contact_thickness = settings.contact_distance_m / 2
+        contact.min_contact_stiffness = settings.ipc_min_contact_stiffness
+        contact.max_contact_stiffness = settings.ipc_max_contact_stiffness
         contact.friction_enabled = True
         self.simulation.interactions().contact().set_global_params(contact)
         self.settings = settings
@@ -46,7 +54,8 @@ class StarkSceneBuilder:
         params.strain.youngs_modulus = material.youngs_modulus_pa
         params.strain.poissons_ratio = material.poissons_ratio
         params.strain.damping = material.damping
-        params.contact.contact_thickness = self.settings.contact_distance_m
+        params.strain.elasticity_only = True
+        params.contact.contact_thickness = self.settings.contact_distance_m / 2
         handler = self.simulation.presets().deformables().add_volume(
             mesh.name, np.ascontiguousarray(mesh.vertices_m), np.ascontiguousarray(mesh.tets), params
         )

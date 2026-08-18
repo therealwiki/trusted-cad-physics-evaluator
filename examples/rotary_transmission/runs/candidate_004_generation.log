@@ -1,0 +1,11 @@
+Info    : Writing '/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_004.step'...
+[32;1m
+*******************************************************************
+******        Statistics on Transfer (Write)                 ******[0m
+[32;1m
+*******************************************************************
+******        Transfer Mode = 0  I.E.  As Is       ******[0m
+[32;1m******        Transferring Shape, ShapeType = 0                      ******[0m
+[32;1m** WorkSession : Sending all data[0m
+[32;1m Step File Name : /Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_004.step(11934 ents)  Write  Done[0m
+Info    : Done writing '/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/cad/candidate_004.step'

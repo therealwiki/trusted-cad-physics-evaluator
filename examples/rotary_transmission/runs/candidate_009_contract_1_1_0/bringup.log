@@ -1,0 +1,134 @@
+
+================================== Settings ==============================
+Stark Settings
+     Output
+         simulation_name: "mechanical_eval"
+         output_directory: "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/runs/candidate_009_contract_1_1_0/vtk"
+         codegen_directory: "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/runs/candidate_009_contract_1_1_0/codegen"
+         time_stamp: "2026-08-17__17-42-40"
+         fps: 30
+         console_verbosity: Summary
+         file_verbosity: Full
+         enable_frame_writes: true
+         enable_output: true
+     Simulation
+         gravity: (0.000000, 0.000000, -9.810000)
+         init_frictional_contact: true
+         max_time_step_size: 1.0000e-03
+         use_adaptive_time_step: false
+         time_step_size_success_multiplier: 1.05
+         time_step_size_lower_bound: 1.0e-06
+     Newton's Method
+         Iteration limits
+             max_iterations: 2147483647
+             min_iterations: 0
+         Convergence
+             residual_tolerance_abs: 1.0e-06
+             residual_tolerance_rel: 0.0e+00
+             step_tolerance: 1.0e-03
+             max_iterations_as_success: false
+         Line search
+             step_cap: inf
+             enable_armijo_backtracking: true
+             armijo_beta: 1.0e-04
+             max_armijo_iterations: 20
+             max_invalid_state_iterations: 8
+             print_line_search_upon_failure: false
+         Hessian projection
+             projection_mode: Progressive
+             projection_eps: 1.0e-10
+             use_mirroring: false
+             on_demand_countdown: 4
+             ppn_tightening_factor: 0.50
+             ppn_release_factor: 2.00
+         Linear solver
+             solver: BDPCG
+             cg_max_iterations: 10000
+             cg_abs_tolerance: 1.0e-12
+             cg_rel_tolerance: 1.0e-04
+             cg_stop_on_indefiniteness: true
+             bailout_residual: 1.0e-10
+     Execution
+         allowed_execution_time: 1.8e+308
+         end_simulation_time: 1.8e+308
+         end_frame: 2147483647
+         n_threads: 5
+
+==================================== SymX ================================
+Second Order Potentials:
+    EnergyLumpedInertia.............................queued for compilation
+    EnergyPrescribedPositions.......................queued for compilation
+    EnergyAttachments_d_d_e_e.......................queued for compilation
+    rb_constraint_global_directions.................queued for compilation
+    friction_d_d_pt_C0..............................queued for compilation
+    EnergySegmentStrain.............................queued for compilation
+    EnergyAttachments_rb_d..........................queued for compilation
+    contact_d_d_pt_pp_cubic.........................queued for compilation
+    EnergySegmentStrain_Elasticity_Only.............queued for compilation
+    contact_d_d_pt_pe_cubic.........................queued for compilation
+    friction_d_d_ee_C0..............................queued for compilation
+    rb_constraint_points............................queued for compilation
+    contact_d_d_pt_pt_cubic.........................queued for compilation
+    contact_rb_rb_ee_ee_cubic.......................queued for compilation
+    rb_constraint_point_on_axis.....................queued for compilation
+    contact_d_d_ee_pp_cubic.........................queued for compilation
+    contact_rb_d_pt_pp_cubic........................queued for compilation
+    EnergyTriangleStrain............................queued for compilation
+    friction_rb_rb_pp_C0............................queued for compilation
+    EnergyTriangleStrain_Elasticity_Only............queued for compilation
+    contact_d_d_ee_pe_cubic.........................queued for compilation
+    rb_constraint_distances.........................queued for compilation
+    contact_rb_d_pt_pe_cubic........................queued for compilation
+    contact_d_d_ee_ee_cubic.........................queued for compilation
+    friction_rb_rb_pe_C0............................queued for compilation
+    contact_rb_d_pt_pt_cubic........................queued for compilation
+    EnergyDiscreteShells............................queued for compilation
+    rb_constraint_distance_limits...................queued for compilation
+    EnergyBendingFlat...............................queued for compilation
+    contact_rb_rb_pt_pp_cubic.......................queued for compilation
+    contact_rb_d_pt_ep_cubic........................queued for compilation
+    rb_constraint_directions........................queued for compilation
+    contact_rb_rb_pt_pe_cubic.......................queued for compilation
+    friction_rb_rb_pt_C0............................queued for compilation
+    rb_constraint_angle_limits......................queued for compilation
+    contact_rb_d_pt_tp_cubic........................queued for compilation
+    EnergyTetStrain.................................queued for compilation
+    friction_rb_rb_ee_C0............................queued for compilation
+    contact_rb_rb_pt_pt_cubic.......................queued for compilation
+    EnergyTetStrain_Elasticity_Only.................queued for compilation
+    friction_rb_d_pp_C0.............................queued for compilation
+    EnergyRigidBodyInertia_Linear...................queued for compilation
+    EnergyRigidBodyInertia_Angular..................queued for compilation
+    rb_constraint_damped_spring.....................queued for compilation
+    rb_constraint_global_points.....................queued for compilation
+    EnergyAttachments_d_d_p_t.......................queued for compilation
+    EnergyAttachments_d_d_p_e.......................queued for compilation
+    friction_rb_d_pe_C0.............................queued for compilation
+    EnergyAttachments_d_d_p_p.......................queued for compilation
+    rb_constraint_linear_velocity...................queued for compilation
+    rb_constraint_angular_velocity..................queued for compilation
+    friction_d_d_pe_C0..............................queued for compilation
+    contact_rb_d_ee_pp_cubic........................queued for compilation
+    friction_rb_d_pt_C0.............................queued for compilation
+    friction_d_d_pp_C0..............................queued for compilation
+    friction_rb_d_ee_C0.............................queued for compilation
+    friction_rb_d_ep_C0.............................queued for compilation
+    contact_rb_rb_ee_pp_cubic.......................queued for compilation
+    contact_rb_d_ee_pe_cubic........................queued for compilation
+    contact_rb_d_ee_ep_cubic........................queued for compilation
+    friction_rb_d_tp_C0.............................queued for compilation
+    contact_rb_d_ee_ee_cubic........................queued for compilation
+    contact_rb_rb_ee_pe_cubic.......................queued for compilation
+Compiling... done.
+Total time: 36.229918 s
+
+Degrees of freedom:
+soft.v1: 75105
+rigid.v1: 0
+rigid.w1: 0
+Total: 75105
+
+==================================== STARK ===============================
+[Frame: 0] Time: 0.000 sStark error: Initial collision detected between the following contact object pairs:
+	- 0 and 1
+Initial state is not valid. Exiting simulation.

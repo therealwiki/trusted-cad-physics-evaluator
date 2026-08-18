@@ -1,0 +1,52 @@
+# IPC and timestep history — Candidates 001–026
+
+This is an execution audit, not a retrospective statement of intended settings. Values are taken from native STARK logs, observation contract hashes, preserved source history, and the immutable attempt ledger. `effective` means the value that reached STARK. Where the surviving artifacts cannot prove a value, it is explicitly marked.
+
+## Shared solver configuration
+
+- Integrator: STARK implicit time integration with fixed timestep; adaptive timestep disabled.
+- Contact: triangle/edge IPC barrier contact with continuous collision checks and friction enabled.
+- Material during the recorded optimization: stable Neo-Hookean tetrahedral FEM; the current locked profile is effective isotropic printed PLA, density 1200 kg/m³, Young's modulus 2.5 GPa, Poisson ratio 0.35.
+- Newton absolute residual tolerance: `1e-6` from contract 1.1.0 onward.
+- Newton step tolerance: `1e-3` from contract 1.1.0 onward.
+- BDPCG absolute/relative tolerances: `1e-12` / `1e-4` from contract 1.1.0 onward.
+- Maximum IPC stiffness: `1e12` for the later controlled runs.
+- Friction coefficient: 0.35.
+- IPC friction stick/slip smoothing threshold: STARK default 0.1 m/s; this was not previously made contract-explicit and must be included in the final lock.
+
+## Candidate-by-candidate execution settings
+
+| Candidate | Contract/run family | Fixed dt | Effective pair IPC distance | Effective surface / volume target | Effective initial IPC stiffness | Load protocol | Evidence and audit note |
+|---:|---|---:|---:|---:|---:|---|---|
+| 001 | foundation bring-up | 1.00 ms | 0.10 mm | 1.2 / 1.2 mm | 1e6 default | no valid actuation | Initial overlap; contact thickness was mistakenly applied in full to both objects. |
+| 002 | foundation bring-up | 1.00 ms | 0.10 mm | 1.2 / 1.2 mm | 1e6 default | no valid actuation | Initial overlap. |
+| 003 | foundation bring-up | 1.00 ms | 0.10 mm | 1.2 / 1.2 mm | 1e6 default | no valid actuation | Initial overlap. |
+| 004 | foundation diagnostics | 1.00 ms | 0.10 mm initially; corrected to 0.05 mm in later sub-run | 1.2 / 1.2 mm | 1e6 default | several 0.02 s diagnostics | Multiple preserved sub-runs; exposed doubled pair-distance adapter bug. |
+| 005 | contracts 1.0.x–1.1.0 diagnostics | 1.00 ms | 0.05 mm after pair-distance fix | 1.2 / 1.2 mm | 1e6 default | up to 0.25 s | Multiple control diagnostics; tighter solver tolerances introduced. |
+| 006 | 1.1.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e6, log-proven | 0.35 s requested | First hardening at 0.130 s. Old harness stopped instead of retrying. |
+| 007 | 1.1.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e6 | no actuation | Rejected at initial collision. |
+| 008 | 1.1.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e6 | no actuation | Rejected at initial collision. |
+| 009 | 1.1.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e6 | no actuation | Rejected at initial collision. |
+| 010 | 1.1.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e6 | no actuation | Rejected at initial contact-distance check. |
+| 011 | 1.1.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e6, log-proven | 0.35 s requested | First hardening at 0.125 s; old harness stopped instead of retrying. |
+| 012 | 1.2.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e7, log-proven | 0.35 s requested | First hardening at 0.130 s; old harness stopped instead of retrying. |
+| 013 | 1.3.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e7, log-proven | staged speed; brake after take-up | First hardening at 0.201 s; old harness stopped instead of retrying. |
+| 014 | 1.4.0 | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e8, log-proven | 0.4 N·m/s brake ramp | 0.300 s gate completed; loaded repeat first hardened at 0.543 s and 0.0172 N·m. |
+| 015 | 1.5.0 diagnostic | 1.00 ms | 0.05 mm | 1.2 / 1.2 mm | 1e9 intended; not independently log-proven | fast brake ramp | Interrupted at 0.038 s to run timestep study; not a scored attempt. |
+| 016 | 1.6.0 | 0.50 ms | 0.05 mm | 1.2 / 1.2 mm | 1e8, log-proven | 0.4 N·m/s brake ramp | First hardening at 0.544 s and about 0.0176 N·m. |
+| 017 | 1.6.0 | 0.50 ms | 0.05 mm | 1.2 / 1.2 mm | 1e8 | no actuation | D-flat relief revision rejected by initial collision. |
+| 018 | 1.6.0 | 0.50 ms | 0.05 mm | 1.2 / 1.2 mm | 1e8, log-proven | staged speed | First hardening at 0.2355 s before brake. |
+| 019 | 1.6.0 | 0.50 ms | 0.05 mm | 1.2 / 1.2 mm | 1e8, log-proven | 0.4 N·m/s brake ramp | First hardening at 0.549 s and 0.01884 N·m. |
+| 020 | 1.6.0 | 0.50 ms | 0.05 mm | 0.8 / 1.2 mm | 1e8, log-proven | 0.4 N·m/s brake ramp | Surface-mesh plumbing fixed; first hardening at 0.5555 s and 0.01405 N·m. |
+| 021 | 1.7.0 | 0.25 ms | 0.05 mm | 0.8 / 1.2 mm | 1e8, log-proven | 0.4 N·m/s brake ramp | First hardening at 0.55675 s. |
+| 022 | 1.8.0 | 0.25 ms | 0.05 mm | 0.8 / 1.2 mm | 1e8, log-proven | 0.4 N·m/s brake ramp | Separate evaluator rotor inertias; first hardening at 0.5545 s and 0.01798 N·m. |
+| 023 | 1.8.0 | 0.25 ms | 0.05 mm | 0.8 / 1.2 mm | 1e8, log-proven | 0.4 N·m/s brake ramp | First hardening at 0.53425 s and 0.01370 N·m. |
+| 024 | 1.9.0 | 0.25 ms | 0.05 mm | 0.8 / 1.2 mm | 1e8, log-proven | 0.08 N·m/s brake ramp | First hardening at 0.76375 s and 0.02110 N·m. |
+| 025 | 1.9.0 | 0.25 ms | 0.05 mm | 0.8 / 1.2 mm | 1e8, log-proven | 0.08 N·m/s brake ramp | First hardening at 0.74975 s and 0.01998 N·m. |
+| 026 | 1.9.0 | 0.25 ms | 0.05 mm | 0.8 / 1.2 mm | 1e8, log-proven | 0.08 N·m/s brake ramp | First hardening at 0.76125 s and 0.02090 N·m. |
+
+## Why the prior stops were not mechanical breaks
+
+STARK's native `run_one_step()` treats `InvalidConvergedState` and `TooManyInvalidIntermediateIterations` as recoverable: it hardens the IPC barrier, does not advance physical time, and returns a continue signal so the caller retries the same timestep. The old Python harness interpreted one non-advancing call as terminal. Therefore Candidates 006–026 that ended at their first hardening event are evaluator-integration failures and must not be presented as broken parts.
+
+Contract 1.10.0 fixed the settings plumbing and retry protocol, then its expensive 0.25 ms / 2e8 diagnostic was deliberately interrupted before the old failure point when the performance audit showed that those conservative settings predated the root-cause fix. Contract 1.11.0 restores a 1.00 ms step and 1e8 initial barrier while retaining the same physical load history. It is the fast baseline for a controlled 1.00/0.50/0.25 ms convergence study. Final scoring requires a newly frozen contract and clean repeat runs.

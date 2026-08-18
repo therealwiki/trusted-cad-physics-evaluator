@@ -20,6 +20,27 @@ void pystark_PointSetHandler(nb::module_& m)
         .def("get_acceleration", &PointSetHandler::get_acceleration)
         .def("get_force", &PointSetHandler::get_force)
 
+        .def("get_positions", [](PointSetHandler& self) {
+            Eigen::MatrixXd out(self.size(), 3);
+            for (int i = 0; i < self.size(); ++i) out.row(i) = self.get_position(i);
+            return out;
+        })
+        .def("get_rest_positions", [](PointSetHandler& self) {
+            Eigen::MatrixXd out(self.size(), 3);
+            for (int i = 0; i < self.size(); ++i) out.row(i) = self.get_rest_position(i);
+            return out;
+        })
+        .def("get_velocities", [](PointSetHandler& self) {
+            Eigen::MatrixXd out(self.size(), 3);
+            for (int i = 0; i < self.size(); ++i) out.row(i) = self.get_velocity(i);
+            return out;
+        })
+        .def("get_forces", [](PointSetHandler& self) {
+            Eigen::MatrixXd out(self.size(), 3);
+            for (int i = 0; i < self.size(); ++i) out.row(i) = self.get_force(i);
+            return out;
+        })
+
         .def("set_position", &PointSetHandler::set_position)
         .def("set_rest_position", &PointSetHandler::set_rest_position)
         .def("set_velocity", &PointSetHandler::set_velocity)

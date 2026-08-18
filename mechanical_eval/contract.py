@@ -11,10 +11,10 @@ def canonical_contract_bytes(contract: dict[str, Any]) -> bytes:
     return json.dumps(contract, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode()
 
 
-def load_contract(path: str | Path) -> dict[str, Any]:
+def load_contract(path: str | Path, *, allow_prelock: bool = False) -> dict[str, Any]:
     with Path(path).open(encoding="utf-8") as stream:
         contract = json.load(stream)
-    if not contract.get("frozen_before_attempts"):
+    if not allow_prelock and not contract.get("frozen_before_attempts"):
         raise ValueError("recorded optimization requires a frozen contract")
     return contract
 

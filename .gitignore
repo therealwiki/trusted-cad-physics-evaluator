@@ -6,3 +6,9 @@ build/
 dist/
 .native/
 .venv/
+
+# Rotary-transmission runs retain compact logs and JSON evidence in Git. These
+# heavy products are reproducible and remain in the local organized output tree.
+examples/rotary_transmission/runs/**/vtk/
+examples/rotary_transmission/runs/**/codegen/
+examples/rotary_transmission/runs/**/recorded_frames.npz

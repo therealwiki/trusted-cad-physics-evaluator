@@ -1,0 +1,43 @@
+1
+00:00:01,000 --> 00:00:07,500
+A test cell with no opinion about the design.
+
+2
+00:00:09,000 --> 00:00:17,500
+Metadata locates equipment. Geometry carries the load.
+
+3
+00:00:18,500 --> 00:00:24,500
+STEP → exact solids → separate tet bodies → insert → settle → actuate/load → evidence.
+
+4
+00:00:25,500 --> 00:00:30,500
+Effective isotropic printed-PLA model. Recoverable elasticity—not a fracture model.
+
+5
+00:00:31,000 --> 00:00:46,500
+Every substantive candidate is preserved. Initial overlap is a failure. Numerical failure is inconclusive.
+
+6
+00:00:47,000 --> 00:01:02,500
+The agent revises only from measured geometry, contact, motion, and solver evidence.
+
+7
+00:01:03,000 --> 00:01:15,500
+No candidate joints. No prescribed candidate motion. No direct force on a candidate body.
+
+8
+00:01:16,000 --> 00:01:30,500
+Physical insertion. Contact-only transmission. Evaluator-owned brake load.
+
+9
+00:01:31,000 --> 00:01:38,500
+The evidence panel reports the actual classification and immutable hashes.
+
+10
+00:01:39,000 --> 00:01:44,000
+The evaluator never trusted the design. It tested the geometry.
+
+11
+00:01:40,000 --> 00:01:45,000
+Simulation engineering evaluation under the shown model/settings; not real-world safety certification.

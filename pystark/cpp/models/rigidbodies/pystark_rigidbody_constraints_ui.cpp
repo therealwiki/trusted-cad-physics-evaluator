@@ -19,9 +19,11 @@
 #define DEFINE(NAME) \
     .def(#NAME, &Self::NAME) \
 	
+#define STRINGIFY_INNER(NAME) #NAME
+#define STRINGIFY(NAME) STRINGIFY_INNER(NAME)
 #define DEFINE_GETTER_SETTER(NAME) \
-    .def("get_##NAME", &Self::get_##NAME) \
-    .def("set_##NAME", &Self::set_##NAME) \
+    .def("get_" STRINGIFY(NAME), &Self::get_##NAME) \
+    .def("set_" STRINGIFY(NAME), &Self::set_##NAME) \
 
 void pystark_rigidbody_constraints_ui(nb::module_& m)
 {

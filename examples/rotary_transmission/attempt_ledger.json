@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "contract_sha256": "50777f4b32ecb2f667939229b2d3a096dfaee0b70804c395752691a6640a56b4",
+  "attempts": [
+    {
+      "attempt": 1,
+      "cad": "cad/candidate_001.step",
+      "cad_sha256": "33fed2a3ed793b2b09b63923fb6c5df36f11fc184a18d0be738bf0c901612b10",
+      "settings_sha256": "b0a972448234c8484d5d3db3499b01916d130404604cd84ca247e18212c724df",
+      "result": "FAIL",
+      "evidence": ["runs/candidate_001_bringup/vtk/mechanical_eval__2026-08-17__16-58-12.log", "runs/candidate_001_bringup/volume_1.npz", "runs/candidate_001_bringup/volume_2.npz"],
+      "measured_reason": "STARK rejected an initial collision between the two separate candidate contact bodies.",
+      "revision": "Phase the 24-tooth gear and narrow tooth tangential width."
+    },
+    {
+      "attempt": 2,
+      "cad": "cad/candidate_002.step",
+      "cad_sha256": "adc58488b5269ca651811e96f2e246c7bb163bd3f30a8a83fb7f78e1a6c45edf",
+      "settings_sha256": "b0a972448234c8484d5d3db3499b01916d130404604cd84ca247e18212c724df",
+      "result": "FAIL",
+      "evidence": ["runs/candidate_002_bringup.log", "runs/candidate_002_bringup/vtk/mechanical_eval__2026-08-17__16-59-04.log"],
+      "measured_reason": "Exact OCC intersection remained 1.7032584768 mm^3 and STARK rejected the initial candidate-body collision.",
+      "revision": "Reduce tangential tooth fraction again."
+    },
+    {
+      "attempt": 3,
+      "cad": "cad/candidate_003.step",
+      "cad_sha256": "76b17898d3f89df76496ccb790d85f29d3fa85055a4b8ff1c5db708f42d42cac",
+      "settings_sha256": "b0a972448234c8484d5d3db3499b01916d130404604cd84ca247e18212c724df",
+      "result": "FAIL",
+      "evidence": ["runs/candidate_003_bringup.log", "runs/candidate_003_bringup/vtk/mechanical_eval__2026-08-17__16-59-47.log"],
+      "measured_reason": "Exact OCC intersection remained 1.1160889320 mm^3 and STARK rejected the initial candidate-body collision.",
+      "revision": "Increase physical gear-center clearance instead of further weakening teeth."
+    },
+    {
+      "attempt": 4,
+      "cad": "cad/candidate_004.step",
+      "cad_sha256": "418caf91a81ccdc059ba8db2f6c6816d2dbb07def1681e5bd4acf60b5cf2901e",
+      "settings_sha256": "b0a972448234c8484d5d3db3499b01916d130404604cd84ca247e18212c724df",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_004_bringup/bringup_observation.json", "runs/candidate_004_actuation_short3/vtk/mechanical_eval__2026-08-17__17-04-05.log"],
+      "measured_reason": "Exact intersection cleared, but the initial adapter doubled the intended pairwise IPC distance and the loaded solve ended in Armijo failure.",
+      "revision": "Increase center clearance and correct per-object thickness so the locked pair distance remains 0.05 mm."
+    },
+    {
+      "attempt": 5,
+      "cad": "cad/candidate_005.step",
+      "cad_sha256": "ea755841f07df265084ee194eddca2dff2e0c2ff727b6c0aecc585c049e7def9",
+      "settings_sha256": "b0a972448234c8484d5d3db3499b01916d130404604cd84ca247e18212c724df",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_005_bringup/bringup_observation.json", "runs/candidate_005_pair_distance_fix/actuation_observation.json", "runs/candidate_005_ramp.log"],
+      "measured_reason": "All 250 fixed steps converged, but default solver residual tolerance discarded the low-inertia speed-control torque; no actuation was observed.",
+      "revision": "Version and lock explicit tighter solver tolerances without changing physical acceptance thresholds."
+    },
+    {
+      "attempt": 6,
+      "cad": "cad/candidate_006.step",
+      "cad_sha256": "bc8c72146d59490d85c430bf9eb14824779b09a730f5ea72afaedfad201d0b4e",
+      "settings_sha256": "280b4c9e2840963e973a98d6c3bfdf5e2c0853082ccf445d95aad12e53215cf4",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_006_contract_1_1_0/bringup_observation.json", "runs/candidate_006_contract_1_1_0/actuation_observation.json", "runs/candidate_006_contract_1_1_0/recorded_frames.npz"],
+      "measured_reason": "Tapered teeth drove the output gear in the correct direction, but the output D connector remained stationary and IPC could not avoid penetration at 130 ms.",
+      "revision": "Replace ad-hoc tapered teeth with generated involute flanks."
+    },
+    {
+      "attempt": 7,
+      "cad": "cad/candidate_007.step",
+      "cad_sha256": "b4154bbb7997f1d67becd3e3193209369716c86cbc7fd4fe635f54bf03dd7b3c",
+      "settings_sha256": "280b4c9e2840963e973a98d6c3bfdf5e2c0853082ccf445d95aad12e53215cf4",
+      "result": "FAIL",
+      "evidence": ["runs/candidate_007_contract_1_1_0/bringup.log"],
+      "measured_reason": "Initial candidate-body collision: the first involute implementation widened toward the tooth tip.",
+      "revision": "Audit the involute polar-angle sign and preserve this rejected STEP."
+    },
+    {
+      "attempt": 8,
+      "cad": "cad/candidate_008.step",
+      "cad_sha256": "f0189980007475008ffdac662b0a0de428750d10d0d162697f16b8ec4c0cbfef",
+      "settings_sha256": "280b4c9e2840963e973a98d6c3bfdf5e2c0853082ccf445d95aad12e53215cf4",
+      "result": "FAIL",
+      "evidence": ["runs/candidate_008_contract_1_1_0/bringup.log"],
+      "measured_reason": "Initial collision persisted after clearance increase because the involute sign defect remained.",
+      "revision": "Do not tune clearance around a defective flank; correct the CAD generator."
+    },
+    {
+      "attempt": 9,
+      "cad": "cad/candidate_009.step",
+      "cad_sha256": "c75aae6c465e9be09826a390d5958140c8c1f464dd80069d822ca2261dc4c1f1",
+      "settings_sha256": "280b4c9e2840963e973a98d6c3bfdf5e2c0853082ccf445d95aad12e53215cf4",
+      "result": "FAIL",
+      "evidence": ["runs/candidate_009_contract_1_1_0/bringup.log"],
+      "measured_reason": "Initial collision persisted even at 1.0 mm center clearance, isolating the CAD flank defect.",
+      "revision": "Correct the involute polar-angle formula."
+    },
+    {
+      "attempt": 10,
+      "cad": "cad/candidate_010.step",
+      "cad_sha256": "97423e7a172f6bcf6ff2dbe90bb2954b9033f6da4508ed2725e40a9c9cd007aa",
+      "settings_sha256": "280b4c9e2840963e973a98d6c3bfdf5e2c0853082ccf445d95aad12e53215cf4",
+      "result": "FAIL",
+      "evidence": ["runs/candidate_010_contract_1_1_0/bringup.log"],
+      "measured_reason": "Corrected involute geometry still failed the initial contact-distance check at 0.1 mm center clearance.",
+      "revision": "Increase designed center clearance to 0.5 mm."
+    },
+    {
+      "attempt": 11,
+      "cad": "cad/candidate_011.step",
+      "cad_sha256": "cf0700d7489fe7104669279c5023f8c91670710d12f620778b14670c0a62a107",
+      "settings_sha256": "280b4c9e2840963e973a98d6c3bfdf5e2c0853082ccf445d95aad12e53215cf4",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_011_contract_1_1_0/bringup_observation.json", "runs/candidate_011_contract_1_1_0/actuation_observation.json", "runs/candidate_011_contract_1_1_0/recorded_frames.npz"],
+      "measured_reason": "Correct-direction 1.945:1 gear motion occurred with low strain, but IPC hardened at 125 ms before output D-flat take-up.",
+      "revision": "Strengthen the IPC barrier numerically without changing physical thresholds."
+    },
+    {
+      "attempt": 12,
+      "cad": "cad/candidate_012.step",
+      "cad_sha256": "2da5cf154c666ca1f7adaadecf365146525f1e86908e9fc2258c9bf742757fd4",
+      "settings_sha256": "24c5eb7755ef8e35e352a37044c0a0a38dc5268de284155a770078193f2dba17",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_012_contract_1_2_0/actuation_observation.json", "runs/candidate_012_contract_1_2_0/recorded_frames.npz"],
+      "measured_reason": "A 1e7 minimum IPC stiffness delayed but did not remove hardening; solve ended at 130 ms.",
+      "revision": "Stage speed take-up before brake application and simplify flank segmentation."
+    },
+    {
+      "attempt": 13,
+      "cad": "cad/candidate_013.step",
+      "cad_sha256": "dde675ad092d40e2ab102e2679e5ced3b6d175106a4a7c2e04956a6727484a75",
+      "settings_sha256": "0cc385915b79c062671ed48f637e4535e4c5c7ecf47c6aca206efae9db15d785",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_013_contract_1_3_0/actuation_observation.json", "runs/candidate_013_contract_1_3_0/recorded_frames.npz"],
+      "measured_reason": "Staged control achieved physical output D-flat take-up at -0.120 rad/s, then IPC hardened at 201 ms before brake onset.",
+      "revision": "Use the 1e8 minimum barrier stiffness demonstrated by STARK deformable-contact examples."
+    },
+    {
+      "attempt": 14,
+      "cad": "cad/candidate_014.step",
+      "cad_sha256": "593dda728b8bf291dbc802eefe737e95236c8e2b36bc1087fd8d33e557aa18c3",
+      "settings_sha256": "50777f4b32ecb2f667939229b2d3a096dfaee0b70804c395752691a6640a56b4",
+      "result": "PENDING_FULL_LOAD",
+      "evidence": ["runs/candidate_014_contract_1_4_0/actuation_observation.json", "runs/candidate_014_contract_1_4_0/recorded_frames.npz"],
+      "measured_reason": "The 300 ms pre-load gate completed all steps at 1.945:1 with physical output connector motion, 0.00183 max strain, and 0.019 mm wobble.",
+      "revision": "Run the unchanged one-second brake-loaded contract twice before scoring."
+    }
+  ]
+}

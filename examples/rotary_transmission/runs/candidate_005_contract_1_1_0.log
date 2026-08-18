@@ -1,0 +1,260 @@
+
+================================== Settings ==============================
+Stark Settings
+     Output
+         simulation_name: "mechanical_eval"
+         output_directory: "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/runs/candidate_005_contract_1_1_0/vtk"
+         codegen_directory: "/Users/wikios/.codex/worktrees/2c13/sim/examples/rotary_transmission/runs/candidate_005_contract_1_1_0/codegen"
+         time_stamp: "2026-08-17__17-34-34"
+         fps: 30
+         console_verbosity: Summary
+         file_verbosity: Full
+         enable_frame_writes: true
+         enable_output: true
+     Simulation
+         gravity: (0.000000, 0.000000, -9.810000)
+         init_frictional_contact: true
+         max_time_step_size: 1.0000e-03
+         use_adaptive_time_step: false
+         time_step_size_success_multiplier: 1.05
+         time_step_size_lower_bound: 1.0e-06
+     Newton's Method
+         Iteration limits
+             max_iterations: 2147483647
+             min_iterations: 0
+         Convergence
+             residual_tolerance_abs: 1.0e-06
+             residual_tolerance_rel: 0.0e+00
+             step_tolerance: 1.0e-03
+             max_iterations_as_success: false
+         Line search
+             step_cap: inf
+             enable_armijo_backtracking: true
+             armijo_beta: 1.0e-04
+             max_armijo_iterations: 20
+             max_invalid_state_iterations: 8
+             print_line_search_upon_failure: false
+         Hessian projection
+             projection_mode: Progressive
+             projection_eps: 1.0e-10
+             use_mirroring: false
+             on_demand_countdown: 4
+             ppn_tightening_factor: 0.50
+             ppn_release_factor: 2.00
+         Linear solver
+             solver: BDPCG
+             cg_max_iterations: 10000
+             cg_abs_tolerance: 1.0e-12
+             cg_rel_tolerance: 1.0e-04
+             cg_stop_on_indefiniteness: true
+             bailout_residual: 1.0e-10
+     Execution
+         allowed_execution_time: 1.8e+308
+         end_simulation_time: 1.8e+308
+         end_frame: 2147483647
+         n_threads: 5
+
+==================================== SymX ================================
+Second Order Potentials:
+    EnergyLumpedInertia.............................queued for compilation
+    EnergyAttachments_d_d_e_e.......................queued for compilation
+    EnergyPrescribedPositions.......................queued for compilation
+    friction_d_d_pt_C0..............................queued for compilation
+    rb_constraint_global_directions.................queued for compilation
+    EnergySegmentStrain.............................queued for compilation
+    EnergySegmentStrain_Elasticity_Only.............queued for compilation
+    friction_d_d_ee_C0..............................queued for compilation
+    EnergyAttachments_rb_d..........................queued for compilation
+    contact_d_d_pt_pp_cubic.........................queued for compilation
+    contact_d_d_pt_pe_cubic.........................queued for compilation
+    friction_rb_rb_pp_C0............................queued for compilation
+    EnergyTriangleStrain............................queued for compilation
+    rb_constraint_points............................queued for compilation
+    EnergyTriangleStrain_Elasticity_Only............queued for compilation
+    contact_d_d_pt_pt_cubic.........................queued for compilation
+    friction_rb_rb_pe_C0............................queued for compilation
+    contact_rb_rb_ee_ee_cubic.......................queued for compilation
+    contact_rb_d_pt_pp_cubic........................queued for compilation
+    contact_d_d_ee_pp_cubic.........................queued for compilation
+    rb_constraint_point_on_axis.....................queued for compilation
+    friction_rb_rb_pt_C0............................queued for compilation
+    contact_rb_d_pt_pe_cubic........................queued for compilation
+    EnergyDiscreteShells............................queued for compilation
+    contact_d_d_ee_pe_cubic.........................queued for compilation
+    EnergyBendingFlat...............................queued for compilation
+    rb_constraint_distances.........................queued for compilation
+    contact_d_d_ee_ee_cubic.........................queued for compilation
+    friction_rb_rb_ee_C0............................queued for compilation
+    contact_rb_d_pt_pt_cubic........................queued for compilation
+    rb_constraint_distance_limits...................queued for compilation
+    friction_rb_d_pp_C0.............................queued for compilation
+    contact_rb_rb_pt_pp_cubic.......................queued for compilation
+    contact_rb_d_pt_ep_cubic........................queued for compilation
+    rb_constraint_directions........................queued for compilation
+    friction_rb_d_pe_C0.............................queued for compilation
+    contact_rb_d_pt_tp_cubic........................queued for compilation
+    rb_constraint_angle_limits......................queued for compilation
+    friction_rb_d_pt_C0.............................queued for compilation
+    contact_rb_rb_pt_pe_cubic.......................queued for compilation
+    EnergyTetStrain.................................queued for compilation
+    rb_constraint_damped_spring.....................queued for compilation
+    friction_rb_d_ee_C0.............................queued for compilation
+    rb_constraint_linear_velocity...................queued for compilation
+    EnergyTetStrain_Elasticity_Only.................queued for compilation
+    EnergyRigidBodyInertia_Linear...................queued for compilation
+    EnergyRigidBodyInertia_Angular..................queued for compilation
+    contact_rb_rb_pt_pt_cubic.......................queued for compilation
+    friction_rb_d_ep_C0.............................queued for compilation
+    rb_constraint_angular_velocity..................queued for compilation
+    EnergyAttachments_d_d_p_p.......................queued for compilation
+    rb_constraint_global_points.....................queued for compilation
+    EnergyAttachments_d_d_p_e.......................queued for compilation
+    EnergyAttachments_d_d_p_t.......................queued for compilation
+    friction_d_d_pe_C0..............................queued for compilation
+    friction_d_d_pp_C0..............................queued for compilation
+    friction_rb_d_tp_C0.............................queued for compilation
+    contact_rb_d_ee_pp_cubic........................queued for compilation
+    contact_rb_d_ee_ep_cubic........................queued for compilation
+    contact_rb_d_ee_ee_cubic........................queued for compilation
+    contact_rb_d_ee_pe_cubic........................queued for compilation
+    contact_rb_rb_ee_pe_cubic.......................queued for compilation
+    contact_rb_rb_ee_pp_cubic.......................queued for compilation
+Compiling... done.
+Total time: 26.063406 s
+
+Degrees of freedom:
+soft.v1: 33528
+rigid.v1: 21
+rigid.w1: 21
+Total: 33570
+
+==================================== STARK ===============================
+[Frame: 0] Time: 0.000 s
+    0. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  342.3 ms | cr:  342.3
+    1. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  310.1 ms | cr:  310.1
+    2. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  311.2 ms | cr:  311.2
+    3. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  310.3 ms | cr:  310.3
+    4. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  344.2 ms | cr:  344.2
+    5. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  314.7 ms | cr:  314.7
+    6. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  318.1 ms | cr:  318.1
+    7. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  313.9 ms | cr:  313.9
+    8. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  313.0 ms | cr:  313.0
+    9. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  328.0 ms | cr:  328.0
+    10. dt:  1.00 ms | #newton:  0 | ph:  0.0% | #CG/newton:    0 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  377.0 ms | cr:  377.0
+    11. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  889 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  360.9 ms | cr:  360.9
+    12. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  808 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  295.3 ms | cr:  295.3
+    13. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  812 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  291.4 ms | cr:  291.4
+    14. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  816 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  283.2 ms | cr:  283.2
+    15. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  816 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  294.8 ms | cr:  294.8
+    16. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  810 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  368.6 ms | cr:  368.6
+    17. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  804 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  281.7 ms | cr:  281.7
+    18. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  785 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  272.6 ms | cr:  272.6
+    19. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  794 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  305.0 ms | cr:  305.0
+    20. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  790 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  273.6 ms | cr:  273.6
+    21. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  793 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  284.1 ms | cr:  284.1
+    22. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  780 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  284.8 ms | cr:  284.8
+    23. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  794 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  289.6 ms | cr:  289.6
+    24. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  787 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  345.5 ms | cr:  345.5
+    25. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  768 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  285.3 ms | cr:  285.3
+    26. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  454 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  196.4 ms | cr:  196.4
+    27. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  398 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  178.1 ms | cr:  178.1
+    28. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  436 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  235.0 ms | cr:  235.0
+    29. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  426 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  195.2 ms | cr:  195.2
+    30. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  420 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  219.6 ms | cr:  219.6
+    31. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  424 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  197.7 ms | cr:  197.7
+    32. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  384 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  179.2 ms | cr:  179.2
+    33. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  421 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  182.3 ms | cr:  182.3
+[Frame: 1] Time: 0.034 s
+    34. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  386 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  176.3 ms | cr:  176.3
+    35. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  423 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  178.6 ms | cr:  178.6
+    36. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  397 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  177.2 ms | cr:  177.2
+    37. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  428 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  181.8 ms | cr:  181.8
+    38. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  403 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  174.2 ms | cr:  174.2
+    39. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  425 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  190.7 ms | cr:  190.7
+    40. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  404 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  195.0 ms | cr:  195.0
+    41. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  417 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  183.3 ms | cr:  183.3
+    42. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  394 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  174.2 ms | cr:  174.2
+    43. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  405 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  175.7 ms | cr:  175.7
+    44. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  406 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  180.1 ms | cr:  180.1
+    45. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  421 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  185.3 ms | cr:  185.3
+    46. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  385 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  175.0 ms | cr:  175.0
+    47. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  414 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  185.2 ms | cr:  185.2
+    48. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  419 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  185.1 ms | cr:  185.1
+    49. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  424 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  186.0 ms | cr:  186.0
+    50. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  415 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  190.6 ms | cr:  190.6
+    51. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  422 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  188.3 ms | cr:  188.3
+    52. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  418 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  180.3 ms | cr:  180.3
+    53. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  423 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  186.4 ms | cr:  186.4
+    54. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  438 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  191.0 ms | cr:  191.0
+    55. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  737 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  274.5 ms | cr:  274.5
+    56. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  742 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  279.0 ms | cr:  279.0
+    57. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  757 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  272.0 ms | cr:  272.0
+    58. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  735 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  258.1 ms | cr:  258.1
+    59. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  745 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  266.0 ms | cr:  266.0
+    60. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  766 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  267.4 ms | cr:  267.4
+    61. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  760 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  268.8 ms | cr:  268.8
+    62. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  771 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  269.0 ms | cr:  269.0
+    63. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  725 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  258.0 ms | cr:  258.0
+    64. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  773 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  263.5 ms | cr:  263.5
+    65. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1595 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  472.4 ms | cr:  472.4
+    66. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1565 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  499.2 ms | cr:  499.2
+[Frame: 2] Time: 0.067 s
+    67. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1499 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  435.8 ms | cr:  435.8
+    68. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1365 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  407.1 ms | cr:  407.1
+    69. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1557 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  492.6 ms | cr:  492.6
+    70. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1557 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  452.8 ms | cr:  452.8
+    71. dt:  1.00 ms | #newton:  2 | ph:  0.0% | #CG/newton:  772 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  485.1 ms | cr:  485.1
+    72. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1187 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  374.0 ms | cr:  374.0
+    73. dt:  1.00 ms | #newton:  2 | ph:  0.0% | #CG/newton:  783 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  501.6 ms | cr:  501.6
+    74. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1082 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  352.6 ms | cr:  352.6
+    75. dt:  1.00 ms | #newton:  2 | ph:  0.0% | #CG/newton:  772 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  517.2 ms | cr:  517.2
+    76. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1095 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  359.5 ms | cr:  359.5
+    77. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  756 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  711.8 ms | cr:  711.8
+    78. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  830 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  291.9 ms | cr:  291.9
+    79. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  760 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  702.7 ms | cr:  702.7
+    80. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1069 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  343.4 ms | cr:  343.4
+    81. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  736 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  707.2 ms | cr:  707.2
+    82. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  832 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  297.3 ms | cr:  297.3
+    83. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  755 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  725.5 ms | cr:  725.5
+    84. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  845 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  297.0 ms | cr:  297.0
+    85. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  743 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  699.7 ms | cr:  699.7
+    86. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  841 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  287.3 ms | cr:  287.3
+    87. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  758 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  707.3 ms | cr:  707.3
+    88. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  830 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  288.0 ms | cr:  288.0
+    89. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  763 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  713.5 ms | cr:  713.5
+    90. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  846 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  299.9 ms | cr:  299.9
+    91. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  758 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  768.2 ms | cr:  768.2
+    92. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  833 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  294.2 ms | cr:  294.2
+    93. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  729 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  710.3 ms | cr:  710.3
+    94. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  849 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  289.9 ms | cr:  289.9
+    95. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  759 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  741.5 ms | cr:  741.5
+    96. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  866 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  299.7 ms | cr:  299.7
+    97. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  739 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1001.5 ms | cr: 1001.5
+    98. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  847 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  446.0 ms | cr:  446.0
+    99. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  782 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1135.5 ms | cr: 1135.5
+    100. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  866 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  438.1 ms | cr:  438.1
+[Frame: 3] Time: 0.101 s
+    101. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  722 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  900.9 ms | cr:  900.9
+    102. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton:  838 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  370.0 ms | cr:  370.0
+    103. dt:  1.00 ms | #newton:  3 | ph:  0.0% | #CG/newton:  934 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime: 1035.0 ms | cr: 1035.0
+    104. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1753 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  508.6 ms | cr:  508.6
+    105. dt:  1.00 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1035 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  648.9 ms | cr:  648.9
+    106. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2034 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  575.8 ms | cr:  575.8
+    107. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1012 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  309.2 ms | cr:  309.2
+    108. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2093 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  580.3 ms | cr:  580.3
+    109. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2086 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  653.4 ms | cr:  653.4
+    110. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1009 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  376.1 ms | cr:  376.1
+    111. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1004 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  331.9 ms | cr:  331.9
+    112. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2060 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  570.3 ms | cr:  570.3
+    113. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2074 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  574.4 ms | cr:  574.4
+    114. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2054 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  566.7 ms | cr:  566.7
+    115. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2043 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  640.1 ms | cr:  640.1
+    116. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 2237 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  626.5 ms | cr:  626.5
+    117. dt:  1.00 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1218 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  720.3 ms | cr:  720.3
+    118. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1647 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  486.9 ms | cr:  486.9
+    119. dt:  1.00 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1221 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  789.6 ms | cr:  789.6
+    120. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1640 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  532.2 ms | cr:  532.2
+    121. dt:  1.00 ms | #newton:  2 | ph:  0.0% | #CG/newton: 1311 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  789.9 ms | cr:  789.9
+    122. dt:  1.00 ms | #newton:  1 | ph:  0.0% | #CG/newton: 1473 | ls (cap|max|inv|bt):  0| 0| 0| 0| runtime:  471.4 ms | cr:  471.4
+    123. dt:  1.00 ms | 
+    Penetration couldn't be avoided. Contact stiffness hardened from 1.0e+06 to 2.0e+06.
