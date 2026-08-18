@@ -308,9 +308,9 @@
       "cad_sha256": "5d3df36b2d9f181e299222ae33561f753219019939b4dc75e7931607f0c73a4c",
       "settings_sha256": "d5ea6c3f2d51765f2866ba5ccb994a0fe78a48871842a83536f77e0582a51a37",
       "result": "INCONCLUSIVE_NUMERICS",
-      "evidence": ["runs/candidate_031_contract_1_23_0_initial_contact/actuation_observation.json", "runs/candidate_031_contract_1_23_0_dt05_110ms/actuation_observation.json", "runs/candidate_031_contract_1_24_0_friction1e3_110ms/actuation_observation.json"],
-      "measured_reason": "A corrected module-scaled 8:16 involute pair reduced nodes by 23 percent and completed both 110 ms comparisons with zero hardening. A 1e-3 m/s friction regularization reduced nonlinear work, but the gate ended before gear/output engagement and measured zero output work.",
-      "revision": "Extend the unchanged pre-lock run far enough to observe gear engagement, then optimize the remaining linear conditioning before any full-load scoring."
+      "evidence": ["runs/candidate_031_contract_1_23_0_initial_contact/actuation_observation.json", "runs/candidate_031_contract_1_23_0_dt05_110ms/actuation_observation.json", "runs/candidate_031_contract_1_24_0_friction1e3_110ms/actuation_observation.json", "runs/candidate_031_contract_1_24_0_200ms/actuation_observation.json"],
+      "measured_reason": "A corrected module-scaled 8:16 involute pair reduced nodes by 23 percent. At 200 ms the input/output FEM gears reached +1.838/-0.849 rad/s with the correct opposite direction and about 2.17:1 instantaneous ratio; all 400 steps converged with zero hardening. The output connector was only beginning physical D-flat take-up and no brake load or output work had occurred.",
+      "revision": "Retest the improved geometry and friction model at 1 ms to halve production step count, then extend through output-connector take-up before any full-load scoring."
     }
   ]
 }

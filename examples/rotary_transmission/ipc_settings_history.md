@@ -68,5 +68,6 @@ Contract 1.10.0 fixed the settings plumbing and retry protocol, then its expensi
 | 030 | 1.23 | 0.50 ms | 1e7 | BDPCG | Completed all 220 steps through 0.110 s with zero hardening retries, but required about 15 minutes and ended before brake onset. Stable early gate; rejected for production speed and not eligible for final reward. |
 | 031 | 1.23 | 0.50 ms | 1e7 | BDPCG | Corrected module-scaled 8:16 involute pair; 24,806 nodes. Completed 0.110 s with zero hardening and zero output work; faster than Candidate 030 but still expensive after D-flat take-up. |
 | 031 | 1.24 | 0.50 ms | 1e7 | BDPCG | Friction regularization changed from 1e-4 to 1e-3 m/s. The matched trajectory remained stable; outer Newton work fell, while sustained contact still required roughly 1,800–2,600 CG iterations. Pre-lock diagnostic only. |
+| 031 | 1.24 | 0.50 ms | 1e7 | BDPCG | Extended 0.200 s gate completed 400/400 steps with zero hardening. Contact-only gears reached +1.838/-0.849 rad/s (correct direction, about 2.17:1 instantaneous); output connector take-up had only begun and brake remained off. |
 
 All interrupted rows are `INCONCLUSIVE_NUMERICS` performance studies. None is evidence of a broken printed part or a physical PASS.
