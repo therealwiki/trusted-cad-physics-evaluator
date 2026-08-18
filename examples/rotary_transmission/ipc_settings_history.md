@@ -1,4 +1,4 @@
-# IPC and timestep history — Candidates 001–026
+# IPC and timestep history — Candidates 001–030
 
 This is an execution audit, not a retrospective statement of intended settings. Values are taken from native STARK logs, observation contract hashes, preserved source history, and the immutable attempt ledger. `effective` means the value that reached STARK. Where the surviving artifacts cannot prove a value, it is explicitly marked.
 
@@ -65,6 +65,6 @@ Contract 1.10.0 fixed the settings plumbing and retry protocol, then its expensi
 | 030 | 1.20 | 0.25 ms | 1e7 | BDPCG | Fewer iterations per step but fourfold step count was slower per simulated millisecond; rejected for production. |
 | 030 | 1.21 | 1.00 ms | 1e7 | ILUT BiCGSTAB | Rejected immediately: non-descent directions triggered repeated Hessian-projection retries. |
 | 030 | 1.22 | 1.00 ms | 1e7 | ICPCG | Better early coupling but sustained take-up again reached roughly 10 s/step; rejected. |
-| 030 | 1.23 | 0.50 ms | 1e7 | BDPCG | Active midpoint performance/convergence diagnostic; pre-lock and not eligible for final reward. |
+| 030 | 1.23 | 0.50 ms | 1e7 | BDPCG | Completed all 220 steps through 0.110 s with zero hardening retries, but required about 15 minutes and ended before brake onset. Stable early gate; rejected for production speed and not eligible for final reward. |
 
 All interrupted rows are `INCONCLUSIVE_NUMERICS` performance studies. None is evidence of a broken printed part or a physical PASS.

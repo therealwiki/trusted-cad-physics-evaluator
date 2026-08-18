@@ -137,10 +137,170 @@
       "cad": "cad/candidate_014.step",
       "cad_sha256": "593dda728b8bf291dbc802eefe737e95236c8e2b36bc1087fd8d33e557aa18c3",
       "settings_sha256": "50777f4b32ecb2f667939229b2d3a096dfaee0b70804c395752691a6640a56b4",
-      "result": "PENDING_FULL_LOAD",
+      "result": "INCONCLUSIVE_NUMERICS",
       "evidence": ["runs/candidate_014_contract_1_4_0/actuation_observation.json", "runs/candidate_014_contract_1_4_0/recorded_frames.npz"],
       "measured_reason": "The 300 ms pre-load gate completed all steps at 1.945:1 with physical output connector motion, 0.00183 max strain, and 0.019 mm wobble.",
-      "revision": "Run the unchanged one-second brake-loaded contract twice before scoring."
+      "revision": "The loaded repeat exposed the old harness retry defect; audit timestep sensitivity and distinguish barrier hardening from mechanical failure."
+    },
+    {
+      "attempt": 15,
+      "cad": "cad/candidate_015.step",
+      "cad_sha256": "6cdcbd4f558db45141f7cd1e1dcecbb1e20a1a8b6b19f3bd91935e8e05da2ff0",
+      "settings_sha256": "UNRECOVERABLE_FROM_INTERRUPTED_LOG",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_015_contract_1_5_0/actuation.log"],
+      "measured_reason": "The 1e9-stiffness diagnostic was deliberately interrupted at 0.038 s for a controlled timestep study; no physical verdict was reached.",
+      "revision": "Reduce the timestep while restoring the prior 1e8 initial barrier."
+    },
+    {
+      "attempt": 16,
+      "cad": "cad/candidate_016.step",
+      "cad_sha256": "1b71323fa32db5e0922c2f64ed9e34f382317a3625d13d7487548ae341d46626",
+      "settings_sha256": "c7b520fc43e9f5e67fbe7374f5a7ca9d632de6208107970e88fe3e49b6c8837d",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_016_contract_1_6_0/actuation_observation.json"],
+      "measured_reason": "At 0.5 ms the old harness stopped on the first recoverable IPC hardening event at 0.544 s and about 0.0176 N m brake torque.",
+      "revision": "Test connector relief while preserving the same physical loading."
+    },
+    {
+      "attempt": 17,
+      "cad": "cad/candidate_017.step",
+      "cad_sha256": "da5b53f67e8c135171426bd66e99a9dfe3fa826730d4e79b5cc9d0ea98d31805",
+      "settings_sha256": "c7b520fc43e9f5e67fbe7374f5a7ca9d632de6208107970e88fe3e49b6c8837d",
+      "result": "FAIL",
+      "evidence": ["runs/candidate_017_contract_1_6_0"],
+      "measured_reason": "The D-flat relief revision produced an initial geometric collision and was rejected before actuation.",
+      "revision": "Restore a collision-free connector and change only the candidate support geometry."
+    },
+    {
+      "attempt": 18,
+      "cad": "cad/candidate_018.step",
+      "cad_sha256": "9e79575db5ce7a92589928c4644543f23b7cbb58c39d4bcf14fb39875e255300",
+      "settings_sha256": "c7b520fc43e9f5e67fbe7374f5a7ca9d632de6208107970e88fe3e49b6c8837d",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_018_contract_1_6_0/actuation_observation.json"],
+      "measured_reason": "The old harness stopped at a recoverable hardening event at 0.2355 s, before brake onset.",
+      "revision": "Adjust bearing clearance and repeat the identical ramp."
+    },
+    {
+      "attempt": 19,
+      "cad": "cad/candidate_019.step",
+      "cad_sha256": "8ffac110098306de5fc592adc77e17a1915c81ee15f30444958808de36137afe",
+      "settings_sha256": "c7b520fc43e9f5e67fbe7374f5a7ca9d632de6208107970e88fe3e49b6c8837d",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_019_contract_1_6_0/actuation_observation.json"],
+      "measured_reason": "The old harness stopped on recoverable IPC hardening at 0.549 s and about 0.01884 N m.",
+      "revision": "Correct surface-mesh sizing before interpreting the sensitivity study."
+    },
+    {
+      "attempt": 20,
+      "cad": "cad/candidate_020.step",
+      "cad_sha256": "a2068ce03c15a2c729e51ed5f80cad63174aea4c356337b751dd3c4e9c787759",
+      "settings_sha256": "c7b520fc43e9f5e67fbe7374f5a7ca9d632de6208107970e88fe3e49b6c8837d",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_020_contract_1_6_0/actuation_observation.json"],
+      "measured_reason": "With 0.8 mm surface sizing correctly wired, the old harness stopped at hardening at 0.5555 s and about 0.01405 N m.",
+      "revision": "Run a quarter-millisecond convergence point."
+    },
+    {
+      "attempt": 21,
+      "cad": "cad/candidate_021.step",
+      "cad_sha256": "62ae44a3fb0712e4fef299ec13bf2a119d0c91d1c17bc7eb05752463ee0146a8",
+      "settings_sha256": "766f213b70b804506f434dbdac144771bbe1878e09fd6e4e4d59adf8f3733e47",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_021_contract_1_7_0/actuation_observation.json"],
+      "measured_reason": "The old harness again stopped at its first recoverable hardening event, now at 0.55675 s with a 0.25 ms step.",
+      "revision": "Separate evaluator rotor inertia from candidate geometry and repeat."
+    },
+    {
+      "attempt": 22,
+      "cad": "cad/candidate_022.step",
+      "cad_sha256": "ed921706d77dae700b9504dc285df09f381d3f20e0d8cf9656ffe5b739970f42",
+      "settings_sha256": "0e94f86c3cd5f1c989490e10b067240e68f05fcfecc9786c24cf9d5cf1098379",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_022_contract_1_8_0/actuation_observation.json"],
+      "measured_reason": "With explicit evaluator rotor inertias, the old harness stopped at 0.5545 s and about 0.01798 N m.",
+      "revision": "Change bearing clearance and log failure time and instantaneous torque."
+    },
+    {
+      "attempt": 23,
+      "cad": "cad/candidate_023.step",
+      "cad_sha256": "d6407ca2a4f70707144af77315040b1013988a0bef4773356a0ebcf13eb7a74e",
+      "settings_sha256": "0e94f86c3cd5f1c989490e10b067240e68f05fcfecc9786c24cf9d5cf1098379",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_023_contract_1_8_0/actuation_observation.json"],
+      "measured_reason": "The old harness stopped at 0.53425 s and 0.01370 N m; this single event was not robust enough to call mechanical failure.",
+      "revision": "Apply the same final load with a five-times-slower ramp."
+    },
+    {
+      "attempt": 24,
+      "cad": "cad/candidate_024.step",
+      "cad_sha256": "6854534610a8bb20ca98c59846d6fb6a41c17958f097b7c2a840156f7daf2405",
+      "settings_sha256": "e6ed82e0ab76ab3729958bced5d17d063bca22f14e9c241c51c51663f8b9d989",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_024_contract_1_9_0/actuation_observation.json", "runs/candidate_024_contract_1_12_0_native_rollback_smoke/actuation_observation.json", "runs/candidate_024_contract_1_13_0_scaled_newton_smoke/actuation_observation.json"],
+      "measured_reason": "The slower ramp moved first hardening to 0.76375 s and 0.02110 N m; later native-rollback smoke gates proved those events must be retried, not labeled breakage.",
+      "revision": "Implement native rollback and same-step contact-hardening retries."
+    },
+    {
+      "attempt": 25,
+      "cad": "cad/candidate_025.step",
+      "cad_sha256": "00a52c9d762dac2dee95771383071cf8f5ed453d3411029517acf7f48764b878",
+      "settings_sha256": "e6ed82e0ab76ab3729958bced5d17d063bca22f14e9c241c51c51663f8b9d989",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_025_contract_1_9_0/actuation_observation.json"],
+      "measured_reason": "First hardening occurred at 0.74975 s and 0.01998 N m under the slow ramp; the pre-fix harness could not produce a verdict.",
+      "revision": "Adjust support clearance and repeat without changing the load curve."
+    },
+    {
+      "attempt": 26,
+      "cad": "cad/candidate_026.step",
+      "cad_sha256": "57c5c993ab0bd1765b5ad694343c898fc75582b6c2930f1066b832458d7f8729",
+      "settings_sha256": "e6ed82e0ab76ab3729958bced5d17d063bca22f14e9c241c51c51663f8b9d989",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_026_contract_1_9_0/actuation_observation.json"],
+      "measured_reason": "First hardening occurred at 0.76125 s and 0.02090 N m; this remained an evaluator-integration stop, not a broken part.",
+      "revision": "Move to a complete four-body candidate with printed bearing support."
+    },
+    {
+      "attempt": 27,
+      "cad": "cad/candidate_027.step",
+      "cad_sha256": "19989c272a22a268126cef089f16bd8fea3d0a2fb5cc28a5bd2f3c6060897ee6",
+      "settings_sha256": "PRE_ACTUATION_GEOMETRY_AUDIT",
+      "result": "FAIL",
+      "evidence": ["cad/candidate_027.manifest.json"],
+      "measured_reason": "The first four-body printable support design left mount-hole radial clearance equal to the IPC distance and was rejected before actuation.",
+      "revision": "Increase physical mount clearance beyond the locked contact distance."
+    },
+    {
+      "attempt": 28,
+      "cad": "cad/candidate_028.step",
+      "cad_sha256": "8c06708c1a27fb0f374596e67712e508fc44b597e0b6c608475cf88604c984d9",
+      "settings_sha256": "e31fd270058db843f7cc48a8fcd1e024af9482045524e0ca722125c098f94cea",
+      "result": "INCONCLUSIVE_EVALUATOR_DEFECT",
+      "evidence": ["runs/candidate_028_contract_1_14_0_initial_contact", "runs/candidate_028_contract_1_15_0_initial_contact/actuation_observation.json", "runs/candidate_028_contract_1_15_0_50ms/actuation_observation.json"],
+      "measured_reason": "Evaluator through-pins intersected the output gear. With split studs, the identical STEP hash passed 1 ms and 50 ms early gates with zero hardening retries.",
+      "revision": "Keep the corrected evaluator fixture and reduce candidate mesh cost without changing interfaces."
+    },
+    {
+      "attempt": 29,
+      "cad": "cad/candidate_029.step",
+      "cad_sha256": "fff1c9ecfbc0ba8f8b303ae44952a6085e4d6808cef7b16ce3609bcce2a18901",
+      "settings_sha256": "707188c7fec452aedf1cd0608593be8bbfa6b3aba1d8cd0ad653a7c655079ef3",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_029_contract_1_15_0_300ms", "runs/candidate_029_contract_1_16_0_icpcg_110ms", "runs/candidate_029_contract_1_17_0_icpcg_110ms"],
+      "measured_reason": "A 22 percent node reduction preserved valid initialization, but sustained D-flat take-up required thousands of Krylov iterations; ICPCG diagnostics were interrupted as impractical.",
+      "revision": "Replace broad plates with printable ribbed bearing frames and continue the conditioning study."
+    },
+    {
+      "attempt": 30,
+      "cad": "cad/candidate_030.step",
+      "cad_sha256": "e8760b052479a0c53e2cefc79472786a78a9b7525aa46b67a2b2c007cba12632",
+      "settings_sha256": "df42314dead27193196ad238b71657fbeb271d58192d90623cf7f82bbba44637",
+      "result": "INCONCLUSIVE_NUMERICS",
+      "evidence": ["runs/candidate_030_contract_1_18_0_icpcg_110ms", "runs/candidate_030_contract_1_19_0_k1e7_110ms", "runs/candidate_030_contract_1_20_0_dt025_110ms", "runs/candidate_030_contract_1_21_0_ilut_110ms", "runs/candidate_030_contract_1_22_0_icpcg_k1e7_110ms", "runs/candidate_030_contract_1_23_0_dt05_110ms/actuation_observation.json"],
+      "measured_reason": "The 0.5 ms BDPCG run completed 220 steps through 0.110 s with zero hardening retries, but took about 15 minutes, ended before brake onset, and measured effectively zero output work.",
+      "revision": "Treat linear conditioning and coupling take-up as the current engineering bottleneck; do not freeze or score this contract."
     }
   ]
 }
